@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
-import io.saeid.fabloading.LoadingView;
 
 public class Splashscreen extends AppCompatActivity{
 
