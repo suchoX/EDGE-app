@@ -162,34 +162,34 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 onBackPressed();
             }
         });
-        mToolBarTextView.setText("Compute Aid");
+        mToolBarTextView.setText(R.string.compute_aid);
     }
 
     private void changetoolbartitle(int position)
     {
         switch(position)
         {
-            case 1: mToolBarTextView.setText("Compute Aid");
+            case 1: mToolBarTextView.setText(R.string.compute_aid);
                     break;
-            case 2: mToolBarTextView.setText("Robotics");
+            case 2: mToolBarTextView.setText(R.string.robotics);
                     break;
-            case 3: mToolBarTextView.setText("Cyber Crusade");
+            case 3: mToolBarTextView.setText(R.string.cyber_crusade);
                     break;
-            case 4: mToolBarTextView.setText("Food for Fun");
+            case 4: mToolBarTextView.setText(R.string.food_for_fun);
                     break;
-            case 5: mToolBarTextView.setText("Money Matters");
+            case 5: mToolBarTextView.setText(R.string.money_matters);
                     break;
-            case 6: mToolBarTextView.setText("InFocus");
+            case 6: mToolBarTextView.setText(R.string.infocus);
                     break;
-            case 7: mToolBarTextView.setText("Newron");
+            case 7: mToolBarTextView.setText(R.string.newron);
                     break;
-            case 8: mToolBarTextView.setText("Innovati");
+            case 8: mToolBarTextView.setText(R.string.innovati);
                     break;
-            case 9: mToolBarTextView.setText("CreateIt");
+            case 9: mToolBarTextView.setText(R.string.create_it);
                     break;
-            case 10: mToolBarTextView.setText("Just Like That");
+            case 10: mToolBarTextView.setText(R.string.just_like_that);
                     break;
-            case 11: mToolBarTextView.setText("Elevation");
+            case 11: mToolBarTextView.setText(R.string.elevation);
                     break;
 
         }
