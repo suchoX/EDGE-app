@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
@@ -57,7 +56,7 @@ public class Splashscreen extends AppCompatActivity{
         //Jump to main activity
         if(isFinishing())
             return;
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, EventsActivity.class);
         startActivity(intent);
         finish();
     }
