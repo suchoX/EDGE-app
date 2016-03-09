@@ -8,14 +8,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.geekonix.edge.adapters.EventListAdapter;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 import com.yalantis.contextmenu.lib.MenuObject;
 import com.yalantis.contextmenu.lib.MenuParams;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.yalantis.contextmenu.lib.interfaces.OnMenuItemClickListener;
@@ -30,6 +33,10 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
     Toolbar mToolbar;
     MenuParams menuParams;
 
+    ListView eventsList;
+    EventListAdapter eventListAdapter;
+    List<String> computeaidEvents;
+    List<String> presentList;
     boolean menuOpen=false;
 
     @Override
@@ -37,8 +44,15 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
 
-
         fragmentManager = getSupportFragmentManager();
+
+        eventsList = (ListView)findViewById(R.id.event_list);
+
+        computeaidEvents = Arrays.asList(getResources().getStringArray(R.array.computeaid_events));
+        presentList = computeaidEvents;
+
+        eventListAdapter = new EventListAdapter(this,presentList);
+        eventsList.setAdapter(eventListAdapter);
 
         initToolbar();
         initMenuFragment();
@@ -49,7 +63,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         menuParams.setActionBarSize((int) getResources().getDimension(R.dimen.tool_bar_height));
         menuParams.setMenuObjects(getMenuObjects());
         menuParams.setClosableOutside(false);
-        menuParams.setAnimationDuration(50);
+        menuParams.setAnimationDuration(30);
         mMenuDialogFragment = ContextMenuDialogFragment.newInstance(menuParams);
         mMenuDialogFragment.setItemClickListener(this);
         mMenuDialogFragment.setItemLongClickListener(this);
@@ -60,62 +74,62 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         List<MenuObject> menuObjects = new ArrayList<>();
 
         MenuObject close = new MenuObject();
-        close.setBgColor(R.color.midnightblue);
+        close.setBgColor(R.color.transparent);
         close.setDividerColor(R.color.blackPrimary);
         close.setResource(R.drawable.icn_close);
 
         MenuObject computeaid = new MenuObject("Compute Aid");
-        computeaid.setBgColor(R.color.midnightblue);
+        computeaid.setBgColor(R.color.transparent);
         computeaid.setDividerColor(R.color.blackPrimary);
         computeaid.setResource(R.drawable.icn_computeaid);
 
         MenuObject robotics = new MenuObject("Robotics");
-        robotics.setBgColor(R.color.midnightblue);
+        robotics.setBgColor(R.color.transparent);
         robotics.setDividerColor(R.color.blackPrimary);
         robotics.setResource(R.drawable.icn_robotics);
 
         MenuObject cybercrusade = new MenuObject("Cyber Crusade");
-        cybercrusade.setBgColor(R.color.midnightblue);
+        cybercrusade.setBgColor(R.color.transparent);
         cybercrusade.setDividerColor(R.color.blackPrimary);
         cybercrusade.setResource(R.drawable.icn_cybercrusade);
 
         MenuObject foodforfun = new MenuObject("Food for Fun");
-        foodforfun.setBgColor(R.color.midnightblue);
+        foodforfun.setBgColor(R.color.transparent);
         foodforfun.setDividerColor(R.color.blackPrimary);
         foodforfun.setResource(R.drawable.icn_foodforfun);
 
         MenuObject moneymatters = new MenuObject("Money Matters");
-        moneymatters.setBgColor(R.color.midnightblue);
+        moneymatters.setBgColor(R.color.transparent);
         moneymatters.setDividerColor(R.color.blackPrimary);
         moneymatters.setResource(R.drawable.icn_moneymatters);
 
         MenuObject infocus = new MenuObject("InFocus");
-        infocus.setBgColor(R.color.midnightblue);
+        infocus.setBgColor(R.color.transparent);
         infocus.setDividerColor(R.color.blackPrimary);
         infocus.setResource(R.drawable.icn_infocus);
 
         MenuObject newron = new MenuObject("Newron");
-        newron.setBgColor(R.color.midnightblue);
+        newron.setBgColor(R.color.transparent);
         newron.setDividerColor(R.color.blackPrimary);
         newron.setResource(R.drawable.icn_newron);
 
         MenuObject innovati = new MenuObject("Innovati");
-        innovati.setBgColor(R.color.midnightblue);
+        innovati.setBgColor(R.color.transparent);
         innovati.setDividerColor(R.color.blackPrimary);
         innovati.setResource(R.drawable.icn_innovati);
 
         MenuObject createit = new MenuObject("Create It");
-        createit.setBgColor(R.color.midnightblue);
+        createit.setBgColor(R.color.transparent);
         createit.setDividerColor(R.color.blackPrimary);
         createit.setResource(R.drawable.icn_createit);
 
         MenuObject justlikethat = new MenuObject("Just Like That");
-        justlikethat.setBgColor(R.color.midnightblue);
+        justlikethat.setBgColor(R.color.transparent);
         justlikethat.setDividerColor(R.color.blackPrimary);
         justlikethat.setResource(R.drawable.icn_justlikethat);
 
         MenuObject elevation = new MenuObject("Elevation");
-        elevation.setBgColor(R.color.midnightblue);
+        elevation.setBgColor(R.color.transparent);
         elevation.setDividerColor(R.color.blackPrimary);
         elevation.setResource(R.drawable.icn_elevation);
 
@@ -221,4 +235,10 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             finish();
         }
     }
+
+    public void eventSelected(String eventName)
+    {
+
+    }
+
 }

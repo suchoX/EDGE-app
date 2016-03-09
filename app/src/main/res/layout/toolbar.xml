@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         android:textColor="@color/whitePrimary"
         android:textSize="20sp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:elevation="5dp"/>
 
 </android.support.v7.widget.Toolbar>

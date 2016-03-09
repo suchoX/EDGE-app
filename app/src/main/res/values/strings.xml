@@ -2,4 +2,15 @@
     <string name="app_name">EDGE</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="computeaid_events">
+        <item>Flawless</item>
+        <item>Bughunt</item>
+        <item>Codemart</item>
+        <item>CryptoQuest</item>
+        <item>Game of Zones</item>
+        <item>Codeout</item>
+    </string-array>
+
+
 </resources>

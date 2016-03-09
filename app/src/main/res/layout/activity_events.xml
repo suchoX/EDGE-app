@@ -7,10 +7,12 @@
 
     <include layout="@layout/toolbar" />
 
-    <FrameLayout
-        android:id="@+id/event_frame"
+    <ListView
+        android:id="@+id/event_list"
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"></FrameLayout>
+        android:divider="@null"/>
+
 
 </RelativeLayout>

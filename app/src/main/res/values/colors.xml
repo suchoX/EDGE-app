@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#e74c3c</color>
-    <color name="colorPrimaryDark">#e74c3c</color>
+    <color name="colorPrimary">#95a5a6</color>
+    <color name="colorPrimaryDark">#95a5a6</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="whitePrimary">#FFFEFF</color>
     <color name="blackPrimary">#000000</color>
-    <color name="test">#d9080f</color>
+    <color name="test">#2980b9</color>
 
     <color name="toolbartext">#e74c3c</color>
 
 
-    <color name="listcolor1">#e67e22</color>
+    <color name="listcolor1">#f1c40f</color>
     <color name="listcolor2">#3498db</color>
     <color name="listcolor3">#e74c3c</color>
-    <color name="listcolor4">#1abc9c</color>
+    <color name="listcolor4">#27ae60</color>
+    <color name="listcolor5">#d35400</color>
+    <color name="listcolor6">#8e44ad</color>
+
+    <color name="transparent">#00000000</color>
 
     <color name="midnightblue">#2c3e50</color>
 
