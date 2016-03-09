@@ -35,7 +35,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
 
     ListView eventsList;
     EventListAdapter eventListAdapter;
-    List<String> computeaidEvents;
+    List<String> computeaidEvents,roboticsEvents,foodforfunEvents,cybercrusadeEvents,moneymattersEvents,newronEvents,infocusEvents,createitEvents,justlikethatEvents,innovatiEvents;
     List<String> presentList;
     boolean menuOpen=false;
 
@@ -49,6 +49,16 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         eventsList = (ListView)findViewById(R.id.event_list);
 
         computeaidEvents = Arrays.asList(getResources().getStringArray(R.array.computeaid_events));
+        roboticsEvents = Arrays.asList(getResources().getStringArray(R.array.robotics_events));
+        foodforfunEvents = Arrays.asList(getResources().getStringArray(R.array.foodforfun_events));
+        cybercrusadeEvents = Arrays.asList(getResources().getStringArray(R.array.cybercrusade_events));
+        moneymattersEvents = Arrays.asList(getResources().getStringArray(R.array.moneymatters_events));
+        newronEvents = Arrays.asList(getResources().getStringArray(R.array.newron_events));
+        infocusEvents = Arrays.asList(getResources().getStringArray(R.array.infocus_events));
+        createitEvents = Arrays.asList(getResources().getStringArray(R.array.createit_events));
+        justlikethatEvents = Arrays.asList(getResources().getStringArray(R.array.justlikethat_events));
+        innovatiEvents = Arrays.asList(getResources().getStringArray(R.array.innovati_events));
+
         presentList = computeaidEvents;
 
         eventListAdapter = new EventListAdapter(this,presentList);
@@ -56,6 +66,93 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
 
         initToolbar();
         initMenuFragment();
+    }
+
+    private void reinitList(int position)
+    {
+        switch (position)
+        {
+            case 1:
+                presentList = null;
+                presentList = computeaidEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 2:
+                presentList = null;
+                presentList = roboticsEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 3:
+                presentList = null;
+                presentList = cybercrusadeEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 4:
+                presentList = null;
+                presentList = foodforfunEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 5:
+                presentList = null;
+                presentList = moneymattersEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 6:
+                presentList = null;
+                presentList = infocusEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 7:
+                presentList = null;
+                presentList = newronEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 8:
+                presentList = null;
+                presentList = innovatiEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 9:
+                presentList = null;
+                presentList = createitEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+            case 10:
+                presentList = null;
+                presentList = justlikethatEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+        }
     }
 
     private void initMenuFragment() {
@@ -199,6 +296,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
     public void onMenuItemClick(View clickedView, int position) {
         Toast.makeText(this, "Clicked on position: " + position, Toast.LENGTH_SHORT).show();
         changetoolbartitle(position);
+        reinitList(position);
     }
 
     @Override

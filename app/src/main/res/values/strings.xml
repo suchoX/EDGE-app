@@ -12,5 +12,72 @@
         <item>Codeout</item>
     </string-array>
 
+	<string-array name="robotics_events">
+        <item>Xpedition</item>
+        <item>Xoccer</item>
+        <item>X-Port</item>
+        <item>Blitzkrieg-X</item>
+        <item>Xcelsior</item>
+        <item>EXult</item>
+	    <item>AerostriX</item>
+        <item>Xplore</item>
+        <item>PerpleXity</item>
+        <item>Xtreat</item>
+    </string-array>
+	
+    <string-array name="foodforfun_events">
+        <item>X-Quiz it</item>
+        <item>Food Relay</item>
+        <item>Creation-X-Nihilo</item>
+        <item>2 minutes 2 sell</item>
+        <item>Crypt-O-Label</item>
+        <item>Wizcase</item>
+        <item>Kwiznet</item>
+    </string-array>
+
+    <string-array name="cybercrusade_events">
+        <item>Need For Speed 05</item>
+        <item>Need For Speed 12</item>
+        <item>Counter Strike Go College League</item>
+        <item>Counter Strike Go Pro League</item>
+        <item>Mortal Kombat 10</item>
+        <item>FIFA 16 Pro League</item>
+        <item>FIFA 11 College League</item>
+        <item>Dota 2</item>
+    </string-array>
+
+    <string-array name="moneymatters_events">
+        <item>B-Plan</item>
+        <item>Addomedia</item>
+        <item>B-Quiz</item>
+        <item>Stock IT</item>
+    </string-array>
+
+    <string-array name="newron_events">
+        <item>The Quiz</item>
+        <item>Youth Parliament</item>
+        <item>Electronically Yours</item>
+    </string-array>
+
+    <string-array name="infocus_events">
+        <item>Crumbs</item>
+        <item>Odyssey</item>
+        <item>Shoot \'M\' Up</item>
+        <item>Insta Click</item>
+    </string-array>
+
+    <string-array name="createit_events">
+        <item>Rags to Riches</item>
+        <item>Mechanix</item>
+    </string-array>
+
+    <string-array name="justlikethat_events">
+        <item>Khulja Sim Sim</item>
+    </string-array>
+
+    <string-array name="innovati_events">
+        <item>Project View</item>
+    </string-array>
+
 
 </resources>
