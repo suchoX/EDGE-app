@@ -15,15 +15,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
-import com.geekonix.edge.others.Constants;
-import com.mixpanel.android.mpmetrics.MixpanelAPI;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Random;
 
 
 public class Splashscreen extends AppCompatActivity{

@@ -20,7 +20,7 @@ android {
 }
 repositories {
     maven {
-        url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"
+        url  "http://dl.bintray.com/urbanairship/android"
     }
 }
 
@@ -31,6 +31,6 @@ dependencies {
     compile 'com.android.support:design:23.2.0'
     compile 'com.yalantis:contextmenu:1.0.6'
     compile 'de.hdodenhof:circleimageview:2.0.0'
-    compile 'com.mixpanel.android:mixpanel-android:4.8.0'
     compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.urbanairship.android:urbanairship-sdk:7.0.+'
 }

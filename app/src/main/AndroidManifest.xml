@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -33,16 +34,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".DevTeamActivity" />
         <activity android:name=".CoreTeamActivity"></activity>
-
-        <activity android:name="com.mixpanel.android.surveys.SurveyActivity" />
-        <receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <category android:name="com.geekonix.edge" />
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>
