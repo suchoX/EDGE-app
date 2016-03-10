@@ -1,26 +1,42 @@
 package com.geekonix.edge;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
+import com.geekonix.edge.others.Constants;
+import com.mixpanel.android.mpmetrics.MixpanelAPI;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
+
 
 public class Splashscreen extends AppCompatActivity{
 
     DisplayMetrics metrics;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+
         View decorView=getWindow().getDecorView();
         int uiOptions= View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
@@ -56,13 +72,21 @@ public class Splashscreen extends AppCompatActivity{
         //Jump to main activity
         if(isFinishing())
             return;
-        Intent intent = new Intent(this, EventsActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+
+    @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
     }
+
 }

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "edge-1244",
+    "project_number": "356849071366",
+    "name": "EDGE"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356849071366:android:748c44d42a9b228e",
+        "client_id": "android:com.geekonix.edge",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.geekonix.edge",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356849071366-cglebk8nvlvcjhg4pol349ol4pmo42cf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geekonix.edge",
+            "certificate_hash": "D581BE06BD88F01FBAE026B720A9459E40B0203F"
+          }
+        },
+        {
+          "client_id": "356849071366-s54c487jp688nam4bc8gf3colrvni7gd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

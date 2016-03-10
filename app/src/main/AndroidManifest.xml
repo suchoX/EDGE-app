@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geekonix.edge">
 
+    <permission android:name="com.geekonix.edge.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.geekonix.edge.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,8 +29,20 @@
         </activity>
         <activity
             android:name=".EventsActivity"
-            android:theme="@style/AppTheme"
-            ></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DevTeamActivity" />
+        <activity android:name=".CoreTeamActivity"></activity>
+
+        <activity android:name="com.mixpanel.android.surveys.SurveyActivity" />
+        <receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.geekonix.edge" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
