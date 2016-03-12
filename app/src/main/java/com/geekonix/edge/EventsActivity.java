@@ -35,7 +35,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
 
     ListView eventsList;
     EventListAdapter eventListAdapter;
-    List<String> computeaidEvents,roboticsEvents,foodforfunEvents,cybercrusadeEvents,moneymattersEvents,newronEvents,infocusEvents,createitEvents,justlikethatEvents,innovatiEvents;
+    List<String> computeaidEvents,roboticsEvents,foodforfunEvents,cybercrusadeEvents,moneymattersEvents,newronEvents,infocusEvents,createitEvents,justlikethatEvents,innovatiEvents,elevationEvents;
     List<String> presentList;
     boolean menuOpen=false;
 
@@ -58,10 +58,11 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         createitEvents = Arrays.asList(getResources().getStringArray(R.array.createit_events));
         justlikethatEvents = Arrays.asList(getResources().getStringArray(R.array.justlikethat_events));
         innovatiEvents = Arrays.asList(getResources().getStringArray(R.array.innovati_events));
+        elevationEvents = Arrays.asList(getResources().getStringArray(R.array.elevation_events));
 
         presentList = computeaidEvents;
 
-        eventListAdapter = new EventListAdapter(this,presentList);
+        eventListAdapter = new EventListAdapter(this,presentList,0);
         eventsList.setAdapter(eventListAdapter);
 
         initToolbar();
@@ -77,7 +78,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = computeaidEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,0);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 2:
@@ -85,7 +86,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = roboticsEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,1);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 3:
@@ -93,7 +94,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = cybercrusadeEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,2);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 4:
@@ -101,7 +102,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = foodforfunEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,3);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 5:
@@ -109,7 +110,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = moneymattersEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,4);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 6:
@@ -117,7 +118,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = infocusEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,5);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 7:
@@ -125,7 +126,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = newronEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,6);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 8:
@@ -133,7 +134,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = innovatiEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,7);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 9:
@@ -141,7 +142,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = createitEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,8);
                 eventsList.setAdapter(eventListAdapter);
                 break;
             case 10:
@@ -149,7 +150,16 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 presentList = justlikethatEvents;
 
                 eventsList.setAdapter(null);
-                eventListAdapter = new EventListAdapter(this,presentList);
+                eventListAdapter = new EventListAdapter(this,presentList,9);
+                eventsList.setAdapter(eventListAdapter);
+                break;
+
+            case 11:
+                presentList = null;
+                presentList = elevationEvents;
+
+                eventsList.setAdapter(null);
+                eventListAdapter = new EventListAdapter(this,presentList,10);
                 eventsList.setAdapter(eventListAdapter);
                 break;
         }
@@ -294,15 +304,12 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
 
     @Override
     public void onMenuItemClick(View clickedView, int position) {
-        Toast.makeText(this, "Clicked on position: " + position, Toast.LENGTH_SHORT).show();
         changetoolbartitle(position);
         reinitList(position);
     }
 
     @Override
     public void onMenuItemLongClick(View clickedView, int position) {
-
-        Toast.makeText(this, "Long clicked on position: " + position, Toast.LENGTH_SHORT).show();
     }
 
     @Override

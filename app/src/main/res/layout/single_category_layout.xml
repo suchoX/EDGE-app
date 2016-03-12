@@ -13,8 +13,7 @@
     <ImageView
         android:id="@+id/category_image"
         android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:src="@drawable/temp"/>
+        android:layout_height="75dp"/>
     <TextView
         android:id="@+id/category_name"
         android:layout_width="wrap_content"

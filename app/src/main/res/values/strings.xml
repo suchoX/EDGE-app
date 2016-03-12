@@ -44,19 +44,18 @@
         <item>Creation-X-Nihilo</item>
         <item>2 minutes 2 sell</item>
         <item>Crypt-O-Label</item>
-        <item>Wizcase</item>
+        <item>Case Study</item>
         <item>Kwiznet</item>
     </string-array>
 
     <string-array name="cybercrusade_events">
-        <item>Need For Speed 05</item>
-        <item>Need For Speed 12</item>
-        <item>Counter Strike Go College League</item>
-        <item>Counter Strike Go Pro League</item>
-        <item>Mortal Kombat 10</item>
-        <item>FIFA 16 Pro League</item>
-        <item>FIFA 11 College League</item>
+        <item>CS College League</item>
+        <item>CS Go Pro League</item>
+        <item>Mortal Kombat</item>
         <item>Dota 2</item>
+        <item>FIFA 15 Pro League</item>
+        <item>FIFA 11 College League</item>
+        <item>Need For Speed MW</item>
     </string-array>
 
     <string-array name="moneymatters_events">
@@ -81,15 +80,21 @@
 
     <string-array name="createit_events">
         <item>Rags to Riches</item>
-        <item>Mechanix</item>
+        <item>Mekanix</item>
     </string-array>
 
     <string-array name="justlikethat_events">
         <item>Khulja Sim Sim</item>
+        <item>Get Selfie-ish With X</item>
+
     </string-array>
 
     <string-array name="innovati_events">
         <item>Project View</item>
+    </string-array>
+    <string-array name="elevation_events">
+        <item>Cad-O-Mania</item>
+        <item>Nirmaan</item>
     </string-array>
 
 
