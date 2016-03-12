@@ -181,62 +181,62 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         List<MenuObject> menuObjects = new ArrayList<>();
 
         MenuObject close = new MenuObject();
-        close.setBgColor(R.color.transparent);
+        close.setBgColor(R.color.blackPrimary);
         close.setDividerColor(R.color.blackPrimary);
         close.setResource(R.drawable.icn_close);
 
         MenuObject computeaid = new MenuObject("Compute Aid");
-        computeaid.setBgColor(R.color.transparent);
+        computeaid.setBgColor(R.color.blackPrimary);
         computeaid.setDividerColor(R.color.blackPrimary);
         computeaid.setResource(R.drawable.icn_computeaid);
 
         MenuObject robotics = new MenuObject("Robotics");
-        robotics.setBgColor(R.color.transparent);
+        robotics.setBgColor(R.color.blackPrimary);
         robotics.setDividerColor(R.color.blackPrimary);
         robotics.setResource(R.drawable.icn_robotics);
 
         MenuObject cybercrusade = new MenuObject("Cyber Crusade");
-        cybercrusade.setBgColor(R.color.transparent);
+        cybercrusade.setBgColor(R.color.blackPrimary);
         cybercrusade.setDividerColor(R.color.blackPrimary);
         cybercrusade.setResource(R.drawable.icn_cybercrusade);
 
         MenuObject foodforfun = new MenuObject("Food for Fun");
-        foodforfun.setBgColor(R.color.transparent);
+        foodforfun.setBgColor(R.color.blackPrimary);
         foodforfun.setDividerColor(R.color.blackPrimary);
         foodforfun.setResource(R.drawable.icn_foodforfun);
 
         MenuObject moneymatters = new MenuObject("Money Matters");
-        moneymatters.setBgColor(R.color.transparent);
+        moneymatters.setBgColor(R.color.blackPrimary);
         moneymatters.setDividerColor(R.color.blackPrimary);
         moneymatters.setResource(R.drawable.icn_moneymatters);
 
         MenuObject infocus = new MenuObject("InFocus");
-        infocus.setBgColor(R.color.transparent);
+        infocus.setBgColor(R.color.blackPrimary);
         infocus.setDividerColor(R.color.blackPrimary);
         infocus.setResource(R.drawable.icn_infocus);
 
         MenuObject newron = new MenuObject("Newron");
-        newron.setBgColor(R.color.transparent);
+        newron.setBgColor(R.color.blackPrimary);
         newron.setDividerColor(R.color.blackPrimary);
         newron.setResource(R.drawable.icn_newron);
 
         MenuObject innovati = new MenuObject("Innovati");
-        innovati.setBgColor(R.color.transparent);
+        innovati.setBgColor(R.color.blackPrimary);
         innovati.setDividerColor(R.color.blackPrimary);
         innovati.setResource(R.drawable.icn_innovati);
 
         MenuObject createit = new MenuObject("Create It");
-        createit.setBgColor(R.color.transparent);
+        createit.setBgColor(R.color.blackPrimary);
         createit.setDividerColor(R.color.blackPrimary);
         createit.setResource(R.drawable.icn_createit);
 
         MenuObject justlikethat = new MenuObject("Just Like That");
-        justlikethat.setBgColor(R.color.transparent);
+        justlikethat.setBgColor(R.color.blackPrimary);
         justlikethat.setDividerColor(R.color.blackPrimary);
         justlikethat.setResource(R.drawable.icn_justlikethat);
 
         MenuObject elevation = new MenuObject("Elevation");
-        elevation.setBgColor(R.color.transparent);
+        elevation.setBgColor(R.color.blackPrimary);
         elevation.setDividerColor(R.color.blackPrimary);
         elevation.setResource(R.drawable.icn_elevation);
 
