@@ -3,6 +3,7 @@ package com.geekonix.edge.adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.geekonix.edge.EventsActivity;
@@ -25,11 +27,96 @@ public class EventListAdapter extends BaseAdapter
     List<String> eventNames;
     Context mContext;
     int category;
+    Drawable eventImage[] = new Drawable[10];
     public EventListAdapter(Context mContext,List<String> eventNames,int category)
     {
         this.mContext = mContext;
         this.eventNames = eventNames;
         this.category = category;
+
+        switch (category)
+        {
+            case 0:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_flawless);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icg_bughunt);
+                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_codemart);
+                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_cryptoquest);
+                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_gameofzones);
+                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_codeout);
+                break;
+
+            case 1:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_xpedition);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_xoccer);
+                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_xport);
+                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_blitzkriegx);
+                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_xcelsior);
+                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_exult);
+                eventImage[6] = ContextCompat.getDrawable(mContext,R.drawable.icn_aerostrix);
+                eventImage[7] = ContextCompat.getDrawable(mContext,R.drawable.icn_xplore);
+                eventImage[8] = ContextCompat.getDrawable(mContext,R.drawable.icn_perplexity);
+                eventImage[9] = ContextCompat.getDrawable(mContext,R.drawable.icn_3xtreet);
+                break;
+
+            case 2:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_cs);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_csgo);
+                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_mortalkombat);
+                eventImage[3] = ContextCompat.getDrawable(mContext, R.drawable.icn_dota);
+                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_fifa15);
+                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_fifa11);
+                eventImage[6] = ContextCompat.getDrawable(mContext,R.drawable.icn_nfsmw);
+                break;
+
+            case 3:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_xquizit);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_foodrelay);
+                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_creationxnihilo);
+                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_2minutestosell);
+                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_foodproductlabel);
+                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_casestudy);
+                eventImage[6] = ContextCompat.getDrawable(mContext,R.drawable.icn_kwiznet);
+                break;
+
+            case 4:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_bplan);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_addomedia);
+                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_bquiz);
+                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_stockit);
+                break;
+
+            case 5:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_bplan);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_addomedia);
+                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_bquiz);
+                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_stockit);
+                break;
+
+            case 6:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_btechquiz);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_debate);
+                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_electronic);
+                break;
+
+            case 7:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_projectview);
+                break;
+
+            case 8:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_selfie);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_mekanix);
+                break;
+
+            case 9:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_khuljasimsim);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_selfie);
+                break;
+
+            case 10:
+                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_cad);
+                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_bridge);
+                break;
+        }
     }
 
     @Override
@@ -143,22 +230,22 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_flawless));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icg_bughunt));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
             case 2:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_codemart));
+                holder.categoryImage.setImageDrawable(eventImage[2]);
                 break;
             case 3:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_cryptoquest));
+                holder.categoryImage.setImageDrawable(eventImage[3]);
                 break;
             case 4:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_gameofzones));
+                holder.categoryImage.setImageDrawable(eventImage[5]);
                 break;
             case 5:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_codeout));
+                holder.categoryImage.setImageDrawable(eventImage[6]);
                 break;
         }
     }
@@ -167,34 +254,34 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_xpedition));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_xoccer));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
             case 2:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_xport));
+                holder.categoryImage.setImageDrawable(eventImage[2]);
                 break;
             case 3:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_blitzkriegx));
+                holder.categoryImage.setImageDrawable(eventImage[3]);
                 break;
             case 4:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_xcelsior));
+                holder.categoryImage.setImageDrawable(eventImage[4]);
                 break;
             case 5:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_exult));
+                holder.categoryImage.setImageDrawable(eventImage[5]);
                 break;
             case 6:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_aerostrix));
+                holder.categoryImage.setImageDrawable(eventImage[6]);
                 break;
             case 7:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_xplore));
+                holder.categoryImage.setImageDrawable(eventImage[7]);
                 break;
             case 8:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_perplexity));
+                holder.categoryImage.setImageDrawable(eventImage[8]);
                 break;
             case 9:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_3xtreet));
+                holder.categoryImage.setImageDrawable(eventImage[9]);
                 break;
 
         }
@@ -204,25 +291,25 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_cs));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_csgo));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
             case 2:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_mortalkombat));
+                holder.categoryImage.setImageDrawable(eventImage[2]);
                 break;
             case 3:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_dota));
+                holder.categoryImage.setImageDrawable(eventImage[3]);
                 break;
             case 4:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_fifa15));
+                holder.categoryImage.setImageDrawable(eventImage[4]);
                 break;
             case 5:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_fifa11));
+                holder.categoryImage.setImageDrawable(eventImage[5]);
                 break;
             case 6:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_nfsmw));
+                holder.categoryImage.setImageDrawable(eventImage[6]);
                 break;
         }
     }
@@ -231,25 +318,25 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_xquizit));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_foodrelay));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
             case 2:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_creationxnihilo));
+                holder.categoryImage.setImageDrawable(eventImage[2]);
                 break;
             case 3:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_2minutestosell));
+                holder.categoryImage.setImageDrawable(eventImage[3]);
                 break;
             case 4:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_foodproductlabel));
+                holder.categoryImage.setImageDrawable(eventImage[4]);
                 break;
             case 5:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_casestudy));
+                holder.categoryImage.setImageDrawable(eventImage[5]);
                 break;
             case 6:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_kwiznet));
+                holder.categoryImage.setImageDrawable(eventImage[6]);
                 break;
         }
     }
@@ -258,16 +345,16 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_bplan));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_addomedia));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
             case 2:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_bquiz));
+                holder.categoryImage.setImageDrawable(eventImage[2]);
                 break;
             case 3:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_stockit));
+                holder.categoryImage.setImageDrawable(eventImage[3]);
                 break;
 
         }
@@ -277,16 +364,16 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_crumbs));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_odyssey));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
             case 2:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_shootmup));
+                holder.categoryImage.setImageDrawable(eventImage[2]);
                 break;
             case 3:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_insta));
+                holder.categoryImage.setImageDrawable(eventImage[3]);
                 break;
 
         }
@@ -296,13 +383,13 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_btechquiz));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_debate));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
             case 2:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_electronic));
+                holder.categoryImage.setImageDrawable(eventImage[2]);
                 break;
         }
     }
@@ -311,7 +398,7 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_projectview));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
         }
     }
@@ -320,10 +407,10 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_cad));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_bridge));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
         }
     }
@@ -332,10 +419,10 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_selfie));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_mekanix));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
         }
     }
@@ -344,10 +431,10 @@ public class EventListAdapter extends BaseAdapter
         switch (position)
         {
             case 0:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_khuljasimsim));
+                holder.categoryImage.setImageDrawable(eventImage[0]);
                 break;
             case 1:
-                holder.categoryImage.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.icn_selfie));
+                holder.categoryImage.setImageDrawable(eventImage[1]);
                 break;
         }
     }

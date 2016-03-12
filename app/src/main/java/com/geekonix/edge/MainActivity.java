@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
         menuParams = new MenuParams();
         menuParams.setActionBarSize((int) getResources().getDimension(R.dimen.tool_bar_height));
         menuParams.setMenuObjects(getMenuObjects());
-        menuParams.setClosableOutside(false);
+        menuParams.setClosableOutside(true);
         menuParams.setAnimationDuration(30);
         mMenuDialogFragment = ContextMenuDialogFragment.newInstance(menuParams);
         mMenuDialogFragment.setItemClickListener(this);
