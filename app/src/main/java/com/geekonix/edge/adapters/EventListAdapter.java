@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -149,7 +150,7 @@ public class EventListAdapter extends BaseAdapter
 
         holder.categoryName = (TextView)convertView.findViewById(R.id.category_name);
         holder.categoryImage = (ImageView)convertView.findViewById(R.id.category_image);
-        holder.linearLayout = (LinearLayout)convertView.findViewById(R.id.row_layout);
+        holder.cardView = (CardView)convertView.findViewById(R.id.card_view);
 
         holder.categoryName.setText(eventNames.get(position));
         setBackground(position%6,holder);
@@ -200,27 +201,27 @@ public class EventListAdapter extends BaseAdapter
         switch(position)
         {
             case 0:
-                holder.linearLayout.setBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor1));
+                holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor1));
                 break;
 
             case 1:
-                holder.linearLayout.setBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor2));
+                holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor2));
                 break;
 
             case 2:
-                holder.linearLayout.setBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor3));
+                holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor3));
                 break;
 
             case 3:
-                holder.linearLayout.setBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor4));
+                holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor4));
                 break;
 
             case 4:
-                holder.linearLayout.setBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor5));
+                holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor5));
                 break;
 
             case 5:
-                holder.linearLayout.setBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor6));
+                holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.listcolor6));
                 break;
         }
     }
@@ -445,7 +446,7 @@ public class EventListAdapter extends BaseAdapter
     {
         TextView categoryName;
         ImageView categoryImage;
-        LinearLayout linearLayout;
+        CardView cardView;
     }
 
     private class OnItemClickListener  implements View.OnClickListener {
