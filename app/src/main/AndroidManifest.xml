@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geekonix.edge">
 
-    <permission android:name="com.geekonix.edge.permission.C2D_MESSAGE"
+    <permission
+        android:name="com.geekonix.edge.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="com.geekonix.edge.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -33,7 +35,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".MainActivity" />
         <activity android:name=".DevTeamActivity" />
-        <activity android:name=".CoreTeamActivity"></activity>
+        <activity android:name=".CoreTeamActivity" />
+        <activity android:name=".WebviewActivity"></activity>
     </application>
 
 </manifest>

@@ -1,8 +1,11 @@
 package com.geekonix.edge;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.provider.Settings;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,12 +57,27 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
         campusambassadorLayout = (LinearLayout)findViewById(R.id.campusambassador_layout);
         teamLayout = (LinearLayout)findViewById(R.id.team_layout);
         sponsorsLayout = (LinearLayout)findViewById(R.id.sponsor_layout);
+
         eventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
                 Intent intent = new Intent(MainActivity.this, EventsActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        campusambassadorLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isNetworkAvailable()) {
+                    Intent intent = new Intent(MainActivity.this, WebviewActivity.class);
+                    intent.putExtra("Heading", "Campus Ambassador");
+                    intent.putExtra("URL", "https://docs.google.com/forms/d/1fYtuK08jRcSTFwK1EIo3SiSsjx9QBjhfjLtj_kXYI_Y/viewform");
+                    startActivity(intent);
+                }
+                else
+                    Toast.makeText(MainActivity.this,"We need Internet for Registration",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -78,7 +97,7 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
         mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setHomeButtonEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         mToolBarTextView.setText("EDGE X");
     }
 
@@ -205,6 +224,13 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
                 break;
         }
 
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     @Override
