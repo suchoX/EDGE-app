@@ -67,6 +67,13 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
             }
         });
 
+        sponsorsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, UpcomingActivity.class));
+            }
+        });
+
         campusambassadorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -226,7 +233,7 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
 
     }
 
-    private boolean isNetworkAvailable() {
+    public boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
