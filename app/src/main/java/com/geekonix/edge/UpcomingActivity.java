@@ -1,7 +1,9 @@
 package com.geekonix.edge;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +29,8 @@ public class UpcomingActivity extends Activity{
     TextView round, time, duration;
     LinearLayout llUpcoming;
     UpcomingFile upcomingObj;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +58,6 @@ public class UpcomingActivity extends Activity{
             try {
                 URL url = new URL("https://docs.google.com/uc?authuser=0&id=0B9ir1SJLpxDEWXJvQ3JYSU9XNWs&export=download");
                 BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
-                System.out.println("pos3");
                 x=br.readLine();
                 if(x.equalsIgnoreCase("y"))
                 {
@@ -64,9 +67,6 @@ public class UpcomingActivity extends Activity{
                         x=x+"\n"+y;
                     }
                 }
-
-
-                System.out.println(x);
 
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
@@ -89,9 +89,10 @@ public class UpcomingActivity extends Activity{
 
             BufferedReader br = new BufferedReader(new StringReader(result));
             String line = "n";
+            sharedPreferences = getSharedPreferences("eventname", Context.MODE_PRIVATE);
+            String oldString = sharedPreferences.getString("upcoming", null);
             try {
                 line = br.readLine();
-                System.out.println("try");
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -101,15 +102,16 @@ public class UpcomingActivity extends Activity{
                 llUpcoming.setVisibility(View.VISIBLE);
 
                 try {
-                    round.setText(br.readLine());
+                    String roundName = br.readLine();
+                    round.setText(roundName);
                     dd = Integer.parseInt(br.readLine());
                     mm = Integer.parseInt(br.readLine());
                     hr = Integer.parseInt(br.readLine());
                     min = Integer.parseInt(br.readLine());
                     durat = Integer.parseInt(br.readLine());
                     System.out.println(dd + mm + hr + min);
-                    time.setText("When: "+dd+"/"+mm+"/16 at "+hr+":"+min+"hrs.");
-                    duration.setText("Duration: "+durat+"mins.");
+                    time.setText("When: " + dd + "/" + mm + "/16 at " + hr + ":" + min + "hrs.");
+                    duration.setText("Duration: " + durat + "mins.");
                     reminder.setOnClickListener(new View.OnClickListener() {
 
                         @Override
@@ -123,11 +125,15 @@ public class UpcomingActivity extends Activity{
                             intent.putExtra("beginTime", cal.getTimeInMillis());
                             intent.putExtra("allDay", false);
                             intent.putExtra("endTime", cal.getTimeInMillis() + durat * 60 * 1000);
-                            intent.putExtra("title", "Reminder for "+round+" round.");
+                            intent.putExtra("title", "Reminder for " + round + " round.");
                             startActivity(intent);
 
                         }
                     });
+                    editor = sharedPreferences.edit();
+                    editor.putString("upcoming", result);
+                    editor.commit();
+
                 } catch (NumberFormatException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -140,9 +146,17 @@ public class UpcomingActivity extends Activity{
             else if(line.equalsIgnoreCase("n"))
                 Toast.makeText(UpcomingActivity.this,"No Upcoming Round.",Toast.LENGTH_LONG).show();
             else
+            {
                 Toast.makeText(UpcomingActivity.this,"Connection Error.",Toast.LENGTH_LONG).show();
+                if(oldString != null)
+                {
+                    onPostExecute(oldString);
+                }
+
+            }
 
         }
 
     }
+
 }
