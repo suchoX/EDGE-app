@@ -2,10 +2,15 @@ package com.geekonix.edge.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +33,8 @@ public class EventListAdapter extends BaseAdapter
     List<String> eventNames;
     Context mContext;
     int category;
-    Drawable eventImage[] = new Drawable[10];
+    int eventImage[] = new int[10];
+    private Bitmap bmp;
     public EventListAdapter(Context mContext,List<String> eventNames,int category)
     {
         this.mContext = mContext;
@@ -38,84 +44,84 @@ public class EventListAdapter extends BaseAdapter
         switch (category)
         {
             case 0:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_flawless);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icg_bughunt);
-                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_codemart);
-                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_cryptoquest);
-                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_gameofzones);
-                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_codeout);
+                eventImage[0] = R.drawable.icn_flawless;
+                eventImage[1] = R.drawable.icg_bughunt;
+                eventImage[2] = R.drawable.icn_codemart;
+                eventImage[3] = R.drawable.icn_cryptoquest;
+                eventImage[4] = R.drawable.icn_gameofzones;
+                eventImage[5] = R.drawable.icn_codeout;
                 break;
 
             case 1:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_xpedition);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_xoccer);
-                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_xport);
-                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_blitzkriegx);
-                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_xcelsior);
-                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_exult);
-                eventImage[6] = ContextCompat.getDrawable(mContext,R.drawable.icn_aerostrix);
-                eventImage[7] = ContextCompat.getDrawable(mContext,R.drawable.icn_xplore);
-                eventImage[8] = ContextCompat.getDrawable(mContext,R.drawable.icn_perplexity);
-                eventImage[9] = ContextCompat.getDrawable(mContext,R.drawable.icn_3xtreet);
+                eventImage[0] = R.drawable.icn_xpedition;
+                eventImage[1] = R.drawable.icn_xoccer;
+                eventImage[2] = R.drawable.icn_xport;
+                eventImage[3] = R.drawable.icn_blitzkriegx;
+                eventImage[4] = R.drawable.icn_xcelsior;
+                eventImage[5] = R.drawable.icn_exult;
+                eventImage[6] = R.drawable.icn_aerostrix;
+                eventImage[7] = R.drawable.icn_xplore;
+                eventImage[8] = R.drawable.icn_perplexity;
+                eventImage[9] = R.drawable.icn_3xtreet;
                 break;
 
             case 2:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_cs);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_csgo);
-                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_mortalkombat);
-                eventImage[3] = ContextCompat.getDrawable(mContext, R.drawable.icn_dota);
-                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_fifa15);
-                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_fifa11);
-                eventImage[6] = ContextCompat.getDrawable(mContext,R.drawable.icn_nfsmw);
+                eventImage[0] = R.drawable.icn_cs;
+                eventImage[1] = R.drawable.icn_csgo;
+                eventImage[2] = R.drawable.icn_mortalkombat;
+                eventImage[3] =  R.drawable.icn_dota;
+                eventImage[4] = R.drawable.icn_fifa15;
+                eventImage[5] = R.drawable.icn_fifa11;
+                eventImage[6] = R.drawable.icn_nfsmw;
                 break;
 
             case 3:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_xquizit);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_foodrelay);
-                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_creationxnihilo);
-                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_2minutestosell);
-                eventImage[4] = ContextCompat.getDrawable(mContext,R.drawable.icn_foodproductlabel);
-                eventImage[5] = ContextCompat.getDrawable(mContext,R.drawable.icn_casestudy);
-                eventImage[6] = ContextCompat.getDrawable(mContext,R.drawable.icn_kwiznet);
+                eventImage[0] = R.drawable.icn_xquizit;
+                eventImage[1] = R.drawable.icn_foodrelay;
+                eventImage[2] = R.drawable.icn_creationxnihilo;
+                eventImage[3] = R.drawable.icn_2minutestosell;
+                eventImage[4] = R.drawable.icn_foodproductlabel;
+                eventImage[5] = R.drawable.icn_casestudy;
+                eventImage[6] = R.drawable.icn_kwiznet;
                 break;
 
             case 4:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_bplan);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_addomedia);
-                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_bquiz);
-                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_stockit);
+                eventImage[0] = R.drawable.icn_bplan;
+                eventImage[1] = R.drawable.icn_addomedia;
+                eventImage[2] = R.drawable.icn_bquiz;
+                eventImage[3] = R.drawable.icn_stockit;
                 break;
 
             case 5:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_bplan);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_addomedia);
-                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_bquiz);
-                eventImage[3] = ContextCompat.getDrawable(mContext,R.drawable.icn_stockit);
+                eventImage[0] = R.drawable.icn_bplan;
+                eventImage[1] = R.drawable.icn_addomedia;
+                eventImage[2] = R.drawable.icn_bquiz;
+                eventImage[3] = R.drawable.icn_stockit;
                 break;
 
             case 6:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_btechquiz);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_debate);
-                eventImage[2] = ContextCompat.getDrawable(mContext,R.drawable.icn_electronic);
+                eventImage[0] = R.drawable.icn_btechquiz;
+                eventImage[1] = R.drawable.icn_debate;
+                eventImage[2] = R.drawable.icn_electronic;
                 break;
 
             case 7:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_projectview);
+                eventImage[0] = R.drawable.icn_projectview;
                 break;
 
             case 8:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_selfie);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_mekanix);
+                eventImage[0] = R.drawable.icn_selfie;
+                eventImage[1] = R.drawable.icn_mekanix;
                 break;
 
             case 9:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_khuljasimsim);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_selfie);
+                eventImage[0] = R.drawable.icn_khuljasimsim;
+                eventImage[1] = R.drawable.icn_selfie;
                 break;
 
             case 10:
-                eventImage[0] = ContextCompat.getDrawable(mContext,R.drawable.icn_cad);
-                eventImage[1] = ContextCompat.getDrawable(mContext,R.drawable.icn_bridge);
+                eventImage[0] = R.drawable.icn_cad;
+                eventImage[1] = R.drawable.icn_bridge;
                 break;
         }
     }
@@ -146,51 +152,23 @@ public class EventListAdapter extends BaseAdapter
         {
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
             convertView = inflater.inflate(R.layout.single_category_layout, parent, false);
+            holder.categoryName = (TextView)convertView.findViewById(R.id.category_name);
+            holder.categoryImage = (ImageView)convertView.findViewById(R.id.category_image);
+            holder.cardView = (CardView)convertView.findViewById(R.id.card_view);
+            convertView.setTag(holder);
         }
-
-        holder.categoryName = (TextView)convertView.findViewById(R.id.category_name);
-        holder.categoryImage = (ImageView)convertView.findViewById(R.id.category_image);
-        holder.cardView = (CardView)convertView.findViewById(R.id.card_view);
+        else
+        {
+            holder = (Holder) convertView.getTag();
+            holder.mImageLoader.cancel();
+        }
 
         holder.categoryName.setText(eventNames.get(position));
-        setBackground(position%6,holder);
+        setBackground(position % 6, holder);
 
-        switch(category)
-        {
-            case 0:
-                computeaidImage(position,holder);
-                break;
-            case 1:
-                roboticsImage(position,holder);
-                break;
-            case 2:
-                cybercrusadeImage(position,holder);
-                break;
-            case 3:
-                foodforfunImage(position,holder);
-                break;
-            case 4:
-                moneymatytersImage(position,holder);
-                break;
-            case 5:
-                infocusImage(position,holder);
-                break;
-            case 6:
-                newronImage(position,holder);
-                break;
-            case 7:
-                innovatiImage(position,holder);
-                break;
-            case 8:
-                createitImage(position,holder);
-                break;
-            case 9:
-                justlikethatImage(position,holder);
-                break;
-            case 10:
-                elevationImage(position,holder);
-                break;
-        }
+        holder.mImageLoader = new AsyncImageSetter(mContext,holder.categoryImage,eventImage[position],bmp);
+        holder.mImageLoader.execute();
+
 
         convertView.setOnClickListener(new OnItemClickListener(eventNames.get(position)));
         return convertView;
@@ -226,220 +204,6 @@ public class EventListAdapter extends BaseAdapter
         }
     }
 
-    private void computeaidImage(int position,Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-            case 2:
-                holder.categoryImage.setImageDrawable(eventImage[2]);
-                break;
-            case 3:
-                holder.categoryImage.setImageDrawable(eventImage[3]);
-                break;
-            case 4:
-                holder.categoryImage.setImageDrawable(eventImage[5]);
-                break;
-            case 5:
-                holder.categoryImage.setImageDrawable(eventImage[6]);
-                break;
-        }
-    }
-    private void roboticsImage(int position,Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-            case 2:
-                holder.categoryImage.setImageDrawable(eventImage[2]);
-                break;
-            case 3:
-                holder.categoryImage.setImageDrawable(eventImage[3]);
-                break;
-            case 4:
-                holder.categoryImage.setImageDrawable(eventImage[4]);
-                break;
-            case 5:
-                holder.categoryImage.setImageDrawable(eventImage[5]);
-                break;
-            case 6:
-                holder.categoryImage.setImageDrawable(eventImage[6]);
-                break;
-            case 7:
-                holder.categoryImage.setImageDrawable(eventImage[7]);
-                break;
-            case 8:
-                holder.categoryImage.setImageDrawable(eventImage[8]);
-                break;
-            case 9:
-                holder.categoryImage.setImageDrawable(eventImage[9]);
-                break;
-
-        }
-    }
-    private void cybercrusadeImage(int position,Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-            case 2:
-                holder.categoryImage.setImageDrawable(eventImage[2]);
-                break;
-            case 3:
-                holder.categoryImage.setImageDrawable(eventImage[3]);
-                break;
-            case 4:
-                holder.categoryImage.setImageDrawable(eventImage[4]);
-                break;
-            case 5:
-                holder.categoryImage.setImageDrawable(eventImage[5]);
-                break;
-            case 6:
-                holder.categoryImage.setImageDrawable(eventImage[6]);
-                break;
-        }
-    }
-    private void foodforfunImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-            case 2:
-                holder.categoryImage.setImageDrawable(eventImage[2]);
-                break;
-            case 3:
-                holder.categoryImage.setImageDrawable(eventImage[3]);
-                break;
-            case 4:
-                holder.categoryImage.setImageDrawable(eventImage[4]);
-                break;
-            case 5:
-                holder.categoryImage.setImageDrawable(eventImage[5]);
-                break;
-            case 6:
-                holder.categoryImage.setImageDrawable(eventImage[6]);
-                break;
-        }
-    }
-    private void moneymatytersImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-            case 2:
-                holder.categoryImage.setImageDrawable(eventImage[2]);
-                break;
-            case 3:
-                holder.categoryImage.setImageDrawable(eventImage[3]);
-                break;
-
-        }
-    }
-    private void infocusImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-            case 2:
-                holder.categoryImage.setImageDrawable(eventImage[2]);
-                break;
-            case 3:
-                holder.categoryImage.setImageDrawable(eventImage[3]);
-                break;
-
-        }
-    }
-    private void newronImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-            case 2:
-                holder.categoryImage.setImageDrawable(eventImage[2]);
-                break;
-        }
-    }
-    private void innovatiImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-        }
-    }
-    private void elevationImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-        }
-    }
-    private void createitImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-        }
-    }
-    private void justlikethatImage(int position, Holder holder)
-    {
-        switch (position)
-        {
-            case 0:
-                holder.categoryImage.setImageDrawable(eventImage[0]);
-                break;
-            case 1:
-                holder.categoryImage.setImageDrawable(eventImage[1]);
-                break;
-        }
-    }
-
 
 
     private class Holder
@@ -447,6 +211,95 @@ public class EventListAdapter extends BaseAdapter
         TextView categoryName;
         ImageView categoryImage;
         CardView cardView;
+        public AsyncImageSetter mImageLoader;
+    }
+
+    public class AsyncImageSetter extends AsyncTask<Void, Void, Bitmap> {
+
+        private ImageView img;
+        private int image_resId;
+        private Bitmap bmp;
+        private Context c;
+        private boolean cancel = false;
+        private int sampleSize;
+
+
+        public AsyncImageSetter(Context c, ImageView img, int image_ResId,
+                                Bitmap bmp) {
+
+            this.img = img;
+            this.image_resId = image_ResId;
+            this.bmp = bmp;
+            this.c = c;
+
+        }
+
+        public void cancel() {
+            cancel = true;
+        }
+
+        @Override
+        protected void onPreExecute()
+        {
+            img.setVisibility(View.GONE);
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Bitmap doInBackground(Void... params) {
+
+            if (!cancel) {
+                try {
+                    return decodeAndScale(bmp);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap result) {
+
+            img.setVisibility(View.VISIBLE);
+            try {
+                img.setImageBitmap(result);
+            } catch (Exception e) {
+                img.setImageResource(R.drawable.icn_close);
+            }
+            super.onPostExecute(result);
+        }
+
+        private Bitmap decodeAndScale(Bitmap bmp) {
+
+            final BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inSampleSize = setSampleSize();
+
+            return BitmapFactory.decodeResource(c.getResources(), image_resId,
+                    options);
+
+        }
+
+        private int setSampleSize() {
+
+            // TODO add multiple screens check
+            if (getScreenWidth((Activity) c) >= 320) {
+                sampleSize = 2;
+            }
+            return sampleSize;
+        }
+    }
+
+    public int getScreenWidth(Activity a) {
+
+        Display display = a.getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float density = a.getResources().getDisplayMetrics().density;
+        float dpWidth = outMetrics.widthPixels / density;
+
+        return (int) dpWidth;
     }
 
     private class OnItemClickListener  implements View.OnClickListener {
