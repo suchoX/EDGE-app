@@ -27,7 +27,6 @@ public class UpcomingActivity extends Activity{
     TextView round, time, duration;
     LinearLayout llUpcoming;
     UpcomingFile upcomingObj;
-    MainActivity ma;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +108,7 @@ public class UpcomingActivity extends Activity{
                     min = Integer.parseInt(br.readLine());
                     durat = Integer.parseInt(br.readLine());
                     System.out.println(dd + mm + hr + min);
-                    time.setText("When: "+dd+"/"+mm+" at "+hr+":"+min+"hrs.");
+                    time.setText("When: "+dd+"/"+mm+"/16 at "+hr+":"+min+"hrs.");
                     duration.setText("Duration: "+durat+"mins.");
                     reminder.setOnClickListener(new View.OnClickListener() {
 
