@@ -1,5 +1,6 @@
 package com.geekonix.edge;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -343,7 +344,8 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
 
     public void eventSelected(String eventName)
     {
-
+        Intent intent = new Intent(EventsActivity.this, EventContentActivity.class);
+        startActivity(intent);
     }
 
 }

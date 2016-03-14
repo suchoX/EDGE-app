@@ -34,5 +34,7 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.0.0'
     compile 'com.google.android.gms:play-services:8.4.0'
     compile 'com.urbanairship.android:urbanairship-sdk:7.0.+'
+    compile 'com.github.manuelpeinado.fadingactionbar:fadingactionbar:3.1.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
 

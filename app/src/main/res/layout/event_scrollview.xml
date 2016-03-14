@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/windowBackground"
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        card_view:cardCornerRadius="4dp">
+        <TextView
+            android:id="@+id/eventcontent_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="INFORMATION"
+            android:textColor="#404040"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/eventcontent_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Start: 9:30 AM"
+                android:textColor="#404040"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <TextView
+                android:id="@+id/eventcontent_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="#404040"
+                android:text="Duration: 3Hrs"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact-"
+                android:textColor="#404040"
+                android:padding="8dp"
+                android:textAppearance="@android:style/TextAppearance.Large"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/contact_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="Temp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="#404040"/>
+
+                <ImageView
+                    android:id="@+id/contact_facebook1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/facebook_contact"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_below="@id/contact_name1"/>
+
+                <ImageView
+                    android:id="@+id/contact_call1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/call_contact"
+                    android:layout_marginBottom="3dp"
+                    android:layout_below="@id/contact_name1"
+                    android:layout_toRightOf="@id/contact_facebook1"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#b9b9b9"
+                android:layout_margin="10dp"></LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/contact_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="Temp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="#404040"/>
+
+                <ImageView
+                    android:id="@+id/contact_facebook2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/facebook_contact"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/contact_name2"/>
+
+                <ImageView
+                    android:id="@+id/contact_call2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/call_contact"
+                    android:layout_marginBottom="15dp"
+                    android:layout_below="@id/contact_name2"
+                    android:layout_toRightOf="@id/contact_facebook2"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
