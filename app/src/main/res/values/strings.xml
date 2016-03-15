@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="google_app_id">356849071366 </string>
+    <string name="share_using">Share Using</string>
 
     <string name="compute_aid">Compute Aid</string>
     <string name="robotics">Robotics</string>
@@ -97,6 +98,8 @@
         <item>Nirmaan</item>
     </string-array>
 
+
+
     <string-array name="flawless_data">
         <item>
         Licensed under the Apache License, Version 2.0 (the "License");
@@ -109,6 +112,7 @@
         See the License for the specific language governing permissions and
         limitations under the License.
         </item>
+        <item>http://imgur.com/tbDI4x8</item>
         <item>Suchandrim Sarkar</item>
         <item>+919775301737</item>
         <item>https://www.facebook.com/suchandrim.sarkar</item>
@@ -116,6 +120,994 @@
         <item>+919775301737</item>
         <item>https://www.facebook.com/suchandrim.sarkar</item>
     </string-array>
+
+    <string-array name="bughunt_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/qlPPBiO</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="codemart_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/Fn9Gq71</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="cryptoquest_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/i9oJ5cV</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="gameofzones_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/1pGd9Fu</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="codeout_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/Tx6F58S</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xpedition_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/fmackBJ</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xoccer_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/YAfSfTR</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xport_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/mc3zs7r</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="blitzkriegx_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/fVzWQ6m</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xcelsior_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/lZ4hG7U</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xult_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/CDIvwoT</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="aerostrix_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/IGl59bH</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xplore_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/JfceVTx</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="perplexity_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/4xR1jAr</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xtreat_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/fmackBJ</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="cs_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/7Ra8VqT</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="cspro_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/tnLVCmh</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="mortalkombat_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/cnDkalY</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="dota_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/RQZXbV9</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="fifa15_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/iRIFfxZ</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="fifa11_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/x7AdnkR</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="nfs_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/x7AdnkR</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="xquizit_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/a83iGPx</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="foodrelay_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/uyiQowV</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="creationxnihilo_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/uyiQowV</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="twomintosell_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/nXjgJif</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="cryptolabel_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="casestudy_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="kwiznet_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="bplan_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/fF5Gu15</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="addomedia_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/fF5Gu15</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="bquiz_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="stockit_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="crumbs_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/oYFdM2P</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="odyssey_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/FMN7rTP</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="shootmup_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/Z7Zu9OP</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="insta_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="thequiz_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/wX8WXZ5</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="youthparliament_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/kcTIwZN</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="electronicallyyours_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="projectview_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="ragstoriches_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="mekanix_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="khuljasimsim_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/L8NjD0K</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="selfie_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/Z8mIKEg</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="cad_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/Z8mIKEg</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
+    <string-array name="nirmaan_data">
+        <item>
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        </item>
+        <item>http://imgur.com/UOXizDe</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+        <item>Suchandrim Sarkar</item>
+        <item>+919775301737</item>
+        <item>https://www.facebook.com/suchandrim.sarkar</item>
+    </string-array>
+
 
 
 </resources>

@@ -4,11 +4,13 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.provider.Settings;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -18,10 +20,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
+import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 import com.yalantis.contextmenu.lib.MenuObject;
 import com.yalantis.contextmenu.lib.MenuParams;
@@ -32,7 +39,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity  implements OnMenuItemClickListener, OnMenuItemLongClickListener
+public class MainActivity extends AppCompatActivity
 {
     private ContextMenuDialogFragment mMenuDialogFragment;
     private FragmentManager fragmentManager;
@@ -40,8 +47,9 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
     LinearLayout eventsLayout,megaeventsLayout,campusambassadorLayout,teamLayout,sponsorsLayout;
     Toolbar mToolbar;
     TextView mToolBarTextView;
+    ImageView fabMain;
 
-    MenuParams menuParams;
+    FloatingActionButton buttonMain;
 
     boolean menuOpen=false;
 
@@ -57,6 +65,8 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
         campusambassadorLayout = (LinearLayout)findViewById(R.id.campusambassador_layout);
         teamLayout = (LinearLayout)findViewById(R.id.team_layout);
         sponsorsLayout = (LinearLayout)findViewById(R.id.sponsor_layout);
+
+        initFab();
 
         eventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,20 +87,18 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
         campusambassadorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isNetworkAvailable()) {
+                if (isNetworkAvailable()) {
                     Intent intent = new Intent(MainActivity.this, WebviewActivity.class);
                     intent.putExtra("Heading", "Campus Ambassador");
                     intent.putExtra("URL", "https://docs.google.com/forms/d/1fYtuK08jRcSTFwK1EIo3SiSsjx9QBjhfjLtj_kXYI_Y/viewform");
                     startActivity(intent);
-                }
-                else
-                    Toast.makeText(MainActivity.this,"We need Internet for Registration",Toast.LENGTH_SHORT).show();
+                } else
+                    Toast.makeText(MainActivity.this, "We need Internet for Registration", Toast.LENGTH_SHORT).show();
             }
         });
 
 
         initToolbar();
-        initMenuFragment();
     }
 
     @Override
@@ -99,100 +107,24 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
 
     }
 
-    private void initToolbar() {
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setHomeButtonEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        mToolBarTextView.setText("EDGE X");
-    }
-
-    private void initMenuFragment() {
-        menuParams = new MenuParams();
-        menuParams.setActionBarSize((int) getResources().getDimension(R.dimen.tool_bar_height));
-        menuParams.setMenuObjects(getMenuObjects());
-        menuParams.setClosableOutside(true);
-        menuParams.setAnimationDuration(30);
-        mMenuDialogFragment = ContextMenuDialogFragment.newInstance(menuParams);
-        mMenuDialogFragment.setItemClickListener(this);
-        mMenuDialogFragment.setItemLongClickListener(this);
-    }
-
-    private List<MenuObject> getMenuObjects()
+    private void initFab()
     {
-        List<MenuObject> menuObjects = new ArrayList<>();
+        fabMain = new ImageView(this);
+        fabMain.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_main));
 
-        MenuObject close = new MenuObject();
-        close.setBgColor(R.color.blackPrimary);
-        close.setDividerColor(R.color.blackPrimary);
-        close.setResource(R.drawable.icn_close);
+        buttonMain = new FloatingActionButton.Builder(this)
+                .setContentView(fabMain)
+                .setPosition(FloatingActionButton.POSITION_BOTTOM_RIGHT)
+                .build();
 
-        MenuObject facebook = new MenuObject("Facebook");
-        facebook.setBgColor(R.color.blackPrimary);
-        facebook.setDividerColor(R.color.blackPrimary);
-        facebook.setResource(R.drawable.icn_facebook);
-
-        MenuObject youtube = new MenuObject("Youtube");
-        youtube.setBgColor(R.color.blackPrimary);
-        youtube.setDividerColor(R.color.blackPrimary);
-        youtube.setResource(R.drawable.icn_youtube);
-
-        MenuObject twitter = new MenuObject("Twitter");
-        twitter.setBgColor(R.color.blackPrimary);
-        twitter.setDividerColor(R.color.blackPrimary);
-        twitter.setResource(R.drawable.icn_twitter);
-
-        MenuObject instagram = new MenuObject("Instagram");
-        instagram.setBgColor(R.color.blackPrimary);
-        instagram.setDividerColor(R.color.blackPrimary);
-        instagram.setResource(R.drawable.icn_instagram);
-
-        menuObjects.add(close);
-        menuObjects.add(facebook);
-        menuObjects.add(youtube);
-        menuObjects.add(twitter);
-        menuObjects.add(instagram);
-
-        return menuObjects;
-
-    }
-    @Override
-    public boolean onCreateOptionsMenu(final Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_events, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch (item.getItemId()) {
-            case R.id.context_menu:
-                if (fragmentManager.findFragmentByTag(ContextMenuDialogFragment.TAG) == null) {
-                    menuOpen = true;
-                    mMenuDialogFragment.show(fragmentManager, ContextMenuDialogFragment.TAG);
-                }
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (mMenuDialogFragment != null && mMenuDialogFragment.isAdded()) {
-            mMenuDialogFragment.dismiss();
-        } else{
-            finish();
-        }
-    }
-
-    @Override
-    public void onMenuItemClick(View clickedView, int position)
-    {
-        switch (position)
-        {
-            case 1:
+        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
+        // repeat many times:
+        ImageView fabFacebook = new ImageView(this);
+        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_facebook));
+        SubActionButton buttonFacebook = itemBuilder.setContentView(fabFacebook).build();
+        buttonFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 String facebookUrl = "https://www.facebook.com/Gx.Edg";
                 try {
                     int versionCode = getPackageManager().getPackageInfo("com.facebook.katana", 0).versionCode;
@@ -207,17 +139,37 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
                     // Facebook is not installed. Open the browser
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl)));
                 }
-                break;
-            case 2:
+            }
+        });
+
+        ImageView fabYoutube = new ImageView(this);
+        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_youtube));
+        SubActionButton buttonYoutube = itemBuilder.setContentView(fabYoutube).build();
+        buttonYoutube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("https://www.youtube.com/channel/UCSwFemGqe1XRmVlg1jRNJYw"));
                 startActivity(intent);
-                break;
-            case 3:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/geekonixedge")));
+            }
+        });
 
-                break;
-            case 4:
+        ImageView fabTwitter = new ImageView(this);
+        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_twitter));
+        SubActionButton buttonTwitter = itemBuilder.setContentView(fabTwitter).build();
+        buttonTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/geekonixedge")));
+            }
+        });
+
+        ImageView fabInstagram = new ImageView(this);
+        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_instagram));
+        SubActionButton buttonInstagram = itemBuilder.setContentView(fabInstagram).build();
+        buttonInstagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Uri uri = Uri.parse("http://instagram.com/_u/geekonix");
                 Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
 
@@ -228,19 +180,62 @@ public class MainActivity extends AppCompatActivity  implements OnMenuItemClickL
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/geekonix")));
                 }
-                break;
-        }
+            }
+        });
 
+        ImageView fabWeb = new ImageView(this);
+        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_web));
+        SubActionButton buttonWeb = itemBuilder.setContentView(fabWeb).build();
+        buttonWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://edg.co.in")));
+            }
+        });
+
+        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
+                .addSubActionView(buttonFacebook)
+                .addSubActionView(buttonYoutube)
+                .addSubActionView(buttonTwitter)
+                .addSubActionView(buttonInstagram)
+                .addSubActionView(buttonWeb)
+                .attachTo(buttonMain)
+                .build();
     }
 
+    private void initToolbar() {
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setHomeButtonEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        mToolBarTextView.setText("EDGE X");
+    }
+    @Override
+    public boolean onCreateOptionsMenu(final Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mMenuDialogFragment != null && mMenuDialogFragment.isAdded()) {
+            mMenuDialogFragment.dismiss();
+        } else{
+            finish();
+        }
+    }
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-
-    @Override
-    public void onMenuItemLongClick(View clickedView, int position) {
-
     }
 }

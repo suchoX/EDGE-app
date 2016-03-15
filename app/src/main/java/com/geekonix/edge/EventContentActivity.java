@@ -9,12 +9,16 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 import com.squareup.picasso.Picasso;
+import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 
 import java.util.Arrays;
 import java.util.List;
@@ -127,5 +131,21 @@ public class EventContentActivity extends Activity {
                 .contentView(contentView);
         setContentView(helper.createView(this));
         helper.initActionBar(this);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.share_menu:
+                String temp_shr="Check Out the Event *Event Name* at EDGE, Kolkata's Largest Techno-Management Fest. Download our Official App from \n*Link* \nor go to our website\n edg.co.in";
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "*Event Name* at EDGE");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, temp_shr);
+                startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,6 +10,7 @@
     <include layout="@layout/toolbar" />
 
     <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -17,125 +19,175 @@
             tools:context="com.geekonix.edge.MainActivity"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/event_layout"
-                android:orientation="vertical"
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/listcolor1"
-                android:paddingTop="50dp"
-                android:paddingBottom="50dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/event_image"
-                    android:src="@drawable/temp"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"/>
-                <TextView
-                    android:id="@+id/event_name"
-                    android:layout_width="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@color/listcolor1">
+                <LinearLayout
+                    android:id="@+id/event_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Events"
-                    android:textColor="@color/whitePrimary"
-                    android:textSize="25sp"/>
-            </LinearLayout>
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:gravity="center">
 
-            <LinearLayout
-                android:id="@+id/megaevent_layout"
-                android:orientation="vertical"
+                    <ImageView
+                        android:id="@+id/event_image"
+                        android:src="@drawable/temp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"/>
+                    <TextView
+                        android:id="@+id/event_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Events"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/listcolor2"
-                android:paddingTop="50dp"
-                android:paddingBottom="50dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/megaevent_image"
-                    android:src="@drawable/temp"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"/>
-                <TextView
-                    android:id="@+id/megaevent_name"
-                    android:layout_width="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@color/listcolor2">
+                <LinearLayout
+                    android:id="@+id/megaevent_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mega Events"
-                    android:textColor="@color/whitePrimary"
-                    android:textSize="25sp"/>
-            </LinearLayout>
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:gravity="center">
 
-            <LinearLayout
-                android:id="@+id/campusambassador_layout"
-                android:orientation="vertical"
+                    <ImageView
+                        android:id="@+id/megaevent_image"
+                        android:src="@drawable/temp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"/>
+                    <TextView
+                        android:id="@+id/megaevent_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mega Events"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/listcolor3"
-                android:paddingTop="50dp"
-                android:paddingBottom="50dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/campusambassador_image"
-                    android:src="@drawable/temp"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"/>
-                <TextView
-                    android:id="@+id/campusambassador_name"
-                    android:layout_width="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@color/listcolor3">
+                <LinearLayout
+                    android:id="@+id/campusambassador_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Campus Ambassador"
-                    android:textColor="@color/whitePrimary"
-                    android:textSize="25sp"/>
-            </LinearLayout>
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:gravity="center">
 
-            <LinearLayout
-                android:id="@+id/team_layout"
-                android:orientation="vertical"
+                    <ImageView
+                        android:id="@+id/campusambassador_image"
+                        android:src="@drawable/temp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"/>
+                    <TextView
+                        android:id="@+id/campusambassador_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Campus Ambassador"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/listcolor4"
-                android:paddingTop="50dp"
-                android:paddingBottom="50dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/team_image"
-                    android:src="@drawable/temp"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"/>
-                <TextView
-                    android:id="@+id/team_name"
-                    android:layout_width="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@color/listcolor4">
+                <LinearLayout
+                    android:id="@+id/team_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="The Team"
-                    android:textColor="@color/whitePrimary"
-                    android:textSize="25sp"/>
-            </LinearLayout>
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:gravity="center">
 
-            <LinearLayout
-                android:id="@+id/sponsor_layout"
-                android:orientation="vertical"
+                    <ImageView
+                        android:id="@+id/team_image"
+                        android:src="@drawable/temp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"/>
+                    <TextView
+                        android:id="@+id/team_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Team"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/listcolor5"
-                android:paddingTop="50dp"
-                android:paddingBottom="50dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/sponsor_image"
-                    android:src="@drawable/temp"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"/>
-                <TextView
-                    android:id="@+id/sponsor_name"
-                    android:layout_width="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@color/listcolor5">
+                <LinearLayout
+                    android:id="@+id/sponsor_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sponsors"
-                    android:textColor="@color/whitePrimary"
-                    android:textSize="25sp"/>
-            </LinearLayout>
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/sponsor_image"
+                        android:src="@drawable/temp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"/>
+                    <TextView
+                        android:id="@+id/sponsor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sponsors"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
