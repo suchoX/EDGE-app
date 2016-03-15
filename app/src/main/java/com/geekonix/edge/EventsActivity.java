@@ -40,6 +40,8 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
     List<String> presentList;
     boolean menuOpen=false;
 
+    int category = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +79,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 1:
                 presentList = null;
                 presentList = computeaidEvents;
+                category = 0;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,0);
@@ -85,6 +88,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 2:
                 presentList = null;
                 presentList = roboticsEvents;
+                category = 1;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,1);
@@ -93,6 +97,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 3:
                 presentList = null;
                 presentList = cybercrusadeEvents;
+                category = 2;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,2);
@@ -101,6 +106,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 4:
                 presentList = null;
                 presentList = foodforfunEvents;
+                category = 3;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,3);
@@ -109,6 +115,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 5:
                 presentList = null;
                 presentList = moneymattersEvents;
+                category = 4;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,4);
@@ -117,6 +124,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 6:
                 presentList = null;
                 presentList = infocusEvents;
+                category = 5;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,5);
@@ -125,6 +133,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 7:
                 presentList = null;
                 presentList = newronEvents;
+                category = 6;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,6);
@@ -133,6 +142,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 8:
                 presentList = null;
                 presentList = innovatiEvents;
+                category = 7;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,7);
@@ -141,6 +151,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 9:
                 presentList = null;
                 presentList = createitEvents;
+                category = 8;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,8);
@@ -149,6 +160,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 10:
                 presentList = null;
                 presentList = justlikethatEvents;
+                category = 9;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,9);
@@ -158,6 +170,7 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
             case 11:
                 presentList = null;
                 presentList = elevationEvents;
+                category = 10;
 
                 eventsList.setAdapter(null);
                 eventListAdapter = new EventListAdapter(this,presentList,10);
@@ -342,10 +355,124 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         }
     }
 
-    public void eventSelected(String eventName)
+    public void eventSelected(int event)
     {
+        int resource = getEvent(event);
         Intent intent = new Intent(EventsActivity.this, EventContentActivity.class);
+        intent.putExtra("Event Data",resource);
         startActivity(intent);
+    }
+
+    private int getEvent(int event)
+    {
+        Toast.makeText(this,""+category+"  " + event,Toast.LENGTH_SHORT).show();
+        switch (category)
+        {
+            case 0:
+                switch (event)
+                {
+                    case 0: return R.array.flawless_data;
+                    case 1: return R.array.bughunt_data;
+                    case 2: return R.array.codemart_data;
+                    case 3: return R.array.cryptoquest_data;
+                    case 4: return R.array.gameofzones_data;
+                    case 5: return R.array.codeout_data;
+                }
+                break;
+            case 1:
+                switch (event)
+                {
+                    case 0: return R.array.xpedition_data;
+                    case 1: return R.array.xoccer_data;
+                    case 2: return R.array.xport_data;
+                    case 3: return R.array.blitzkriegx_data;
+                    case 4: return R.array.xcelsior_data;
+                    case 5: return R.array.xult_data;
+                    case 6: return R.array.aerostrix_data;
+                    case 7: return R.array.xplore_data;
+                    case 8: return R.array.perplexity_data;
+                    case 9: return R.array.xtreat_data;
+                }
+                break;
+            case 2:
+                switch (event)
+                {
+                    case 0: return R.array.cs_data;
+                    case 1: return R.array.cspro_data;
+                    case 2: return R.array.mortalkombat_data;
+                    case 3: return R.array.dota_data;
+                    case 4: return R.array.fifa15_data;
+                    case 5: return R.array.fifa11_data;
+                    case 6: return R.array.nfs_data;
+                }
+                break;
+            case 3:
+                switch (event)
+                {
+                    case 0: return R.array.xquizit_data;
+                    case 1: return R.array.foodrelay_data;
+                    case 2: return R.array.creationxnihilo_data;
+                    case 3: return R.array.twomintosell_data;
+                    case 4: return R.array.cryptolabel_data;
+                    case 5: return R.array.casestudy_data;
+                    case 6: return R.array.kwiznet_data;
+                }
+                break;
+            case 4:
+                switch (event)
+                {
+                    case 0: return R.array.bplan_data;
+                    case 1: return R.array.addomedia_data;
+                    case 2: return R.array.bquiz_data;
+                    case 3: return R.array.stockit_data;
+                }
+                break;
+            case 5:
+                switch (event)
+                {
+                    case 0: return R.array.crumbs_data;
+                    case 1: return R.array.odyssey_data;
+                    case 2: return R.array.shootmup_data;
+                    case 3: return R.array.insta_data;
+                }
+                break;
+            case 6:
+                switch (event)
+                {
+                    case 0: return R.array.thequiz_data;
+                    case 1: return R.array.youthparliament_data;
+                    case 2: return R.array.electronicallyyours_data;
+                }
+                break;
+            case 7:
+                switch (event)
+                {
+                    case 0: return R.array.projectview_data;
+                }
+                break;
+            case 8:
+                switch (event)
+                {
+                    case 0: return R.array.ragstoriches_data;
+                    case 1: return R.array.mekanix_data;
+                }
+                break;
+            case 9:
+                switch (event)
+                {
+                    case 0: return R.array.khuljasimsim_data;
+                    case 1: return R.array.selfie_data;
+                }
+                break;
+            case 10:
+                switch (event)
+                {
+                    case 0: return R.array.cad_data;
+                    case 1: return R.array.nirmaan_data;
+                }
+                break;
+        }
+        return 0;
     }
 
 }

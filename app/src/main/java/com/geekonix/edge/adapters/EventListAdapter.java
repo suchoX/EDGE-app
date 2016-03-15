@@ -170,7 +170,7 @@ public class EventListAdapter extends BaseAdapter
         holder.mImageLoader.execute();
 
 
-        convertView.setOnClickListener(new OnItemClickListener(eventNames.get(position)));
+        convertView.setOnClickListener(new OnItemClickListener(position));
         return convertView;
     }
 
@@ -303,11 +303,11 @@ public class EventListAdapter extends BaseAdapter
     }
 
     private class OnItemClickListener  implements View.OnClickListener {
-        private String eventName;
+        private int event;
 
-        OnItemClickListener(String eventName)
+        OnItemClickListener(int event)
         {
-            this.eventName = eventName;
+            this.event = event;
         }
 
         @Override
@@ -315,7 +315,7 @@ public class EventListAdapter extends BaseAdapter
         {
             /****  Call  onItemClick Method inside CustomListViewAndroidExample Class ( See Below )****/
 
-            ((EventsActivity)mContext).eventSelected(eventName);
+            ((EventsActivity)mContext).eventSelected(event);
         }
     }
 }
