@@ -66,8 +66,7 @@ public class MainActivity extends AppCompatActivity
 
         eventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, EventsActivity.class);
                 startActivity(intent);
             }
@@ -77,6 +76,13 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, UpcomingActivity.class));
+            }
+        });
+
+        teamLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TeamActivity.class));
             }
         });
 

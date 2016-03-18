@@ -21,5 +21,6 @@ public class CustomApplication extends Application
                 airship.getPushManager().setUserNotificationsEnabled(true);
             }
         });
+
     }
 }

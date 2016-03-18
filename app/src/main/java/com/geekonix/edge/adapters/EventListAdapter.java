@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.geekonix.edge.EventsActivity;
 import com.geekonix.edge.R;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

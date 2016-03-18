@@ -34,14 +34,12 @@
             android:name=".EventsActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".DevTeamActivity" />
-        <activity android:name=".CoreTeamActivity" />
         <activity android:name=".WebviewActivity" />
         <activity android:name=".UpcomingActivity" />
         <activity
             android:name=".EventContentActivity"
-            android:theme="@style/AppTheme.TranslucentActionBar"
-            ></activity>
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity android:name=".TeamActivity"></activity>
     </application>
 
 </manifest>
