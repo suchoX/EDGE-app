@@ -22,6 +22,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,10 +31,6 @@ import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
-import com.yalantis.contextmenu.lib.MenuObject;
-import com.yalantis.contextmenu.lib.MenuParams;
-import com.yalantis.contextmenu.lib.interfaces.OnMenuItemClickListener;
-import com.yalantis.contextmenu.lib.interfaces.OnMenuItemLongClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,10 +38,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
 {
-    private ContextMenuDialogFragment mMenuDialogFragment;
     private FragmentManager fragmentManager;
 
-    LinearLayout eventsLayout,megaeventsLayout,campusambassadorLayout,teamLayout,sponsorsLayout;
+    RelativeLayout eventsLayout,megaeventsLayout,campusambassadorLayout,teamLayout,sponsorsLayout;
     Toolbar mToolbar;
     TextView mToolBarTextView;
     ImageView fabMain;
@@ -60,11 +56,11 @@ public class MainActivity extends AppCompatActivity
 
         fragmentManager = getSupportFragmentManager();
 
-        eventsLayout = (LinearLayout)findViewById(R.id.event_layout);
-        megaeventsLayout = (LinearLayout)findViewById(R.id.megaevent_layout);
-        campusambassadorLayout = (LinearLayout)findViewById(R.id.campusambassador_layout);
-        teamLayout = (LinearLayout)findViewById(R.id.team_layout);
-        sponsorsLayout = (LinearLayout)findViewById(R.id.sponsor_layout);
+        eventsLayout = (RelativeLayout)findViewById(R.id.event_layout);
+        megaeventsLayout = (RelativeLayout)findViewById(R.id.megaevent_layout);
+        campusambassadorLayout = (RelativeLayout)findViewById(R.id.campusambassador_layout);
+        teamLayout = (RelativeLayout)findViewById(R.id.team_layout);
+        sponsorsLayout = (RelativeLayout)findViewById(R.id.sponsor_layout);
 
         initFab();
 
@@ -227,11 +223,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        if (mMenuDialogFragment != null && mMenuDialogFragment.isAdded()) {
-            mMenuDialogFragment.dismiss();
-        } else{
-            finish();
-        }
+        finish();
     }
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -27,30 +27,38 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardBackgroundColor="@color/listcolor1">
-                <LinearLayout
+                card_view:cardCornerRadius="0dp"
+                card_view:cardBackgroundColor="@color/blackPrimary">
+                <RelativeLayout
                     android:id="@+id/event_layout"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="50dp"
-                    android:paddingBottom="50dp"
-                    android:gravity="center">
+                    android:layout_height="220dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.3"
+                        android:src="@drawable/temp_header"/>
 
                     <ImageView
                         android:id="@+id/event_image"
                         android:src="@drawable/temp"
                         android:layout_width="75dp"
-                        android:layout_height="75dp"/>
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
                     <TextView
                         android:id="@+id/event_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Events"
                         android:textColor="@color/whitePrimary"
-                        android:textSize="25sp"/>
-                </LinearLayout>
+                        android:textSize="25sp"
+                        android:layout_below="@+id/event_image"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -61,30 +69,38 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardBackgroundColor="@color/listcolor2">
-                <LinearLayout
+                card_view:cardCornerRadius="0dp"
+                card_view:cardBackgroundColor="@color/blackPrimary">">
+                <RelativeLayout
                     android:id="@+id/megaevent_layout"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="50dp"
-                    android:paddingBottom="50dp"
-                    android:gravity="center">
+                    android:layout_height="220dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.3"
+                        android:src="@drawable/temp_header"/>
 
                     <ImageView
                         android:id="@+id/megaevent_image"
                         android:src="@drawable/temp"
                         android:layout_width="75dp"
-                        android:layout_height="75dp"/>
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
                     <TextView
                         android:id="@+id/megaevent_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mega Events"
                         android:textColor="@color/whitePrimary"
-                        android:textSize="25sp"/>
-                </LinearLayout>
+                        android:textSize="25sp"
+                        android:layout_below="@+id/megaevent_image"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -95,30 +111,37 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardBackgroundColor="@color/listcolor3">
-                <LinearLayout
+                card_view:cardCornerRadius="0dp"
+                card_view:cardBackgroundColor="@color/blackPrimary">>
+                <RelativeLayout
                     android:id="@+id/campusambassador_layout"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="50dp"
-                    android:paddingBottom="50dp"
-                    android:gravity="center">
+                    android:layout_height="220dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.3"
+                        android:src="@drawable/temp_header"/>
 
                     <ImageView
                         android:id="@+id/campusambassador_image"
                         android:src="@drawable/temp"
                         android:layout_width="75dp"
-                        android:layout_height="75dp"/>
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
                     <TextView
                         android:id="@+id/campusambassador_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Campus Ambassador"
                         android:textColor="@color/whitePrimary"
-                        android:textSize="25sp"/>
-                </LinearLayout>
+                        android:textSize="25sp"
+                        android:layout_below="@id/campusambassador_image"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -129,30 +152,38 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardBackgroundColor="@color/listcolor4">
-                <LinearLayout
+                card_view:cardCornerRadius="0dp"
+                card_view:cardBackgroundColor="@color/blackPrimary">">
+                <RelativeLayout
                     android:id="@+id/team_layout"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="50dp"
-                    android:paddingBottom="50dp"
-                    android:gravity="center">
+                    android:layout_height="220dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.3"
+                        android:src="@drawable/temp_header"/>
 
                     <ImageView
                         android:id="@+id/team_image"
                         android:src="@drawable/temp"
                         android:layout_width="75dp"
-                        android:layout_height="75dp"/>
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
                     <TextView
                         android:id="@+id/team_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="The Team"
                         android:textColor="@color/whitePrimary"
-                        android:textSize="25sp"/>
-                </LinearLayout>
+                        android:textSize="25sp"
+                        android:layout_below="@+id/team_image"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -163,30 +194,38 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardBackgroundColor="@color/listcolor5">
-                <LinearLayout
+                card_view:cardCornerRadius="0dp"
+                card_view:cardBackgroundColor="@color/blackPrimary">>
+                <RelativeLayout
                     android:id="@+id/sponsor_layout"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="50dp"
-                    android:paddingBottom="50dp"
-                    android:gravity="center">
+                    android:layout_height="220dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.3"
+                        android:src="@drawable/temp_header"/>
 
                     <ImageView
                         android:id="@+id/sponsor_image"
                         android:src="@drawable/temp"
                         android:layout_width="75dp"
-                        android:layout_height="75dp"/>
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
                     <TextView
                         android:id="@+id/sponsor_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sponsors"
                         android:textColor="@color/whitePrimary"
-                        android:textSize="25sp"/>
-                </LinearLayout>
+                        android:textSize="25sp"
+                        android:layout_below="@+id/sponsor_image"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
         </LinearLayout>

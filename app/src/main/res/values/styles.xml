@@ -16,6 +16,7 @@
 
     <style name="Widget.ActionBar.Transparent">
         <item name="android:background">@android:color/transparent</item>
+        <item name="android:logo">@android:color/transparent</item>
     </style>
 
     <style name="Widget" />

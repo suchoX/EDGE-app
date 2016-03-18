@@ -365,7 +365,6 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
 
     private int getEvent(int event)
     {
-        Toast.makeText(this,""+category+"  " + event,Toast.LENGTH_SHORT).show();
         switch (category)
         {
             case 0:

@@ -13,26 +13,35 @@
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="3dp"
-        card_view:cardCornerRadius="4dp">
-        <LinearLayout
-            android:orientation="vertical"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardBackgroundColor="@color/blackPrimary">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="50dp"
-            android:paddingBottom="50dp"
-            android:gravity="center">
+            android:layout_height="220dp">
+            <ImageView
+                android:id="@+id/category_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:alpha="0.3"/>
 
             <ImageView
                 android:id="@+id/category_image"
                 android:layout_width="75dp"
-                android:layout_height="75dp"/>
+                android:layout_height="75dp"
+                android:src="@drawable/icn_flawless"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
             <TextView
                 android:id="@+id/category_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Flawless"
                 android:textColor="@color/whitePrimary"
-                android:textSize="25sp"/>
-        </LinearLayout>
+                android:textSize="25sp"
+                android:layout_below="@+id/category_image"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

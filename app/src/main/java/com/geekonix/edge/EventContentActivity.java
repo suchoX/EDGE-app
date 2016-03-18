@@ -57,7 +57,6 @@ public class EventContentActivity extends Activity {
         eventInfo.setText(eventData.get(0));
         imageLink = eventData.get(1);
         imageLink = imageLink.concat(".png");
-        Toast.makeText(this,imageLink,Toast.LENGTH_SHORT).show();
         contactName1.setText(eventData.get(2));
         contactNumber1 = eventData.get(3);
         contactNumber1 = "tel:" + contactNumber1;
