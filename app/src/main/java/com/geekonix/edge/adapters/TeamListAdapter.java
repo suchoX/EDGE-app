@@ -40,7 +40,10 @@ public class TeamListAdapter extends RecyclerView.Adapter<TeamViewHolder>
     public void onBindViewHolder(TeamViewHolder holder, int position)
     {
         holder.teamName.setText(itemList.get(position).getName());
-        //holder.teamPhoto.setImageResource(itemList.get(position).getImage());
+        holder.teamPosition.setText(itemList.get(position).getPosition());
+        holder.number = itemList.get(position).getNumber();
+        holder.fblink = itemList.get(position).getFblink();
+        holder.link = itemList.get(position).getImage();
         Picasso.with(context).load(itemList.get(position).getImage()).into(holder.teamPhoto);
     }
 
@@ -58,6 +61,4 @@ public class TeamListAdapter extends RecyclerView.Adapter<TeamViewHolder>
     public int getItemCount() {
         return this.itemList.size();
     }
-
-
 }

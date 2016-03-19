@@ -4,6 +4,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="google_app_id">356849071366 </string>
     <string name="share_using">Share Using</string>
+    <string name="the_team">The Team</string>
 
     <string name="compute_aid">Compute Aid</string>
     <string name="robotics">Robotics</string>

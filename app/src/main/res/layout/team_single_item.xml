@@ -16,24 +16,37 @@
         <ImageView
             android:id="@+id/team_photo"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:contentDescription="@string/action_settings"
             android:scaleType="centerCrop"
-            android:src="@drawable/pic_utsav"
             />
 
-        <TextView
-            android:id="@+id/team_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:textColor="#ffffff"
-            android:layout_below="@+id/team_photo"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:gravity="center_horizontal"
-            android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary"/>
+            <TextView
+                android:id="@+id/team_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/team_photo"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/team_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Position"
+                android:textColor="#ffffff"
+                android:paddingBottom="4dp"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/team_name"
+                android:background="@color/colorPrimary"/>
 
     </RelativeLayout>
 
