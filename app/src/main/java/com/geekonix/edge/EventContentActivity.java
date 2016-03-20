@@ -20,6 +20,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,7 +51,8 @@ public class EventContentActivity extends Activity {
 
     View headerView,contentView;
     ImageView headerImageView, call1View, call2View;
-    TextView eventInfoView, eventTimeView, eventDurationView, contactName1View, contactName2View,eventpdfView;
+    TextView eventInfoView, eventTimeView, eventDurationView, eventDateView, contactName1View, contactName2View,eventpdfView;
+    LinearLayout divider;
     String contactNumber1,contactNumber1Temp="";
     String contactNumber2,contactNumber2Temp="";
     String imageLink;
@@ -66,8 +68,8 @@ public class EventContentActivity extends Activity {
     SharedPreferences dataPreference;
     SharedPreferences.Editor editor;
 
-    String startTime = "NULL", length = "NULL";
-
+    String startTime = "NULL", length = "NULL", date = "NULL";
+    boolean twoContacts = true;
     ProgressDialog progressDialog;
 
     @Override
@@ -88,11 +90,17 @@ public class EventContentActivity extends Activity {
         eventInfoView = (TextView)contentView.findViewById(R.id.eventcontent_info);
         eventTimeView = (TextView)contentView.findViewById(R.id.eventcontent_time);
         eventDurationView = (TextView)contentView.findViewById(R.id.eventcontent_duration);
+        eventDateView = (TextView)contentView.findViewById(R.id.eventcontent_date);
         contactName1View = (TextView)contentView.findViewById(R.id.contact_name1);
         contactName2View = (TextView)contentView.findViewById(R.id.contact_name2);
         eventpdfView = (TextView)contentView.findViewById(R.id.eventcontent_pdf);
+        call1View = (ImageView)contentView.findViewById(R.id.contact_call1);
+        call2View = (ImageView)contentView.findViewById(R.id.contact_call2);
+        divider = (LinearLayout)contentView.findViewById(R.id.divider);
 
         eventData = Arrays.asList(getResources().getStringArray(dataResID));
+
+        twoContacts = dataPreference.getBoolean("two contacts",true);
 
         eventdesc = eventData.get(0);
         ID = eventData.get(1);
@@ -110,8 +118,10 @@ public class EventContentActivity extends Activity {
         if(first == 0 && isNetworkAvailable())
             progressDialog = ProgressDialog.show(this, "Loading", "Loading Event Information", true);
 
-        else if(first == 0 && !isNetworkAvailable())
+        else if(first == 0 && !isNetworkAvailable()) {
             putDataUI();
+            Toast.makeText(this,"Internet is needed the first time to load updated Event Info",Toast.LENGTH_SHORT).show();
+        }
 
         if(first == 1)
         {
@@ -123,7 +133,6 @@ public class EventContentActivity extends Activity {
             getJSON();
         }
 
-        call1View = (ImageView)contentView.findViewById(R.id.contact_call1);
         call1View.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,7 +147,6 @@ public class EventContentActivity extends Activity {
             }
         });
 
-        call2View = (ImageView)contentView.findViewById(R.id.contact_call2);
         call2View.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -211,40 +219,42 @@ public class EventContentActivity extends Activity {
                             JSONObject jsonObject = response.getJSONObject("contact1");
                             eventname1Temp = jsonObject.getString("name");
                             contactNumber1Temp = jsonObject.getString("phone");
-                            jsonObject = response.getJSONObject("contact2");
-                            eventname2Temp = jsonObject.getString("name");
-                            contactNumber2Temp = jsonObject.getString("phone");
-
-                            Log.d("Volley",eventdescTemp + " " + eventpdf + " " + eventname1Temp + " " + contactNumber1Temp + " " + eventname2Temp + " " + contactNumber2Temp + " " + startTime + " " + length);
-
+                            if(response.length() >= 5)
+                            {
+                                jsonObject = response.getJSONObject("contact2");
+                                twoContacts = true;
+                                editor.putBoolean("two contacts",true);
+                                editor.apply();
+                                eventname2Temp = jsonObject.getString("name");
+                                contactNumber2Temp = jsonObject.getString("phone");
+                            }
+                            else {
+                                editor.putBoolean("two contacts",false);
+                                editor.apply();
+                            }
                             //startTime = response.getString("start_time");
                             //length = response.getString("length");
+                            //date = response.getString("date");
                             editor.putInt("first_"+ID,1);
                             editor.apply();
                             if(first == 0)
                                 progressDialog.dismiss();
                             updateAfterJson();
                             putDataUI();
-                        }catch(JSONException e){e.printStackTrace();}
+                        }catch(JSONException e)
+                        {
+                            e.printStackTrace();
+                            if(first == 0)
+                                progressDialog.dismiss();
+                            putDataUI();
+                        }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
-                    public void onErrorResponse(VolleyError error) {
+                    public void onErrorResponse(VolleyError error)
+                    {
                         Log.e("Volley", "Error");
-
-                        if (error instanceof TimeoutError || error instanceof NoConnectionError) {
-                            Toast.makeText(EventContentActivity.this, "Timeout", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof AuthFailureError) {
-                            Toast.makeText(EventContentActivity.this, "Auth", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof ServerError) {
-                            Toast.makeText(EventContentActivity.this, "Server", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof NetworkError) {
-                            Toast.makeText(EventContentActivity.this, "Network", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof ParseError) {
-                            Toast.makeText(EventContentActivity.this, "Parse", Toast.LENGTH_LONG).show();
-                        }
-
                     }
                 }
         );
@@ -290,6 +300,8 @@ public class EventContentActivity extends Activity {
         editor.apply();
         editor.putString("length_" + ID, length);
         editor.apply();
+        editor.putString("date_" + ID, date);
+        editor.apply();
     }
 
     private void updateViaSharedPreference()
@@ -321,15 +333,28 @@ public class EventContentActivity extends Activity {
         else
             eventDurationView.setText("Duration: " + length);
 
+        if(date.equals("NULL"))
+            eventDateView.setText(getResources().getText(R.string.updated_soon_others));
+        else
+            eventDateView.setText(date + " April");
+
         if(eventname1.equals("NULL"))
             contactName1View.setText(getResources().getText(R.string.updated_soon_others));
         else
             contactName1View.setText(eventname1);
 
-        if(eventname2.equals("NULL"))
-            contactName2View.setText(getResources().getText(R.string.updated_soon_others));
+        if(twoContacts)
+        {
+            if (eventname2.equals("NULL"))
+                contactName2View.setText(getResources().getText(R.string.updated_soon_others));
+            else
+                contactName2View.setText(eventname2);
+        }
         else
-            contactName2View.setText(eventname2);
-
+        {
+            contactName2View.setVisibility(View.GONE);
+            call2View.setVisibility(View.GONE);
+            divider.setVisibility(View.GONE);
+        }
     }
 }

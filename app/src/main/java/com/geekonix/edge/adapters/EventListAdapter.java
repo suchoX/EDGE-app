@@ -101,7 +101,7 @@ public class EventListAdapter extends BaseAdapter
                 eventBack[3] = "http://imgur.com/RQZXbV9";
                 eventBack[4] = "http://imgur.com/iRIFfxZ";
                 eventBack[5] = "http://imgur.com/x7AdnkR";
-                eventBack[6] = "http://imgur.com/x7AdnkR";
+                eventBack[6] = "http://imgur.com/2YoKygL";
                 break;
 
             case 3:
