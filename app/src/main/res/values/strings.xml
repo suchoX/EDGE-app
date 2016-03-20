@@ -5,6 +5,10 @@
     <string name="google_app_id">356849071366 </string>
     <string name="share_using">Share Using</string>
     <string name="the_team">The Team</string>
+    <string name="event_pdf"><u>Download Rules for this Event</u></string>
+    <string name="updated_soon_desc">--Information Will be Updated Soon--</string>
+    <string name="updated_soon_others">--Will be Updated--</string>
+
 
     <string name="compute_aid">Compute Aid</string>
     <string name="robotics">Robotics</string>
@@ -37,16 +41,15 @@
         <item>AerostriX</item>
         <item>Xplore</item>
         <item>PerpleXity</item>
-        <item>Xtreat</item>
+        <item>Xtreet</item>
     </string-array>
 
     <string-array name="foodforfun_events">
         <item>X-Quiz it</item>
         <item>Food Relay</item>
         <item>Creation-X-Nihilo</item>
-        <item>2 minutes 2 sell</item>
-        <item>Crypt-O-Label</item>
-        <item>Case Study</item>
+        <item>Food Product Labelling</item>
+        <item>Wizcase</item>
         <item>Kwiznet</item>
     </string-array>
 
@@ -55,16 +58,16 @@
         <item>CS Go Pro League</item>
         <item>Mortal Kombat</item>
         <item>Dota 2</item>
-        <item>FIFA 15 Pro League</item>
-        <item>FIFA 11 College League</item>
-        <item>Need For Speed MW</item>
+        <item>FIFA Pro League</item>
+        <item>FIFA College League</item>
+        <item>Need For Speed</item>
     </string-array>
 
     <string-array name="moneymatters_events">
         <item>B-Plan</item>
         <item>Addomedia</item>
         <item>B-Quiz</item>
-        <item>Stock IT</item>
+        <item>StockIT</item>
     </string-array>
 
     <string-array name="newron_events">
@@ -77,7 +80,7 @@
         <item>Crumbs</item>
         <item>Odyssey</item>
         <item>Shoot \'M\' Up</item>
-        <item>Insta Click</item>
+        <item>InstaClick</item>
     </string-array>
 
     <string-array name="createit_events">
@@ -87,7 +90,6 @@
 
     <string-array name="justlikethat_events">
         <item>Khulja Sim Sim</item>
-        <item>Get Selfie-ish With X</item>
 
     </string-array>
 
@@ -104,6 +106,8 @@
         <item>
         There is a nice saying by a great man that \"A designer knows he has achieved perfection not when there is nothing left to add but when there is nothing left to take away\". Indeed, a designer is a creator, creator of every single thing which we witness today. Starting from a needle to a spaceship, everywhere designers are required. And they need to be perfect and flawless. If you also think that you are with the calibre, then show that using coding as your sword and achieving victory.
         </item>
+        <item>1</item>
+        <item>Flawless</item>
         <item>http://imgur.com/tbDI4x8</item>
         <item>Utsav Vatsa</item>
         <item>+919434665052</item>
@@ -115,6 +119,8 @@
         <item>
         It\'s not a Bug, it\'s a feature!\"It is always the teeny tiny shingles that end up causing glitches. Experience the thrill of spotting that anomaly which could bring you the ultimate glory. Get your magnifying glasses ready and your Sherlock hats on. It is time to test your capabilities, when one small \';\' could make or mar your code. So gear up to test your coding skills.
         </item>
+        <item>2</item>
+        <item>BugHunt</item>
         <item>http://imgur.com/qlPPBiO</item>
         <item>Susobhan Roy</item>
         <item>+919932221346</item>
@@ -126,6 +132,8 @@
         <item>
         221B, Baker Street. He\u2019s back. And he was looking for this very opportunity to announce his presence. Every fairy tale needs a good old fashioned villain. But with Sherlock not in town, it\u2019s no more a fairy tale. Can you match his intellect and keep the game in balance? Do you have it in you to confront Moriarty? Solve clues, think outside the box and prove yourselves in this game of alertness and concentration.
         </item>
+        <item>3</item>
+        <item>CryptoQuest</item>
         <item>http://imgur.com/Fn9Gq71</item>
         <item>Palash Chatterjee</item>
         <item>+919051333843</item>
@@ -137,6 +145,8 @@
         <item>
         In an age where entrepreneurship and freelancing rule supreme, it is often not enough to know how to code well but to know how to get others to code for you. CodeMart is a coding event with a twist - the objective is not to solve your own programs but to maximize your objective function. This is a team event, with teams consisting of up to two members. You are welcome to take part by yourself if you so wish. There will only be one, albeit longer than usual, round.
         </item>
+        <item>4</item>
+        <item>CodeMart</item>
         <item>http://imgur.com/i9oJ5cV</item>
         <item>Vishal Agarwal</item>
         <item>+919804563465</item>
@@ -148,6 +158,8 @@
         <item>
         \"If opportunity doesn\'t knock, then build a door.\"\r\nAnd guess what, we have built one for the coders. So all the coders out there who can\'t make it to us, EdgeX feels extremely privileged to present this online coding event. All you have to do is to make your skill sharp enough to hit as hard as needed to be a winner.
         </item>
+        <item>5</item>
+        <item>CodeOut</item>
         <item>http://imgur.com/1pGd9Fu</item>
         <item>Suchandrim Sarkar</item>
         <item>+919775301737</item>
@@ -159,6 +171,8 @@
         <item>
         "Are you a coding geek as well as a gaming freak? Love to dominate and capture territories in games? Well then this is the right place for you. Coding is made even more interesting than ever with a twist. An online Map Conquest event where only the worthwhile would be enthroned as the KING OF THE TERRITORY. So c'mon make your codes mightier than the swords and let your codes clash against each other in this WAR OF DOMINANCE with the slogan \"Code, Conquer, Defend and Win\" !!!"
         </item>
+        <item>6</item>
+        <item>Game of Zones</item>
         <item>http://imgur.com/Tx6F58S</item>
         <item>Palash Chatterjee</item>
         <item>+919051333843</item>
@@ -170,6 +184,8 @@
         <item>
         \"Reach your destination amidst undulating terrains\"
         </item>
+        <item>41</item>
+        <item>Xpedition</item>
         <item>http://imgur.com/fmackBJ</item>
         <item>Abhishek Kumar Singh</item>
         <item>+918582817792</item>
@@ -181,6 +197,8 @@
         <item>
         \"Invincibility lies in the defense, the possibility of victory in the attack. Show your skills in football with your bot.\"
         </item>
+        <item>40</item>
+        <item>Xoccer</item>
         <item>http://imgur.com/YAfSfTR</item>
         <item>Aditya Shaw</item>
         <item>+919804046078</item>
@@ -192,6 +210,8 @@
         <item>
         \"The amalgamation of incredible puzzlers with aquatic and terrestrial bots \"
         </item>
+        <item>43</item>
+        <item>Xport</item>
         <item>http://imgur.com/mc3zs7r</item>
         <item>Soumyadip Roychowdhury</item>
         <item>+918981872242</item>
@@ -203,6 +223,8 @@
         <item>
         \"Winze war, pray for peace, may the Robo have mercy on wheels.\"
         </item>
+        <item>36</item>
+        <item>Blitzkrieg-X</item>
         <item>http://imgur.com/fVzWQ6m</item>
         <item>Ravi Shankar</item>
         <item>+918981670536</item>
@@ -214,6 +236,8 @@
         <item>
         \"Dare to create the impossible \"
         </item>
+        <item>39</item>
+        <item>Xcelsior</item>
         <item>http://imgur.com/lZ4hG7U</item>
         <item>Shubham Saria</item>
         <item>+919432531470</item>
@@ -225,6 +249,8 @@
         <item>
         \"You surely don\'t want to be a bystander.\"
         </item>
+        <item>37</item>
+        <item>eXult</item>
         <item>http://imgur.com/CDIvwoT</item>
         <item>Siddhartha Bhattacharya</item>
         <item>+919038590720</item>
@@ -236,6 +262,8 @@
         <item>
         \"To invent an airplane is nothing\u2026\u2026\u2026\r\nTo build one is something and to fly is everything ! \"
         </item>
+        <item>35</item>
+        <item>AerostriX</item>
         <item>http://imgur.com/IGl59bH</item>
         <item>Rudrajit Bhattacharya</item>
         <item>+918017249968</item>
@@ -247,6 +275,8 @@
         <item>
         \"At the end it\'s all about taking the right turn\"
         </item>
+        <item>42</item>
+        <item>Xplore</item>
         <item>http://imgur.com/JfceVTx</item>
         <item>Prashant Kumar</item>
         <item>+919038378231</item>
@@ -258,6 +288,8 @@
         <item>
         \"Just because my path is complex doesn\'t mean that I\'m lost \"
         </item>
+        <item>38</item>
+        <item>PerpleXity</item>
         <item>http://imgur.com/4xR1jAr</item>
         <item>Asir Rashid</item>
         <item>+918334827079</item>
@@ -269,6 +301,8 @@
         <item>
         \"Victor is the one who makes his own path\"
         </item>
+        <item>44</item>
+        <item>Xtreet</item>
         <item>http://imgur.com/fmackBJ</item>
         <item>M H Sachin</item>
         <item>+917585805511</item>
@@ -278,16 +312,10 @@
 
     <string-array name="cs_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>8</item>
+        <item>CS College League</item>
         <item>http://imgur.com/7Ra8VqT</item>
         <item>Rahul Gupta</item>
         <item>+918016580363</item>
@@ -297,16 +325,10 @@
 
     <string-array name="cspro_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>7</item>
+        <item>CS Pro League</item>
         <item>http://imgur.com/tnLVCmh</item>
         <item>Sarthak Roychowdhury</item>
         <item>+918981723936</item>
@@ -316,16 +338,10 @@
 
     <string-array name="mortalkombat_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>10</item>
+        <item>Mortal Kombat</item>
         <item>http://imgur.com/cnDkalY</item>
         <item>Abhik Das</item>
         <item>+917501794441</item>
@@ -335,16 +351,10 @@
 
     <string-array name="dota_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>9</item>
+        <item>Dota</item>
         <item>http://imgur.com/RQZXbV9</item>
         <item>Bhaskar Ganguly</item>
         <item>+918350014424</item>
@@ -356,6 +366,8 @@
         <item>
         FIFA stands for F\u00e9d\u00e9ration Internationale de Football Association. FIFA has a series of association football video games or football simulator, released annually by Electronic Arts under the EA Sports label. Here in EDGE X we will organize FIFA 16 as FIFA Pro league.
         </item>
+        <item>13</item>
+        <item>FIFA Pro League</item>
         <item>http://imgur.com/iRIFfxZ</item>
         <item>Sayan</item>
         <item>+91983640440</item>
@@ -367,6 +379,8 @@
         <item>
         FIFA stands for F\u00e9d\u00e9ration Internationale de Football Association. FIFA has a series of association football video games or football simulator, released annually by Electronic Arts under the EA Sports label. Here in EDGE X we will organize FIFA 11 as FIFA College league.
         </item>
+        <item>14</item>
+        <item>FIFA College League</item>
         <item>http://imgur.com/x7AdnkR</item>
         <item>Suman Mandal</item>
         <item>+919038457494</item>
@@ -376,16 +390,10 @@
 
     <string-array name="nfs_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>11</item>
+        <item>Need For Speed</item>
         <item>http://imgur.com/x7AdnkR</item>
         <item>Tribir Bhattacharya</item>
         <item>+918961296232</item>
@@ -397,6 +405,8 @@
         <item>
         \"Knowledge is of no value unless you put it into practice.\"\r\nImplement your knowledge regarding the vast syllabus of Food Technology, Microbiology, Food chemistry etc.
         </item>
+        <item>15</item>
+        <item>XQuizit</item>
         <item>http://imgur.com/a83iGPx</item>
         <item>Amitava De</item>
         <item>+919477258562</item>
@@ -408,6 +418,8 @@
         <item>
         \"Individuals don\'t win ; Teams do.\"\r\n\r\nHave you ever shown your team work? A chance is given to you by EDGE 2016 to show your skills in team game \"Food Relay\".\r\n
         </item>
+        <item>18</item>
+        <item>Food Relay</item>
         <item>http://imgur.com/uyiQowV</item>
         <item>Bishal Ghosh</item>
         <item>+918961679294</item>
@@ -419,6 +431,8 @@
         <item>
         \"Ideas are the roots of creation.\"\r\nEDGE 2016 here offers you an opportunity to prove your skills in creation in the event named Creation-X-Nihilo.
         </item>
+        <item>17</item>
+        <item>Creation-X-Nihilo</item>
         <item>http://imgur.com/uyiQowV</item>
         <item>Sanghamitra Bhattacharjee</item>
         <item>+919874425774</item>
@@ -426,67 +440,38 @@
         <item>+918620947119</item>
     </string-array>
 
-    <string-array name="twomintosell_data">
-        <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
-        </item>
-        <item>http://imgur.com/nXjgJif</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-    </string-array>
-
     <string-array name="cryptolabel_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        Are you a foodie? Ever looked those tiny little labels in the packages? Implement your knowledge of food product labels in this event.
         </item>
+        <item>21</item>
+        <item>Food Product Labelling</item>
         <item>http://imgur.com/L8NjD0K</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
+        <item>Sreyasee Biswas</item>
+        <item>+919051972439</item>
+        <item>Sunanjoy Nath</item>
+        <item>+919706940773</item>
     </string-array>
 
     <string-array name="casestudy_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        \"If you can\'t explain it simply, you don\'t understand it well enough.\"\r\nEDGE 2016 wants to give you a chance to test your decision making skills in the event named Wizcase. All of the relevant information will be provided, use your brains in a perfect manner and impress the judges.\r\n
         </item>
+        <item>16</item>
+        <item>WizCase</item>
         <item>http://imgur.com/L8NjD0K</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
+        <item>Samrat Roy</item>
+        <item>+918017968258</item>
+        <item>Nidhi Agarwalla</item>
+        <item>+919051870086</item>
     </string-array>
 
     <string-array name="kwiznet_data">
         <item>
         A quiz will be provided to you in which you need not come to the venue. Just you can login into the quiz with the help of an internet connection at any time. Now,enjoy the game.
         </item>
+        <item>19</item>
+        <item>Kwiznet</item>
         <item>http://imgur.com/L8NjD0K</item>
         <item>Soumyajit Bagchi</item>
         <item>+919038649522</item>
@@ -496,84 +481,62 @@
 
     <string-array name="bplan_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>22</item>
+        <item>B-Plan</item>
         <item>http://imgur.com/fF5Gu15</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
+        <item>Ujjwal Prakash</item>
+        <item>+918972406116</item>
+        <item>Vishal Agarwal</item>
+        <item>+919804563465</item>
     </string-array>
 
     <string-array name="addomedia_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>24</item>
+        <item>Addomedia</item>
         <item>http://imgur.com/fF5Gu15</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
+        <item>Ujjwal Prakash</item>
+        <item>+918972406116</item>
+        <item>Vishal Agarwal</item>
+        <item>+919804563465</item>
     </string-array>
 
     <string-array name="bquiz_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>23</item>
+        <item>B-Quiz</item>
         <item>http://imgur.com/L8NjD0K</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
+        <item>NULL</item>
+        <item>NULL</item>
+        <item>NULL</item>
+        <item>NULL</item>
     </string-array>
 
     <string-array name="stockit_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>25</item>
+        <item>StockIt</item>
         <item>http://imgur.com/L8NjD0K</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
+        <item>NULL</item>
+        <item>NULL</item>
+        <item>NULL</item>
+        <item>NULL</item>
     </string-array>
 
     <string-array name="crumbs_data">
         <item>
         \u201cA camera is a save button for the mind\u2019s eye.\u201d\r\nPerspectives are what chisel our persona. Introspect to showcase those scattered crumbs which are termed insignificant by this industrialized urban society.\r\n
         </item>
+        <item>26</item>
+        <item>Crumbs</item>
         <item>http://imgur.com/oYFdM2P</item>
         <item>Anubrata Sengupta</item>
         <item>+918981368380</item>
@@ -585,6 +548,8 @@
         <item>
         \u201cYou shouldn\u2019t dream your film, you should make it.\u201d \r\n ~Steven Spielberg\r\nSo go on friends. Embark upon a journey\u2026 Capture the mobility.\r\n
         </item>
+        <item>27</item>
+        <item>Odyssey</item>
         <item>http://imgur.com/FMN7rTP</item>
         <item>Krishnendu Ghosh</item>
         <item>+919874371051</item>
@@ -594,16 +559,10 @@
 
     <string-array name="shootmup_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        \u201cPhotography is an art of observation. It has little to do with the things you see and everything to do with the way you see them.\u201d \u2013 Elliott Erwitt.\r\n\r\n*This is an open end event. Anyone from any field with any type of camera can participate. Your photos can be used with proper copyright statements for Geekonix beneficial.\r\n
         </item>
+        <item>28</item>
+        <item>Shoot \'M\' UP</item>
         <item>http://imgur.com/Z7Zu9OP</item>
         <item>Krishnendu Ghosh</item>
         <item>+919874371051</item>
@@ -615,6 +574,8 @@
         <item>
         This is a live photography competition. A tough challenge for all fellow photographers! Come and win cash prizes just by clicking that best shot of yours. \r\n**This is an open end event. Anyone from any field with any type of camera can participate. Your photos can be used with proper copyright statements for Geekonix beneficial.\r\n
         </item>
+        <item>29</item>
+        <item>InstaClick</item>
         <item>http://imgur.com/L8NjD0K</item>
         <item>Anubrata Sengupta</item>
         <item>+918981368380</item>
@@ -626,6 +587,8 @@
         <item>
         The thing which I enjoy most about the quiz bowl is that it is both a team and an individual competition. Even though you compete as a team, a whole game can change based on the random knowledge of one person.
         </item>
+        <item>31</item>
+        <item>The Quiz</item>
         <item>http://imgur.com/wX8WXZ5</item>
         <item>NGT</item>
         <item>+918902230155</item>
@@ -637,6 +600,8 @@
         <item>
         \"Voice the Noise\"\r\n It is a two days spearheading initiative which replicates the Indian parliament, its working and proceedings through Debate, Party Formation, Policy Making and Voting. We strive to bring together as many young, enthusiastic, politically active students from all across India to this one platform where they will exercise their political knowledge and grow as leaders. During these two days, students will engage themselves in political dialogues and deliberations on issues that the country is up against, with few of India\'s most prominent speakers leading to introspection on India\'s democracy.
         </item>
+        <item>32</item>
+        <item>Youth Parliament</item>
         <item>http://imgur.com/kcTIwZN</item>
         <item>Medhavi Kumar</item>
         <item>+918420977499</item>
@@ -646,27 +611,23 @@
 
     <string-array name="electronicallyyours_data">
         <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+        NULL
         </item>
+        <item>30</item>
+        <item>Electronically Yours</item>
         <item>http://imgur.com/L8NjD0K</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
+        <item>NULL</item>
+        <item>NULL</item>
+        <item>NULL</item>
+        <item>NULL</item>
     </string-array>
 
     <string-array name="projectview_data">
         <item>
         Innovation distinguishes between a leader and a follower. It is not just about ideas... \r\n\r\nin fact, one could argue that it is more concerned with implementation, development, \r\n\r\nbreakthrough, and that creation might just actually make the engineer an innovator; \r\n\r\nyet the principle of \'implementing\' the thought, idea or solution to a problem defines \r\n\r\nthe intrinsic character of an engineer.\r\n\r\n Steve Jobs was probably the greatest innovator of modern times. Yet as history \r\n\r\nknows, he would have been nothing without the backing of Steve Wozniak - the \r\n\r\nsilent Steve of Apple... the man who redesigned Atari\'s game box using only 50 ICs \r\n\r\ninstead of the 100 it was built with. The idea of Winklevoss brothers\' was not worth a \r\n\r\ndime, till Mark Zuckerberg made Facebook!
         </item>
+        <item>45</item>
+        <item>Project View</item>
         <item>http://imgur.com/L8NjD0K</item>
         <item>Saumyadip Roy Chowdhary</item>
         <item>+918981872242</item>
@@ -678,6 +639,8 @@
         <item>
         With sand and water, the world he stitches\r\nGrant us power, grant our wishes\r\nGives you scrap to build your creations\r\nStart with rags and ends with riches.
         </item>
+        <item>46</item>
+        <item>Rags to Riches</item>
         <item>http://imgur.com/L8NjD0K</item>
         <item>Puja Rani</item>
         <item>+919614592487</item>
@@ -689,6 +652,8 @@
         <item>
         \u201cGive me a lever long enough and much space to stand and I will move the whole world\u201d.
         </item>
+        <item>47</item>
+        <item>Mekanix</item>
         <item>http://imgur.com/L8NjD0K</item>
         <item>Sneha Ghosh</item>
         <item>+918272971030</item>
@@ -700,6 +665,8 @@
         <item>
         Riches do not consist in the possession of treasures, but in the use made of them. Get ready to indulge your grey cells. When the climax unfolds an actual hidden treasure may not be found, but the victory may be equivalent to one.
         </item>
+        <item>49</item>
+        <item>Khulja Sim Sim</item>
         <item>http://imgur.com/L8NjD0K</item>
         <item>Rittika Singhania</item>
         <item>+919007452380</item>
@@ -707,29 +674,12 @@
         <item>+919007452380</item>
     </string-array>
 
-    <string-array name="selfie_data">
-        <item>
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        http://www.apache.org/licenses/LICENSE-2.0
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
-        </item>
-        <item>http://imgur.com/Z8mIKEg</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-        <item>Suchandrim Sarkar</item>
-        <item>+919775301737</item>
-    </string-array>
-
     <string-array name="cad_data">
         <item>
         \"Put your imagination into your drawing.\"
         </item>
+        <item>33</item>
+        <item>Cad-O-Mania</item>
         <item>http://imgur.com/Z8mIKEg</item>
         <item>Priyajit Kundu</item>
         <item>+918653538532</item>
@@ -741,12 +691,12 @@
         <item>
         The art of constructing Bridge . Bring out the Engineer inside you. May the BRIDGE you build today, light the way for a better tomorrow.
         </item>
+        <item>34</item>
+        <item>Nirmaan</item>
         <item>http://imgur.com/UOXizDe</item>
         <item>Soumyabrata Guha</item>
         <item>+918981696657</item>
         <item>Suvotosh Nandi</item>
         <item>+919804137312</item>
     </string-array>
-
-
 </resources>

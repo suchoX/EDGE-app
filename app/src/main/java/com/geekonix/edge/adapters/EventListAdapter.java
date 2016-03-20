@@ -108,18 +108,16 @@ public class EventListAdapter extends BaseAdapter
                 eventImage[0] = R.drawable.icn_xquizit;
                 eventImage[1] = R.drawable.icn_foodrelay;
                 eventImage[2] = R.drawable.icn_creationxnihilo;
-                eventImage[3] = R.drawable.icn_2minutestosell;
-                eventImage[4] = R.drawable.icn_foodproductlabel;
-                eventImage[5] = R.drawable.icn_casestudy;
-                eventImage[6] = R.drawable.icn_kwiznet;
+                eventImage[3] = R.drawable.icn_foodproductlabel;
+                eventImage[4] = R.drawable.icn_casestudy;
+                eventImage[5] = R.drawable.icn_kwiznet;
 
                 eventBack[0] = "http://imgur.com/a83iGPx";
                 eventBack[1] = "http://imgur.com/uyiQowV";
                 eventBack[2] = "http://imgur.com/uyiQowV";
-                eventBack[3] = "http://imgur.com/nXjgJif";
+                eventBack[3] = "http://imgur.com/L8NjD0K";
                 eventBack[4] = "http://imgur.com/L8NjD0K";
                 eventBack[5] = "http://imgur.com/L8NjD0K";
-                eventBack[6] = "http://imgur.com/L8NjD0K";
                 break;
 
             case 4:
@@ -162,19 +160,15 @@ public class EventListAdapter extends BaseAdapter
                 break;
 
             case 8:
-                eventImage[0] = R.drawable.icn_selfie;
-                eventImage[1] = R.drawable.icn_mekanix;
+                eventImage[0] = R.drawable.icn_mekanix;
 
                 eventBack[0] = "http://imgur.com/L8NjD0K";
-                eventBack[1] = "http://imgur.com/L8NjD0K";
                 break;
 
             case 9:
                 eventImage[0] = R.drawable.icn_khuljasimsim;
-                eventImage[1] = R.drawable.icn_selfie;
 
                 eventBack[0] = "http://imgur.com/L8NjD0K";
-                eventBack[1] = "http://imgur.com/Z8mIKEg";
                 break;
 
             case 10:

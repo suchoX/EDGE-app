@@ -411,10 +411,9 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                     case 0: return R.array.xquizit_data;
                     case 1: return R.array.foodrelay_data;
                     case 2: return R.array.creationxnihilo_data;
-                    case 3: return R.array.twomintosell_data;
-                    case 4: return R.array.cryptolabel_data;
-                    case 5: return R.array.casestudy_data;
-                    case 6: return R.array.kwiznet_data;
+                    case 3: return R.array.cryptolabel_data;
+                    case 4: return R.array.casestudy_data;
+                    case 5: return R.array.kwiznet_data;
                 }
                 break;
             case 4:
@@ -460,7 +459,6 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
                 switch (event)
                 {
                     case 0: return R.array.khuljasimsim_data;
-                    case 1: return R.array.selfie_data;
                 }
                 break;
             case 10:

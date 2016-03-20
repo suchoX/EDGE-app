@@ -13,14 +13,30 @@
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         card_view:cardCornerRadius="4dp">
-        <TextView
-            android:id="@+id/eventcontent_info"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:text="INFORMATION"
-            android:textColor="#404040"
-            android:textAppearance="@android:style/TextAppearance.Medium" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/eventcontent_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="INFORMATION"
+                android:textColor="#404040"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <TextView
+                android:id="@+id/eventcontent_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/event_pdf"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/test"/>
+        </LinearLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -83,7 +99,7 @@
                 android:orientation="vertical">
                 <TextView
                     android:id="@+id/contact_name1"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingBottom="8dp"
@@ -91,15 +107,6 @@
                     android:textAppearance="@android:style/TextAppearance.Medium"
                     android:textColor="#404040"/>
 
-                <ImageView
-                    android:id="@+id/contact_facebook1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/facebook_contact"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_below="@id/contact_name1"/>
 
                 <ImageView
                     android:id="@+id/contact_call1"
@@ -107,8 +114,9 @@
                     android:layout_height="25dp"
                     android:src="@drawable/call_contact"
                     android:layout_marginBottom="3dp"
-                    android:layout_below="@id/contact_name1"
-                    android:layout_toRightOf="@id/contact_facebook1"/>
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentRight="true"/>
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -130,23 +138,14 @@
                     android:textColor="#404040"/>
 
                 <ImageView
-                    android:id="@+id/contact_facebook2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/facebook_contact"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_below="@id/contact_name2"/>
-
-                <ImageView
                     android:id="@+id/contact_call2"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:src="@drawable/call_contact"
                     android:layout_marginBottom="15dp"
-                    android:layout_below="@id/contact_name2"
-                    android:layout_toRightOf="@id/contact_facebook2"/>
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentRight="true"/>
             </RelativeLayout>
         </LinearLayout>
 
