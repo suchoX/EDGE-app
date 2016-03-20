@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity
 
         fragmentManager = getSupportFragmentManager();
 
+
+
         eventsLayout = (RelativeLayout)findViewById(R.id.event_layout);
         megaeventsLayout = (RelativeLayout)findViewById(R.id.megaevent_layout);
         campusambassadorLayout = (RelativeLayout)findViewById(R.id.campusambassador_layout);
