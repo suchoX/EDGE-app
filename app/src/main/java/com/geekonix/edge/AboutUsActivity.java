@@ -21,7 +21,6 @@ public class AboutUsActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setTitle("About Us");
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

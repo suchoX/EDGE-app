@@ -39,47 +39,7 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        card_view:cardCornerRadius="4dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/eventcontent_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="2 April"
-                android:textColor="#404040"
-                android:textAppearance="@android:style/TextAppearance.Medium" />
-
-            <TextView
-                android:id="@+id/eventcontent_time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="Start: 9:30 AM"
-                android:textColor="#404040"
-                android:textAppearance="@android:style/TextAppearance.Medium" />
-
-            <TextView
-                android:id="@+id/eventcontent_duration"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="8dp"
-                android:paddingBottom="8dp"
-                android:textColor="#404040"
-                android:text="Duration: 3Hrs"
-                android:textAppearance="@android:style/TextAppearance.Medium" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"

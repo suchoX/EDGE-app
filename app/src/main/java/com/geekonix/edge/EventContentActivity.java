@@ -39,7 +39,6 @@ import com.android.volley.toolbox.Volley;
 import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 import com.squareup.picasso.Picasso;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -50,7 +49,7 @@ public class EventContentActivity extends Activity {
 
     View headerView,contentView;
     ImageView headerImageView, call1View, call2View;
-    TextView eventInfoView, eventTimeView, eventDurationView, eventDateView, contactName1View, contactName2View,eventpdfView;
+    TextView eventInfoView, contactName1View, contactName2View,eventpdfView;
     LinearLayout divider;
     String contactNumber1,contactNumber1Temp="";
     String contactNumber2,contactNumber2Temp="";
@@ -62,12 +61,11 @@ public class EventContentActivity extends Activity {
 
     RequestQueue requestQueue;
     String URL,ID;
-    int first;
+    boolean first;
 
     SharedPreferences dataPreference;
     SharedPreferences.Editor editor;
 
-    String startTime = "NULL", length = "NULL", date = "NULL";
     boolean twoContacts = true;
     ProgressDialog progressDialog;
 
@@ -87,9 +85,6 @@ public class EventContentActivity extends Activity {
 
         contentView = getLayoutInflater().inflate(R.layout.event_scrollview,null);
         eventInfoView = (TextView)contentView.findViewById(R.id.eventcontent_info);
-        eventTimeView = (TextView)contentView.findViewById(R.id.eventcontent_time);
-        eventDurationView = (TextView)contentView.findViewById(R.id.eventcontent_duration);
-        eventDateView = (TextView)contentView.findViewById(R.id.eventcontent_date);
         contactName1View = (TextView)contentView.findViewById(R.id.contact_name1);
         contactName2View = (TextView)contentView.findViewById(R.id.contact_name2);
         eventpdfView = (TextView)contentView.findViewById(R.id.eventcontent_pdf);
@@ -104,25 +99,34 @@ public class EventContentActivity extends Activity {
         eventdesc = eventData.get(0);
         ID = eventData.get(1);
         URL = "http://edg.co.in/details.php?event_id=" + ID;
-        first = dataPreference.getInt("first_"+ID,0);
+        first = dataPreference.getBoolean("first_"+ID,true);
 
         eventName = eventData.get(2);
         imageLink = eventData.get(3);
         imageLink = imageLink.concat(".png");
         eventname1 = eventData.get(4);
         contactNumber1 = eventData.get(5);
-        eventname2 = eventData.get(6);
-        contactNumber2 = eventData.get(7);
-
-        if(first == 0 && isNetworkAvailable())
-            progressDialog = ProgressDialog.show(this, "Loading", "Loading Event Information", true);
-
-        else if(first == 0 && !isNetworkAvailable()) {
-            putDataUI();
-            Toast.makeText(this,"Internet is needed the first time to load updated Event Info",Toast.LENGTH_SHORT).show();
+        if(eventData.size() > 6) {
+            twoContacts = true;
+            eventname2 = eventData.get(6);
+            contactNumber2 = eventData.get(7);
+        }
+        else
+        {
+            twoContacts = false;
+            eventname2 = "NULL";
+            contactNumber2 = "NULL";
         }
 
-        if(first == 1)
+        if(first == true && isNetworkAvailable())
+            progressDialog = ProgressDialog.show(this, "Loading", "Loading Latest Event Information", true);
+
+        else if(first == true && !isNetworkAvailable()) {
+            putDataUI();
+            Toast.makeText(this,"Internet is needed the first time to load Latest Event Info",Toast.LENGTH_SHORT).show();
+        }
+
+        if(first == false)
         {
             updateViaSharedPreference();
             putDataUI();
@@ -211,42 +215,47 @@ public class EventContentActivity extends Activity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        try{
-                            Log.d("Volley","Got Response");
+
+                        Log.d("Volley","Got Response");
+                        try {
                             eventdescTemp = response.getString("desc");
-                            eventpdf = response.getString("file");
-                            JSONObject jsonObject = response.getJSONObject("contact1");
-                            eventname1Temp = jsonObject.getString("name");
-                            contactNumber1Temp = jsonObject.getString("phone");
-                            if(response.length() >= 5)
-                            {
-                                jsonObject = response.getJSONObject("contact2");
-                                twoContacts = true;
-                                editor.putBoolean("two contacts",true);
-                                editor.apply();
-                                eventname2Temp = jsonObject.getString("name");
-                                contactNumber2Temp = jsonObject.getString("phone");
-                            }
-                            else {
-                                editor.putBoolean("two contacts",false);
-                                editor.apply();
-                            }
-                            //startTime = response.getString("start_time");
-                            //length = response.getString("length");
-                            //date = response.getString("date");
-                            editor.putInt("first_"+ID,1);
-                            editor.apply();
-                            if(first == 0)
-                                progressDialog.dismiss();
-                            updateAfterJson();
-                            putDataUI();
                         }catch(JSONException e)
                         {
-                            e.printStackTrace();
-                            if(first == 0)
-                                progressDialog.dismiss();
-                            putDataUI();
+
                         }
+                        try{
+                            eventpdf = response.getString("file");
+                        }catch(JSONException e)
+                        {
+                            eventpdf = "NULL";
+                        }
+                        JSONObject jsonObject;
+                        try{
+                            jsonObject = response.getJSONObject("contact1");
+                            eventname1Temp = jsonObject.getString("name");
+                            contactNumber1Temp = jsonObject.getString("phone");
+                        }catch(JSONException e)
+                        {
+                        }
+                        try {
+                            jsonObject = response.getJSONObject("contact2");
+                            twoContacts = true;
+                            editor.putBoolean("two contacts", true);
+                            editor.apply();
+                            eventname2Temp = jsonObject.getString("name");
+                            contactNumber2Temp = jsonObject.getString("phone");
+                        }catch (JSONException e)
+                        {
+                            twoContacts = false;
+                            editor.putBoolean("two contacts", false);
+                            editor.apply();
+                        }
+                        editor.putBoolean("first_"+ID,false);
+                        editor.apply();
+                        if(first == true)
+                            progressDialog.dismiss();
+                        updateAfterJson();
+                        putDataUI();
                     }
                 },
                 new Response.ErrorListener() {
@@ -254,6 +263,7 @@ public class EventContentActivity extends Activity {
                     public void onErrorResponse(VolleyError error)
                     {
                         Log.e("Volley", "Error");
+                        progressDialog.dismiss();
                     }
                 }
         );
@@ -295,12 +305,6 @@ public class EventContentActivity extends Activity {
 
         editor.putString("pdf_"+ID,eventpdf);
         editor.apply();
-        editor.putString("starttime_" + ID, startTime);
-        editor.apply();
-        editor.putString("length_" + ID, length);
-        editor.apply();
-        editor.putString("date_" + ID, date);
-        editor.apply();
     }
 
     private void updateViaSharedPreference()
@@ -311,8 +315,6 @@ public class EventContentActivity extends Activity {
         contactNumber1 = dataPreference.getString("number1_"+ID,contactNumber1);
         contactNumber2 = dataPreference.getString("number2_"+ID,contactNumber2);
         eventpdf = dataPreference.getString("pdf_"+ID,eventpdf);
-        startTime = dataPreference.getString("starttime_"+ID,startTime);
-        length = dataPreference.getString("length_"+ID,startTime);
     }
 
     private void putDataUI()
@@ -321,21 +323,6 @@ public class EventContentActivity extends Activity {
             eventInfoView.setText(getResources().getText(R.string.updated_soon_desc));
         else
             eventInfoView.setText(eventdesc);
-
-        if(startTime.equals("NULL"))
-            eventTimeView.setText("Start: " + getResources().getText(R.string.updated_soon_others));
-        else
-            eventTimeView.setText("Start: " + startTime);
-
-        if(length.equals("NULL"))
-            eventDurationView.setText("Duration: " + getResources().getText(R.string.updated_soon_others));
-        else
-            eventDurationView.setText("Duration: " + length);
-
-        if(date.equals("NULL"))
-            eventDateView.setText(getResources().getText(R.string.updated_soon_others));
-        else
-            eventDateView.setText(date + " April");
 
         if(eventname1.equals("NULL"))
             contactName1View.setText(getResources().getText(R.string.updated_soon_others));

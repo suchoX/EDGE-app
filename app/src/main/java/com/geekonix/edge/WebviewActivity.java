@@ -40,7 +40,6 @@ public class WebviewActivity extends AppCompatActivity
         getSupportActionBar().setTitle(heading);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
         //mToolbar.setNavigationIcon(R.drawable.icn_back);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
