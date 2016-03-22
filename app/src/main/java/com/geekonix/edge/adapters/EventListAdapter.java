@@ -87,7 +87,7 @@ public class EventListAdapter extends BaseAdapter
                 break;
 
             case 2:
-                eventImage[0] = R.drawable.icn_cs;
+                eventImage[0] = R.drawable.icn_csgo;
                 eventImage[1] = R.drawable.icn_csgo;
                 eventImage[2] = R.drawable.icn_mortalkombat;
                 eventImage[3] =  R.drawable.icn_dota;
@@ -160,9 +160,11 @@ public class EventListAdapter extends BaseAdapter
                 break;
 
             case 8:
-                eventImage[0] = R.drawable.icn_mekanix;
+                eventImage[0] = R.drawable.icn_selfie;
+                eventImage[1] = R.drawable.icn_mekanix;
                 
                 eventBack[0] = "http://imgur.com/th3NY2P";
+                eventBack[1] = "http://imgur.com/th3NY2P";
                 break;
 
             case 9:

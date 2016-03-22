@@ -38,7 +38,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 import com.squareup.picasso.Picasso;
-import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -39,7 +39,8 @@
         <activity
             android:name=".EventContentActivity"
             android:theme="@style/AppTheme.TranslucentActionBar" />
-        <activity android:name=".TeamActivity"></activity>
+        <activity android:name=".TeamActivity" />
+        <activity android:name=".AboutUsActivity"></activity>
     </application>
 
 </manifest>

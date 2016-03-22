@@ -9,45 +9,46 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.geekonix.edge.adapters.EventListAdapter;
-import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
-import com.yalantis.contextmenu.lib.MenuObject;
-import com.yalantis.contextmenu.lib.MenuParams;
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.yalantis.contextmenu.lib.interfaces.OnMenuItemClickListener;
-import com.yalantis.contextmenu.lib.interfaces.OnMenuItemLongClickListener;
 
-public class EventsActivity extends AppCompatActivity implements OnMenuItemClickListener, OnMenuItemLongClickListener {
 
-    private ContextMenuDialogFragment mMenuDialogFragment;
-    private FragmentManager fragmentManager;
+public class EventsActivity extends AppCompatActivity{
+
+
 
     TextView mToolBarTextView;
     Toolbar mToolbar;
-    MenuParams menuParams;
 
     ListView eventsList;
     EventListAdapter eventListAdapter;
     List<String> computeaidEvents,roboticsEvents,foodforfunEvents,cybercrusadeEvents,moneymattersEvents,newronEvents,infocusEvents,createitEvents,justlikethatEvents,innovatiEvents,elevationEvents;
     List<String> presentList;
-    boolean menuOpen=false;
 
     int category = 0;
+
+    Drawer drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
-
-        fragmentManager = getSupportFragmentManager();
 
         eventsList = (ListView)findViewById(R.id.event_list);
 
@@ -69,7 +70,46 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         eventsList.setAdapter(eventListAdapter);
 
         initToolbar();
-        initMenuFragment();
+        initDrawer();
+    }
+
+    private void initDrawer()
+    {
+        SecondaryDrawerItem computeaid = new SecondaryDrawerItem().withName(R.string.compute_aid).withIcon(R.drawable.icn_computeaid).withIdentifier(1);
+        SecondaryDrawerItem robotics = new SecondaryDrawerItem().withName(R.string.robotics).withIcon(R.drawable.icn_robotics).withIdentifier(2);
+        SecondaryDrawerItem cybercrusade = new SecondaryDrawerItem().withName(R.string.cyber_crusade).withIcon(R.drawable.icn_cybercrusade).withIdentifier(3);
+        SecondaryDrawerItem foodforfun = new SecondaryDrawerItem().withName(R.string.food_for_fun).withIcon(R.drawable.icn_foodforfun).withIdentifier(4);
+        SecondaryDrawerItem moneymatters = new SecondaryDrawerItem().withName(R.string.money_matters).withIcon(R.drawable.icn_moneymatters).withIdentifier(5);
+        SecondaryDrawerItem infocus = new SecondaryDrawerItem().withName(R.string.infocus).withIcon(R.drawable.icn_infocus).withIdentifier(6);
+        SecondaryDrawerItem newron = new SecondaryDrawerItem().withName(R.string.newron).withIcon(R.drawable.icn_newron).withIdentifier(7);
+        SecondaryDrawerItem innovati = new SecondaryDrawerItem().withName(R.string.innovati).withIcon(R.drawable.icn_innovati).withIdentifier(8);
+        SecondaryDrawerItem createit = new SecondaryDrawerItem().withName(R.string.create_it).withIcon(R.drawable.icn_createit).withIdentifier(9);
+        SecondaryDrawerItem justlikethat = new SecondaryDrawerItem().withName(R.string.just_like_that).withIcon(R.drawable.icn_justlikethat).withIdentifier(10);
+        SecondaryDrawerItem elevation = new SecondaryDrawerItem().withName(R.string.elevation).withIcon(R.drawable.icn_elevation).withIdentifier(11);
+
+
+        AccountHeader header = new AccountHeaderBuilder()
+                .withActivity(this)
+                .withHeaderBackground(R.drawable.logo_edge)
+                .withHeaderBackgroundScaleType(ImageView.ScaleType.CENTER_CROP)
+                .build();
+        drawer = new DrawerBuilder()
+                .withActivity(this)
+                .withToolbar(mToolbar)
+                .withAccountHeader(header)
+                .addDrawerItems(computeaid, robotics, cybercrusade, foodforfun, moneymatters, infocus, newron, innovati, createit, justlikethat, elevation)
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                        if (drawerItem != null)
+                        {
+                            changetoolbartitle((int)drawerItem.getIdentifier());
+                            reinitList((int)drawerItem.getIdentifier());
+                        }
+                        return false;
+                    }
+                })
+                .build();
     }
 
     private void reinitList(int position)
@@ -179,110 +219,13 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         }
     }
 
-    private void initMenuFragment() {
-        menuParams = new MenuParams();
-        menuParams.setActionBarSize((int) getResources().getDimension(R.dimen.tool_bar_height));
-        menuParams.setMenuObjects(getMenuObjects());
-        menuParams.setClosableOutside(false);
-        menuParams.setAnimationDuration(30);
-        mMenuDialogFragment = ContextMenuDialogFragment.newInstance(menuParams);
-        mMenuDialogFragment.setItemClickListener(this);
-        mMenuDialogFragment.setItemLongClickListener(this);
-    }
-
-    private List<MenuObject> getMenuObjects() {
-
-        List<MenuObject> menuObjects = new ArrayList<>();
-
-        MenuObject close = new MenuObject();
-        close.setBgColor(R.color.blackPrimary);
-        close.setDividerColor(R.color.blackPrimary);
-        close.setResource(R.drawable.icn_close);
-
-        MenuObject computeaid = new MenuObject("Compute Aid");
-        computeaid.setBgColor(R.color.blackPrimary);
-        computeaid.setDividerColor(R.color.blackPrimary);
-        computeaid.setResource(R.drawable.icn_computeaid);
-
-        MenuObject robotics = new MenuObject("Robotics");
-        robotics.setBgColor(R.color.blackPrimary);
-        robotics.setDividerColor(R.color.blackPrimary);
-        robotics.setResource(R.drawable.icn_robotics);
-
-        MenuObject cybercrusade = new MenuObject("Cyber Crusade");
-        cybercrusade.setBgColor(R.color.blackPrimary);
-        cybercrusade.setDividerColor(R.color.blackPrimary);
-        cybercrusade.setResource(R.drawable.icn_cybercrusade);
-
-        MenuObject foodforfun = new MenuObject("Food for Fun");
-        foodforfun.setBgColor(R.color.blackPrimary);
-        foodforfun.setDividerColor(R.color.blackPrimary);
-        foodforfun.setResource(R.drawable.icn_foodforfun);
-
-        MenuObject moneymatters = new MenuObject("Money Matters");
-        moneymatters.setBgColor(R.color.blackPrimary);
-        moneymatters.setDividerColor(R.color.blackPrimary);
-        moneymatters.setResource(R.drawable.icn_moneymatters);
-
-        MenuObject infocus = new MenuObject("InFocus");
-        infocus.setBgColor(R.color.blackPrimary);
-        infocus.setDividerColor(R.color.blackPrimary);
-        infocus.setResource(R.drawable.icn_infocus);
-
-        MenuObject newron = new MenuObject("Newron");
-        newron.setBgColor(R.color.blackPrimary);
-        newron.setDividerColor(R.color.blackPrimary);
-        newron.setResource(R.drawable.icn_newron);
-
-        MenuObject innovati = new MenuObject("Innovati");
-        innovati.setBgColor(R.color.blackPrimary);
-        innovati.setDividerColor(R.color.blackPrimary);
-        innovati.setResource(R.drawable.icn_innovati);
-
-        MenuObject createit = new MenuObject("Create It");
-        createit.setBgColor(R.color.blackPrimary);
-        createit.setDividerColor(R.color.blackPrimary);
-        createit.setResource(R.drawable.icn_createit);
-
-        MenuObject justlikethat = new MenuObject("Just Like That");
-        justlikethat.setBgColor(R.color.blackPrimary);
-        justlikethat.setDividerColor(R.color.blackPrimary);
-        justlikethat.setResource(R.drawable.icn_justlikethat);
-
-        MenuObject elevation = new MenuObject("Elevation");
-        elevation.setBgColor(R.color.blackPrimary);
-        elevation.setDividerColor(R.color.blackPrimary);
-        elevation.setResource(R.drawable.icn_elevation);
-
-        menuObjects.add(close);
-        menuObjects.add(computeaid);
-        menuObjects.add(robotics);
-        menuObjects.add(cybercrusade);
-        menuObjects.add(foodforfun);
-        menuObjects.add(moneymatters);
-        menuObjects.add(infocus);
-        menuObjects.add(newron);
-        menuObjects.add(innovati);
-        menuObjects.add(createit);
-        menuObjects.add(justlikethat);
-        menuObjects.add(elevation);
-        return menuObjects;
-    }
 
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        //mToolbar.setNavigationIcon(R.drawable.icn_back);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        getSupportActionBar().setHomeButtonEnabled(false);
         mToolBarTextView.setText(R.string.compute_aid);
     }
 
@@ -316,15 +259,6 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
         }
     }
 
-    @Override
-    public void onMenuItemClick(View clickedView, int position) {
-        changetoolbartitle(position);
-        reinitList(position);
-    }
-
-    @Override
-    public void onMenuItemLongClick(View clickedView, int position) {
-    }
 
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
@@ -334,24 +268,24 @@ public class EventsActivity extends AppCompatActivity implements OnMenuItemClick
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         switch (item.getItemId()) {
-            case R.id.context_menu:
-                if (fragmentManager.findFragmentByTag(ContextMenuDialogFragment.TAG) == null) {
-                    menuOpen = true;
-                    mMenuDialogFragment.show(fragmentManager, ContextMenuDialogFragment.TAG);
-                }
-                break;
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
     public void onBackPressed() {
-        if (mMenuDialogFragment != null && mMenuDialogFragment.isAdded()) {
-            mMenuDialogFragment.dismiss();
-        } else{
-            finish();
+        if (drawer != null && drawer.isDrawerOpen()) {
+            drawer.closeDrawer();
+        } else {
+            super.onBackPressed();
         }
     }
 

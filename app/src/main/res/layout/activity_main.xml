@@ -44,7 +44,7 @@
 
                     <ImageView
                         android:id="@+id/event_image"
-                        android:src="@drawable/temp"
+                        android:src="@drawable/icn_events"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerVertical="true"
@@ -86,7 +86,7 @@
 
                     <ImageView
                         android:id="@+id/megaevent_image"
-                        android:src="@drawable/temp"
+                        android:src="@drawable/icn_megaevent"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerVertical="true"
@@ -127,7 +127,7 @@
 
                     <ImageView
                         android:id="@+id/campusambassador_image"
-                        android:src="@drawable/temp"
+                        android:src="@drawable/icn_campusambassador"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerVertical="true"
@@ -169,7 +169,7 @@
 
                     <ImageView
                         android:id="@+id/team_image"
-                        android:src="@drawable/temp"
+                        android:src="@drawable/icn_team"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerVertical="true"
@@ -211,7 +211,7 @@
 
                     <ImageView
                         android:id="@+id/sponsor_image"
-                        android:src="@drawable/temp"
+                        android:src="@drawable/icn_team"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerVertical="true"
