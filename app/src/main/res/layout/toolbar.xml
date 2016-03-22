@@ -8,14 +8,4 @@
     android:minHeight="?attr/actionBarSize"
     android:background="?attr/colorPrimary">
 
-    <TextView
-        android:id="@+id/text_view_toolbar_title"
-        android:layout_centerInParent="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/whitePrimary"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:elevation="5dp"/>
-
 </android.support.v7.widget.Toolbar>

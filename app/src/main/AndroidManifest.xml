@@ -35,7 +35,6 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".MainActivity" />
         <activity android:name=".WebviewActivity" />
-        <activity android:name=".UpcomingActivity" />
         <activity
             android:name=".EventContentActivity"
             android:theme="@style/AppTheme.TranslucentActionBar" />

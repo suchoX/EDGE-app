@@ -36,8 +36,8 @@ public class WebviewActivity extends AppCompatActivity
 
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle(heading);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -48,7 +48,6 @@ public class WebviewActivity extends AppCompatActivity
                 onBackPressed();
             }
         });
-        mToolBarTextView.setText(heading);
     }
 
     private class MyWebViewClient extends WebViewClient {

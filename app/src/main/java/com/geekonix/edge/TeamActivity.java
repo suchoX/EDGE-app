@@ -18,7 +18,6 @@ public class TeamActivity extends AppCompatActivity
 {
     private StaggeredGridLayoutManager gridLayoutManager;
     Toolbar mToolbar;
-    TextView mToolBarTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +64,8 @@ public class TeamActivity extends AppCompatActivity
 
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("The Team");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -76,7 +75,6 @@ public class TeamActivity extends AppCompatActivity
                 onBackPressed();
             }
         });
-        mToolBarTextView.setText(R.string.the_team);
     }
 
     @Override

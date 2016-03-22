@@ -33,7 +33,6 @@ public class EventsActivity extends AppCompatActivity{
 
 
 
-    TextView mToolBarTextView;
     Toolbar mToolbar;
 
     ListView eventsList;
@@ -222,38 +221,37 @@ public class EventsActivity extends AppCompatActivity{
 
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Compute Aid");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(false);
-        mToolBarTextView.setText(R.string.compute_aid);
     }
 
     private void changetoolbartitle(int position)
     {
         switch(position)
         {
-            case 1: mToolBarTextView.setText(R.string.compute_aid);
+            case 1: getSupportActionBar().setTitle(R.string.compute_aid);
                     break;
-            case 2: mToolBarTextView.setText(R.string.robotics);
+            case 2: getSupportActionBar().setTitle(R.string.robotics);
                     break;
-            case 3: mToolBarTextView.setText(R.string.cyber_crusade);
+            case 3: getSupportActionBar().setTitle(R.string.cyber_crusade);
                     break;
-            case 4: mToolBarTextView.setText(R.string.food_for_fun);
+            case 4: getSupportActionBar().setTitle(R.string.food_for_fun);
                     break;
-            case 5: mToolBarTextView.setText(R.string.money_matters);
+            case 5: getSupportActionBar().setTitle(R.string.money_matters);
                     break;
-            case 6: mToolBarTextView.setText(R.string.infocus);
+            case 6: getSupportActionBar().setTitle(R.string.infocus);
                     break;
-            case 7: mToolBarTextView.setText(R.string.newron);
+            case 7: getSupportActionBar().setTitle(R.string.newron);
                     break;
-            case 8: mToolBarTextView.setText(R.string.innovati);
+            case 8: getSupportActionBar().setTitle(R.string.innovati);
                     break;
-            case 9: mToolBarTextView.setText(R.string.create_it);
+            case 9: getSupportActionBar().setTitle(R.string.create_it);
                     break;
-            case 10: mToolBarTextView.setText(R.string.just_like_that);
+            case 10: getSupportActionBar().setTitle(R.string.just_like_that);
                     break;
-            case 11: mToolBarTextView.setText(R.string.elevation);
+            case 11: getSupportActionBar().setTitle(R.string.elevation);
                     break;
 
         }

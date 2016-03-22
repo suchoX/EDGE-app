@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity
 
     RelativeLayout eventsLayout,megaeventsLayout,campusambassadorLayout,teamLayout,sponsorsLayout;
     Toolbar mToolbar;
-    TextView mToolBarTextView;
 
     Drawer drawer;
 
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity
         sponsorsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, UpcomingActivity.class));
+
             }
         });
 
@@ -113,11 +112,10 @@ public class MainActivity extends AppCompatActivity
 
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Edge X");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(false);
-        mToolBarTextView.setText("EDGE X");
     }
 
     private void initDrawer()
@@ -219,7 +217,7 @@ public class MainActivity extends AppCompatActivity
                                 alert.setNegativeButton("CANCEL",new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        
+
                                     }
                                 });
                                 alert.show();
