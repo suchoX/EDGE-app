@@ -8,7 +8,11 @@
     <string name="event_pdf"><u>Download Rules for this Event</u></string>
     <string name="updated_soon_desc">--Information Will be Updated Soon--</string>
     <string name="updated_soon_others">--Will be Updated--</string>
-
+    <string name="facebook">Facebook</string>
+    <string name="youtube">Youtube</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="website">Website</string>
 
     <string name="compute_aid">Compute Aid</string>
     <string name="robotics">Robotics</string>
@@ -446,7 +450,7 @@
         </item>
         <item>21</item>
         <item>Food Product Labelling</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/2auAeuH</item>
         <item>Sreyasee Biswas</item>
         <item>+919051972439</item>
         <item>Sunanjoy Nath</item>
@@ -459,7 +463,7 @@
         </item>
         <item>16</item>
         <item>WizCase</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/xUT46vf</item>
         <item>Samrat Roy</item>
         <item>+918017968258</item>
         <item>Nidhi Agarwalla</item>
@@ -472,7 +476,7 @@
         </item>
         <item>19</item>
         <item>Kwiznet</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/xUT46vf</item>
         <item>Soumyajit Bagchi</item>
         <item>+919038649522</item>
         <item>Soumyajit Bagchi</item>
@@ -498,7 +502,7 @@
         </item>
         <item>24</item>
         <item>Addomedia</item>
-        <item>http://imgur.com/fF5Gu15</item>
+        <item>http://imgur.com/T356G8Y</item>
         <item>Ujjwal Prakash</item>
         <item>+918972406116</item>
         <item>Vishal Agarwal</item>
@@ -511,7 +515,7 @@
         </item>
         <item>23</item>
         <item>B-Quiz</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/9mCS5KT</item>
         <item>NULL</item>
         <item>NULL</item>
         <item>NULL</item>
@@ -576,7 +580,7 @@
         </item>
         <item>29</item>
         <item>InstaClick</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/aOlYBQY</item>
         <item>Anubrata Sengupta</item>
         <item>+918981368380</item>
         <item>Rajarshi Sen</item>
@@ -615,7 +619,7 @@
         </item>
         <item>30</item>
         <item>Electronically Yours</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/O8ED9Cs</item>
         <item>NULL</item>
         <item>NULL</item>
         <item>NULL</item>
@@ -628,7 +632,7 @@
         </item>
         <item>45</item>
         <item>Project View</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/th3NY2P</item>
         <item>Saumyadip Roy Chowdhary</item>
         <item>+918981872242</item>
         <item>Arpan Ghosh</item>
@@ -641,7 +645,7 @@
         </item>
         <item>46</item>
         <item>Rags to Riches</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/th3NY2P</item>
         <item>Puja Rani</item>
         <item>+919614592487</item>
         <item>Richa Sharma</item>
@@ -654,7 +658,7 @@
         </item>
         <item>47</item>
         <item>Mekanix</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/th3NY2P</item>
         <item>Sneha Ghosh</item>
         <item>+918272971030</item>
         <item>Sneha Ghosh</item>
@@ -667,7 +671,7 @@
         </item>
         <item>49</item>
         <item>Khulja Sim Sim</item>
-        <item>http://imgur.com/L8NjD0K</item>
+        <item>http://imgur.com/th3NY2P</item>
         <item>Rittika Singhania</item>
         <item>+919007452380</item>
         <item>Rittika Singhania</item>
@@ -680,7 +684,7 @@
         </item>
         <item>33</item>
         <item>Cad-O-Mania</item>
-        <item>http://imgur.com/Z8mIKEg</item>
+        <item>http://imgur.com/FfQp7jV</item>
         <item>Priyajit Kundu</item>
         <item>+918653538532</item>
         <item>Shibam Dutta</item>

@@ -27,13 +27,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
-import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
-import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 
 public class MainActivity extends AppCompatActivity
@@ -43,11 +43,8 @@ public class MainActivity extends AppCompatActivity
     RelativeLayout eventsLayout,megaeventsLayout,campusambassadorLayout,teamLayout,sponsorsLayout;
     Toolbar mToolbar;
     TextView mToolBarTextView;
-    ImageView fabMain;
 
-    FloatingActionButton buttonMain;
-
-    boolean menuOpen=false;
+    Drawer drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +60,6 @@ public class MainActivity extends AppCompatActivity
         campusambassadorLayout = (RelativeLayout)findViewById(R.id.campusambassador_layout);
         teamLayout = (RelativeLayout)findViewById(R.id.team_layout);
         sponsorsLayout = (RelativeLayout)findViewById(R.id.sponsor_layout);
-
-        initFab();
 
         eventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +98,7 @@ public class MainActivity extends AppCompatActivity
 
 
         initToolbar();
+        initDrawer();
     }
 
     @Override
@@ -111,110 +107,90 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void initFab()
-    {
-        fabMain = new ImageView(this);
-        fabMain.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_main));
-
-        buttonMain = new FloatingActionButton.Builder(this)
-                .setContentView(fabMain)
-                .setPosition(FloatingActionButton.POSITION_BOTTOM_RIGHT)
-                .build();
-
-        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
-        // repeat many times:
-        ImageView fabFacebook = new ImageView(this);
-        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_facebook));
-        SubActionButton buttonFacebook = itemBuilder.setContentView(fabFacebook).build();
-        buttonFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String facebookUrl = "https://www.facebook.com/Gx.Edg";
-                try {
-                    int versionCode = getPackageManager().getPackageInfo("com.facebook.katana", 0).versionCode;
-                    if (versionCode >= 3002850) {
-                        Uri uri = Uri.parse("fb://facewebmodal/f?href=" + facebookUrl);
-                        startActivity(new Intent(Intent.ACTION_VIEW, uri));;
-                    } else {
-                        // open the Facebook app using the old method (fb://profile/id or fb://page/id)
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/336227679757310")));
-                    }
-                } catch (PackageManager.NameNotFoundException e) {
-                    // Facebook is not installed. Open the browser
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl)));
-                }
-            }
-        });
-
-        ImageView fabYoutube = new ImageView(this);
-        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_youtube));
-        SubActionButton buttonYoutube = itemBuilder.setContentView(fabYoutube).build();
-        buttonYoutube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.youtube.com/channel/UCSwFemGqe1XRmVlg1jRNJYw"));
-                startActivity(intent);
-            }
-        });
-
-        ImageView fabTwitter = new ImageView(this);
-        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_twitter));
-        SubActionButton buttonTwitter = itemBuilder.setContentView(fabTwitter).build();
-        buttonTwitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/geekonixedge")));
-            }
-        });
-
-        ImageView fabInstagram = new ImageView(this);
-        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_instagram));
-        SubActionButton buttonInstagram = itemBuilder.setContentView(fabInstagram).build();
-        buttonInstagram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse("http://instagram.com/_u/geekonix");
-                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
-
-                likeIng.setPackage("com.instagram.android");
-
-                try {
-                    startActivity(likeIng);
-                } catch (ActivityNotFoundException e) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/geekonix")));
-                }
-            }
-        });
-
-        ImageView fabWeb = new ImageView(this);
-        fabFacebook.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_web));
-        SubActionButton buttonWeb = itemBuilder.setContentView(fabWeb).build();
-        buttonWeb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://edg.co.in")));
-            }
-        });
-
-        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
-                .addSubActionView(buttonFacebook)
-                .addSubActionView(buttonYoutube)
-                .addSubActionView(buttonTwitter)
-                .addSubActionView(buttonInstagram)
-                .addSubActionView(buttonWeb)
-                .attachTo(buttonMain)
-                .build();
-    }
-
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         mToolBarTextView.setText("EDGE X");
     }
+
+    private void initDrawer()
+    {
+        SecondaryDrawerItem faceboook = new SecondaryDrawerItem().withName(R.string.facebook).withIcon(R.drawable.fab_facebook).withIdentifier(1);
+        SecondaryDrawerItem youtube = new SecondaryDrawerItem().withName(R.string.youtube).withIcon(R.drawable.fab_youtube).withIdentifier(2);
+        SecondaryDrawerItem twitter = new SecondaryDrawerItem().withName(R.string.twitter).withIcon(R.drawable.fab_twitter).withIdentifier(3);
+        SecondaryDrawerItem instagram = new SecondaryDrawerItem().withName(R.string.instagram).withIcon(R.drawable.fab_instagram).withIdentifier(4);
+        SecondaryDrawerItem website = new SecondaryDrawerItem().withName(R.string.website).withIcon(R.drawable.fab_web).withIdentifier(5);
+
+        AccountHeader header = new AccountHeaderBuilder()
+                .withActivity(this)
+                .withHeaderBackground(R.drawable.logo_edge)
+                .build();
+        Drawer result = new DrawerBuilder()
+                .withActivity(this)
+                .withToolbar(mToolbar)
+                .withAccountHeader(header)
+                .addDrawerItems(faceboook, youtube, twitter, instagram, website)
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem)
+                    {
+                        if(drawerItem!=null)
+                        {
+                            if(drawerItem.getIdentifier() == 1)
+                            {
+                                String facebookUrl = "https://www.facebook.com/Gx.Edg";
+                                try {
+                                    int versionCode = getPackageManager().getPackageInfo("com.facebook.katana", 0).versionCode;
+                                    if (versionCode >= 3002850) {
+                                        Uri uri = Uri.parse("fb://facewebmodal/f?href=" + facebookUrl);
+                                        startActivity(new Intent(Intent.ACTION_VIEW, uri));;
+                                    } else {
+                                        // open the Facebook app using the old method (fb://profile/id or fb://page/id)
+                                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/336227679757310")));
+                                    }
+                                } catch (PackageManager.NameNotFoundException e) {
+                                    // Facebook is not installed. Open the browser
+                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl)));
+                                }
+                            }
+                            else if(drawerItem.getIdentifier() == 2)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse("https://www.youtube.com/channel/UCSwFemGqe1XRmVlg1jRNJYw"));
+                                startActivity(intent);
+                            }
+                            else if(drawerItem.getIdentifier() == 3)
+                            {
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/geekonixedge")));
+                            }
+                            else if(drawerItem.getIdentifier() == 4)
+                            {
+                                Uri uri = Uri.parse("http://instagram.com/_u/geekonix");
+                                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                                likeIng.setPackage("com.instagram.android");
+
+                                try {
+                                    startActivity(likeIng);
+                                } catch (ActivityNotFoundException e) {
+                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/geekonix")));
+                                }
+                            }
+                            else if(drawerItem.getIdentifier() == 5)
+                            {
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://edg.co.in")));
+                            }
+                        }
+                        return false;
+                    }
+                })
+                .build();
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -225,13 +201,23 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
 
-        return super.onOptionsItemSelected(item);
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
     public void onBackPressed() {
-        finish();
+        if (drawer != null && drawer.isDrawerOpen()) {
+            drawer.closeDrawer();
+        } else {
+            super.onBackPressed();
+        }
     }
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

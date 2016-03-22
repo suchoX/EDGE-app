@@ -115,9 +115,9 @@ public class EventListAdapter extends BaseAdapter
                 eventBack[0] = "http://imgur.com/a83iGPx";
                 eventBack[1] = "http://imgur.com/uyiQowV";
                 eventBack[2] = "http://imgur.com/uyiQowV";
-                eventBack[3] = "http://imgur.com/L8NjD0K";
-                eventBack[4] = "http://imgur.com/L8NjD0K";
-                eventBack[5] = "http://imgur.com/L8NjD0K";
+                eventBack[3] = "http://imgur.com/2auAeuH";
+                eventBack[4] = "http://imgur.com/xUT46vf";
+                eventBack[5] = "http://imgur.com/xUT46vf";
                 break;
 
             case 4:
@@ -127,8 +127,8 @@ public class EventListAdapter extends BaseAdapter
                 eventImage[3] = R.drawable.icn_stockit;
 
                 eventBack[0] = "http://imgur.com/fF5Gu15";
-                eventBack[1] = "http://imgur.com/fF5Gu15";
-                eventBack[2] = "http://imgur.com/L8NjD0K";
+                eventBack[1] = "http://imgur.com/T356G8Y";
+                eventBack[2] = "http://imgur.com/9mCS5KT";
                 eventBack[3] = "http://imgur.com/L8NjD0K";
                 break;
 
@@ -141,7 +141,7 @@ public class EventListAdapter extends BaseAdapter
                 eventBack[0] = "http://imgur.com/oYFdM2P";
                 eventBack[1] = "http://imgur.com/FMN7rTP";
                 eventBack[2] = "http://imgur.com/Z7Zu9OP";
-                eventBack[3] = "http://imgur.com/L8NjD0K";
+                eventBack[3] = "http://imgur.com/aOlYBQY";
                 break;
 
             case 6:
@@ -151,31 +151,31 @@ public class EventListAdapter extends BaseAdapter
 
                 eventBack[0] = "http://imgur.com/wX8WXZ5";
                 eventBack[1] = "http://imgur.com/kcTIwZN";
-                eventBack[2] = "http://imgur.com/L8NjD0K";
+                eventBack[2] = "http://imgur.com/O8ED9Cs";
                 break;
 
             case 7:
                 eventImage[0] = R.drawable.icn_projectview;
-                eventBack[0] = "http://imgur.com/L8NjD0K";
+                eventBack[0] = "http://imgur.com/th3NY2P";
                 break;
 
             case 8:
                 eventImage[0] = R.drawable.icn_mekanix;
-
-                eventBack[0] = "http://imgur.com/L8NjD0K";
+                
+                eventBack[0] = "http://imgur.com/th3NY2P";
                 break;
 
             case 9:
                 eventImage[0] = R.drawable.icn_khuljasimsim;
 
-                eventBack[0] = "http://imgur.com/L8NjD0K";
+                eventBack[0] = "http://imgur.com/th3NY2P";
                 break;
 
             case 10:
                 eventImage[0] = R.drawable.icn_cad;
                 eventImage[1] = R.drawable.icn_bridge;
 
-                eventBack[0] = "http://imgur.com/Z8mIKEg";
+                eventBack[0] = "http://imgur.com/FfQp7jV";
                 eventBack[1] = "http://imgur.com/UOXizDe";
                 break;
         }
