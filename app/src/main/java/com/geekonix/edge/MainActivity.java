@@ -4,32 +4,31 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.provider.Settings;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -38,32 +37,53 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity
 {
-    private FragmentManager fragmentManager;
 
     RelativeLayout eventsLayout,megaeventsLayout,campusambassadorLayout,teamLayout,sponsorsLayout;
     Toolbar mToolbar;
 
     Drawer drawer;
 
+    SharedPreferences schedulePreference;
+    SharedPreferences.Editor editor;
+
+    String scheduleLink,URL;
+    Long scheduleDate, scheduleDatePresent;
+    RequestQueue requestQueue;
+    SecondaryDrawerItem schedule;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        fragmentManager = getSupportFragmentManager();
-
-
 
         eventsLayout = (RelativeLayout)findViewById(R.id.event_layout);
         megaeventsLayout = (RelativeLayout)findViewById(R.id.megaevent_layout);
         campusambassadorLayout = (RelativeLayout)findViewById(R.id.campusambassador_layout);
         teamLayout = (RelativeLayout)findViewById(R.id.team_layout);
         sponsorsLayout = (RelativeLayout)findViewById(R.id.sponsor_layout);
+
+        schedulePreference = this.getSharedPreferences("ScheduleData", 0);
+        editor = schedulePreference.edit();
+        scheduleLink = schedulePreference.getString("Schedule Link", "false");
+        scheduleDate = schedulePreference.getLong("Schedule Date", 0);
+        URL = "http://edg.co.in/details.php?event_id=2";
+        //URL = "https://api.myjson.com/bins/31mri";
+        //URL = "https://api.myjson.com/bins/1ju1a";
+
+
+        initToolbar();
+        initDrawer();
+
+        if (isNetworkAvailable())
+            getScheduleJSON();
 
         eventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,10 +119,49 @@ public class MainActivity extends AppCompatActivity
                     Toast.makeText(MainActivity.this, "We need Internet for Registration", Toast.LENGTH_SHORT).show();
             }
         });
-
-        initToolbar();
-        initDrawer();
     }
+
+    private void getScheduleJSON()
+    {
+        requestQueue = Volley.newRequestQueue(this);
+        JsonObjectRequest jor = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response)
+                    {
+                        try {
+                            scheduleLink = response.getString("schedule");
+                            editor.putString("Schedule Link",scheduleLink);
+                            editor.apply();
+                        }catch (JSONException e)
+                        {
+                            e.printStackTrace();
+                        }
+                        try {
+                            scheduleDatePresent = response.getLong("last_updated");
+                            if(scheduleDatePresent > scheduleDate && !scheduleLink.equals("false"))
+                            {
+                                schedule.withBadge("Updated");
+                                Toast.makeText(MainActivity.this,"Schedule has been updated\nPlease download new Schedule",Toast.LENGTH_LONG).show();
+                            }
+                        }catch (JSONException e)
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("Volley", error.getMessage());
+                    }
+                }
+        );
+        requestQueue.add(jor);
+        requestQueue.start();
+    }
+
+
 
     @Override
     protected void onDestroy() {
@@ -125,10 +184,10 @@ public class MainActivity extends AppCompatActivity
         SecondaryDrawerItem twitter = new SecondaryDrawerItem().withName(R.string.twitter).withIcon(R.drawable.fab_twitter).withIdentifier(3);
         SecondaryDrawerItem instagram = new SecondaryDrawerItem().withName(R.string.instagram).withIcon(R.drawable.fab_instagram).withIdentifier(4);
         SecondaryDrawerItem website = new SecondaryDrawerItem().withName(R.string.website).withIcon(R.drawable.fab_web).withIdentifier(5);
-
         SecondaryDrawerItem location = new SecondaryDrawerItem().withName(R.string.location).withIcon(R.drawable.icn_location).withIdentifier(6);
         SecondaryDrawerItem accomodation = new SecondaryDrawerItem().withName(R.string.accomodation).withIcon(R.drawable.icn_accomodation).withIdentifier(7);
         SecondaryDrawerItem aboutus = new SecondaryDrawerItem().withName(R.string.aboutus).withIcon(R.drawable.icn_aboutus).withIdentifier(8);
+        schedule = new SecondaryDrawerItem().withName(R.string.schedule).withIcon(R.drawable.icn_schedule).withIdentifier(9);
         AccountHeader header = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.logo_edge)
@@ -138,7 +197,7 @@ public class MainActivity extends AppCompatActivity
                 .withActivity(this)
                 .withToolbar(mToolbar)
                 .withAccountHeader(header)
-                .addDrawerItems(faceboook, youtube, twitter, instagram, website, new DividerDrawerItem(),location,accomodation,aboutus)
+                .addDrawerItems(faceboook, youtube, twitter, instagram, website, new DividerDrawerItem(),schedule,location,accomodation,aboutus)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem)
@@ -152,7 +211,7 @@ public class MainActivity extends AppCompatActivity
                                     int versionCode = getPackageManager().getPackageInfo("com.facebook.katana", 0).versionCode;
                                     if (versionCode >= 3002850) {
                                         Uri uri = Uri.parse("fb://facewebmodal/f?href=" + facebookUrl);
-                                        startActivity(new Intent(Intent.ACTION_VIEW, uri));;
+                                        startActivity(new Intent(Intent.ACTION_VIEW, uri));
                                     } else {
                                         // open the Facebook app using the old method (fb://profile/id or fb://page/id)
                                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/336227679757310")));
@@ -225,6 +284,49 @@ public class MainActivity extends AppCompatActivity
                             else if(drawerItem.getIdentifier() == 8)
                             {
                                 startActivity(new Intent(MainActivity.this,AboutUsActivity.class));
+                            }
+                            else if(drawerItem.getIdentifier() == 9)
+                            {
+                                if(isNetworkAvailable())
+                                {
+                                    if(scheduleLink.equals("false"))
+                                    {
+                                        Toast.makeText(MainActivity.this,"The Schedule is not available now,\nPlease Try Later",Toast.LENGTH_SHORT).show();
+                                    }
+                                    else
+                                    {
+                                        if (scheduleDatePresent > scheduleDate) {
+                                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://edg.co.in/content/pdfs/schedule.pdf")));
+                                            editor.putLong("Schedule Date",scheduleDatePresent);
+                                            editor.apply();
+                                            scheduleDate = scheduleDatePresent;
+                                        } else {
+                                            AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+                                            alert.setTitle("Download Schedule");
+                                            alert.setMessage("You already have downloaded the latest schedule\n\nDownload Again?");
+                                            alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://edg.co.in/content/pdfs/schedule.pdf")));
+                                                    editor.putLong("Schedule Date",scheduleDatePresent);
+                                                    editor.apply();
+                                                    scheduleDate = scheduleDatePresent;
+                                                }
+                                            });
+                                            alert.setNegativeButton("NO",new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+
+                                                }
+                                            });
+                                            alert.show();
+                                        }
+                                    }
+
+                                }
+                                else
+                                    Toast.makeText(MainActivity.this,"Internet Connection is required to download Schedule",Toast.LENGTH_SHORT).show();
+
                             }
                         }
                         return false;

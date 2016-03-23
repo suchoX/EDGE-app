@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class WebviewActivity extends AppCompatActivity
 {
-
-    TextView mToolBarTextView;
     Toolbar mToolbar;
     String heading,url;
 

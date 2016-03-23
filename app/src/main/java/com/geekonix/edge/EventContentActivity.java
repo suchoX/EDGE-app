@@ -169,7 +169,7 @@ public class EventContentActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if(eventpdf.charAt(eventpdf.length()-1) != 'f')
-                    Toast.makeText(EventContentActivity.this,"The Rules are not available now,\nTry Later",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EventContentActivity.this,"The Rules are not available now,\nPlease Try Later",Toast.LENGTH_SHORT).show();
                 else
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://edg.co.in/content/"+eventpdf)));
             }
