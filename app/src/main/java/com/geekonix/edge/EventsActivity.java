@@ -354,7 +354,6 @@ public class EventsActivity extends AppCompatActivity{
                     case 0: return R.array.bplan_data;
                     case 1: return R.array.addomedia_data;
                     case 2: return R.array.bquiz_data;
-                    case 3: return R.array.stockit_data;
                 }
                 break;
             case 5:

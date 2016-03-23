@@ -124,12 +124,10 @@ public class EventListAdapter extends BaseAdapter
                 eventImage[0] = R.drawable.icn_bplan;
                 eventImage[1] = R.drawable.icn_addomedia;
                 eventImage[2] = R.drawable.icn_bquiz;
-                eventImage[3] = R.drawable.icn_stockit;
 
                 eventBack[0] = "http://imgur.com/fF5Gu15";
                 eventBack[1] = "http://imgur.com/T356G8Y";
                 eventBack[2] = "http://imgur.com/9mCS5KT";
-                eventBack[3] = "http://imgur.com/L8NjD0K";
                 break;
 
             case 5:
