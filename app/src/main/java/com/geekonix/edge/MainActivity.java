@@ -46,7 +46,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity
 {
 
-    RelativeLayout eventsLayout,megaeventsLayout,campusambassadorLayout,teamLayout,sponsorsLayout;
+    RelativeLayout eventsLayout,megaeventsLayout,funeventsLayout,campusambassadorLayout,teamLayout;
     Toolbar mToolbar;
 
     Drawer drawer;
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity
         megaeventsLayout = (RelativeLayout)findViewById(R.id.megaevent_layout);
         campusambassadorLayout = (RelativeLayout)findViewById(R.id.campusambassador_layout);
         teamLayout = (RelativeLayout)findViewById(R.id.team_layout);
-        sponsorsLayout = (RelativeLayout)findViewById(R.id.sponsor_layout);
+        funeventsLayout = (RelativeLayout)findViewById(R.id.funevent_layout);
 
         schedulePreference = this.getSharedPreferences("ScheduleData", 0);
         editor = schedulePreference.edit();
@@ -93,12 +93,14 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        sponsorsLayout.setOnClickListener(new View.OnClickListener() {
+        funeventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, FunEventsActivity.class);
+                startActivity(intent);
             }
         });
+
 
         teamLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,13 +112,44 @@ public class MainActivity extends AppCompatActivity
         campusambassadorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isNetworkAvailable()) {
-                    Intent intent = new Intent(MainActivity.this, WebviewActivity.class);
-                    intent.putExtra("Heading", "Campus Ambassador");
-                    intent.putExtra("URL", "https://docs.google.com/forms/d/1fYtuK08jRcSTFwK1EIo3SiSsjx9QBjhfjLtj_kXYI_Y/viewform");
-                    startActivity(intent);
-                } else
-                    Toast.makeText(MainActivity.this, "We need Internet for Registration", Toast.LENGTH_SHORT).show();
+
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+                alert.setTitle("Campus Ambassador");
+                alert.setMessage(" What we expect from our Campus Ambassador?\n" +
+                        "* Should be responsible enough to handle the pressure of this grand endeavor.\n" +
+                        "* Good communication skills.\n" +
+                        "* Must have a good network in college to be able to promote and publicize EDGE X 2016 throughout your college.\n" +
+                        "* Should be an active member of any student committee.\n" +
+                        "\n" +
+                        "Benefits for our Campus Ambassador?\n" +
+                        "* Certificate of appreciation from team Geekonix.\n" +
+                        "* A chance to win exciting goodies.\n" +
+                        "* A chance to gain free entry in our grand festival, EDGE X 2016.\n" +
+                        "* Gather experience on professional level and enhance your skills in leadership, marketing, convincing, communication, social media marketing and team work!" +
+                        "\n\n");
+                alert.setPositiveButton("Register", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (isNetworkAvailable()) {
+                            Intent intent = new Intent(MainActivity.this, WebviewActivity.class);
+                            intent.putExtra("Heading", "Campus Ambassador");
+                            intent.putExtra("URL", "https://docs.google.com/forms/d/1fYtuK08jRcSTFwK1EIo3SiSsjx9QBjhfjLtj_kXYI_Y/viewform");
+                            startActivity(intent);
+                        } else
+                            Toast.makeText(MainActivity.this, "We need Internet for Registration", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                alert.setNegativeButton("CANCEL",new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                alert.show();
+
+
+
             }
         });
     }
@@ -190,7 +223,7 @@ public class MainActivity extends AppCompatActivity
         schedule = new SecondaryDrawerItem().withName(R.string.schedule).withIcon(R.drawable.icn_schedule).withIdentifier(9);
         AccountHeader header = new AccountHeaderBuilder()
                 .withActivity(this)
-                .withHeaderBackground(R.drawable.logo_edge)
+                .withHeaderBackground(R.drawable.temp_header)
                 .withHeaderBackgroundScaleType(ImageView.ScaleType.CENTER_CROP)
                 .build();
         drawer = new DrawerBuilder()

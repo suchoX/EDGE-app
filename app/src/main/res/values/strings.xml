@@ -179,7 +179,7 @@
 
     <string-array name="gameofzones_data">
         <item>
-        "Are you a coding geek as well as a gaming freak? Love to dominate and capture territories in games? Well then this is the right place for you. Coding is made even more interesting than ever with a twist. An online Map Conquest event where only the worthwhile would be enthroned as the KING OF THE TERRITORY. So c'mon make your codes mightier than the swords and let your codes clash against each other in this WAR OF DOMINANCE with the slogan \"Code, Conquer, Defend and Win\" !!!"
+        "Are you a coding geek as well as a gaming freak? Love to dominate and capture territories in games? Well then this is the right place for you. Coding is made even more interesting than ever with a twist. An online Map Conquest event where only the worthwhile would be enthroned as the KING OF THE TERRITORY. So c\'mon make your codes mightier than the swords and let your codes clash against each other in this WAR OF DOMINANCE with the slogan \"Code, Conquer, Defend and Win\" !!!"
         </item>
         <item>6</item>
         <item>Game of Zones</item>
@@ -197,8 +197,8 @@
         <item>41</item>
         <item>Xpedition</item>
         <item>http://imgur.com/fmackBJ</item>
-        <item>Abhishek Kumar Singh</item>
-        <item>+918582817792</item>
+        <item>Kumar Satyam Singh</item>
+        <item>+918599913131</item>
         <item>Loveneesh Singh</item>
         <item>+917278601537</item>
     </string-array>
@@ -322,7 +322,7 @@
 
     <string-array name="cs_data">
         <item>
-        NULL
+        Technical brains thrive to become pro\u2019s\u2026 5v5 high action competition with students of technical colleges\u2026
         </item>
         <item>8</item>
         <item>CS College League</item>
@@ -335,59 +335,51 @@
 
     <string-array name="cspro_data">
         <item>
-        NULL
+        High action and drama where winners thrive to become legends\u2026. 5v5 action packed gaming between terrorist and counter terrorists\u2026 most modern weapons and excellent graphics..
         </item>
         <item>7</item>
         <item>CS Pro League</item>
         <item>http://imgur.com/tnLVCmh</item>
         <item>Sarthak Roychowdhury</item>
         <item>+918981723936</item>
-        <item>Sarthak Roychowdhury</item>
-        <item>+918981723936</item>
     </string-array>
 
     <string-array name="mortalkombat_data">
         <item>
-        NULL
+        MMA moves and finishing moves to rule out your opponent to win the crown..
         </item>
         <item>10</item>
         <item>Mortal Kombat</item>
         <item>http://imgur.com/cnDkalY</item>
         <item>Abhik Das</item>
         <item>+917501794441</item>
-        <item>Abhik Das</item>
-        <item>+917501794441</item>
     </string-array>
 
     <string-array name="dota_data">
         <item>
-        NULL
+        Strategise, plan and capture the frozen throne to triumph. Great drama and climax with heroes casting ultimate power\u2019s to capture the throne\u2026
         </item>
         <item>9</item>
         <item>Dota</item>
         <item>http://imgur.com/RQZXbV9</item>
         <item>Bhaskar Ganguly</item>
         <item>+918350014424</item>
-        <item>Bhaskar Ganguly</item>
-        <item>+918350014424</item>
     </string-array>
 
     <string-array name="fifa15_data">
         <item>
-        FIFA stands for F\u00e9d\u00e9ration Internationale de Football Association. FIFA has a series of association football video games or football simulator, released annually by Electronic Arts under the EA Sports label. Here in EDGE X we will organize FIFA 16 as FIFA Pro league.
+        High resolution and graphics with most modern players of football in action, skills, dribbles and celebrations.. come ahead try a hand..
         </item>
         <item>13</item>
         <item>FIFA Pro League</item>
         <item>http://imgur.com/iRIFfxZ</item>
         <item>Sayan</item>
         <item>+91983640440</item>
-        <item>Sayan</item>
-        <item>+91983640440</item>
     </string-array>
 
     <string-array name="fifa11_data">
         <item>
-        FIFA stands for F\u00e9d\u00e9ration Internationale de Football Association. FIFA has a series of association football video games or football simulator, released annually by Electronic Arts under the EA Sports label. Here in EDGE X we will organize FIFA 11 as FIFA College league.
+        Competitors from technical colleges play a hand on the most modern players to score great goals..
         </item>
         <item>14</item>
         <item>FIFA College League</item>
@@ -405,8 +397,6 @@
         <item>11</item>
         <item>Need For Speed</item>
         <item>http://imgur.com/2YoKygL</item>
-        <item>Tribir Bhattacharya</item>
-        <item>+918961296232</item>
         <item>Tribir Bhattacharya</item>
         <item>+918961296232</item>
     </string-array>
@@ -485,13 +475,11 @@
         <item>http://imgur.com/xUT46vf</item>
         <item>Soumyajit Bagchi</item>
         <item>+919038649522</item>
-        <item>Soumyajit Bagchi</item>
-        <item>+919038649522</item>
     </string-array>
 
     <string-array name="bplan_data">
         <item>
-        NULL
+        If you fail to plan, you plan to fail.\u201d\r\nSince the advent of time humans have relied on their selling skills to survive. Some say it is the cornerstone of everyone\'s life. But the real challenge lies in selling\r\nsomething which cannot be sold.\r\nSo, if you think you can dazzle the audience by your impromptu thinking and wittiness then come and be apart of the most challenging competition of Edge, which will provide you with the perfect platform to show your magic. So, how well\r\ncan you sell?
         </item>
         <item>22</item>
         <item>B-Plan</item>
@@ -504,7 +492,7 @@
 
     <string-array name="addomedia_data">
         <item>
-        NULL
+        Advertising says to people , \u201cHere\u2019s what we\u2019ve got. Here\u2019s what it will do for you.\r\nHere\u2019s how to get it.\u201d\r\n ~LeoBurnett\r\nThe idea of this event is to allow the players explore their creativity as well as their\r\n selling power. The Event is based on a marketing theme, participants will have to\r\n pick any product real or fictional of their choice and device an ad campaign to sell\r\n the said product.
         </item>
         <item>24</item>
         <item>Addomedia</item>
@@ -517,15 +505,15 @@
 
     <string-array name="bquiz_data">
         <item>
-        NULL
+        In the buisness world , everyone is paid in two coins: cash and experience .Take the experience first; the cash will come later.\" \r\n ~ Harold S.Geneen \r\nThis is a team event where each team is quizzed on relevant buisness topics and the market scenario.\r\n\r\nTop three teams will be awarded prizes.
         </item>
         <item>23</item>
         <item>B-Quiz</item>
         <item>http://imgur.com/9mCS5KT</item>
-        <item>NULL</item>
-        <item>NULL</item>
-        <item>NULL</item>
-        <item>NULL</item>
+        <item>Ujjwal Prakash</item>
+        <item>+918972406116</item>
+        <item>Vishal Agarwal</item>
+        <item>+919804563465</item>
     </string-array>
     <string-array name="stockit_data">
         <item>
@@ -620,15 +608,13 @@
 
     <string-array name="electronicallyyours_data">
         <item>
-        NULL
+        Any intelligent fool can make things bigger, more complex, and more violent.\r\nIt takes a touch of genius - and a lot of courage - to move in the opposite\r\ndirection. Yes! The new electronic interdependence recreates the world in an\r\nimage of a global picture. Day in and day out the major chunk of technological\r\nbreakthroughs can be attributed to electronics. So here is a chance to revisit\r\nand at the same time to explore the whole new world of electronics!
         </item>
         <item>30</item>
         <item>Electronically Yours</item>
         <item>http://imgur.com/O8ED9Cs</item>
-        <item>NULL</item>
-        <item>NULL</item>
-        <item>NULL</item>
-        <item>NULL</item>
+        <item>Lijanshu Sinha</item>
+        <item>8820799319</item>
     </string-array>
 
     <string-array name="projectview_data">
@@ -666,8 +652,6 @@
         <item>http://imgur.com/th3NY2P</item>
         <item>Sneha Ghosh</item>
         <item>+918272971030</item>
-        <item>Sneha Ghosh</item>
-        <item>+918272971030</item>
     </string-array>
 
     <string-array name="khuljasimsim_data">
@@ -677,8 +661,6 @@
         <item>49</item>
         <item>Khulja Sim Sim</item>
         <item>http://imgur.com/th3NY2P</item>
-        <item>Rittika Singhania</item>
-        <item>+919007452380</item>
         <item>Rittika Singhania</item>
         <item>+919007452380</item>
     </string-array>

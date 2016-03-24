@@ -55,8 +55,8 @@ public class TeamActivity extends AppCompatActivity
         listViewItems.add(new TeamObjects("Shobit Sahay", "Jt. Convener", "http://imgur.com/DpzRZBx.png","+918017174045","https://www.facebook.com/shobhit.shan"));
         listViewItems.add(new TeamObjects("Soumyadip Basu", "Sponsorship Head", "http://imgur.com/8ztWgxf.png","+917686041496","https://www.facebook.com/soumyadip.basu.54"));
         listViewItems.add(new TeamObjects("Abhishek Singh", "Jt. Convenor", "http://imgur.com/bpLKPC6.png","+918582817792","https://www.facebook.com/abhisheik6"));
+        listViewItems.add(new TeamObjects("Vishal Agarwal", "Campus Ambassador Co-Ordinator", "http://i.imgur.com/BrOIDxol.jpg","+919804563465","https://www.facebook.com/agarwalvishal1994"));
         listViewItems.add(new TeamObjects("Suchandrim Sarkar", "App Developer", "http://imgur.com/tg8uaN4.png","+919775301737","https://www.facebook.com/suchandrim.sarkar"));
-
 
 
         return listViewItems;

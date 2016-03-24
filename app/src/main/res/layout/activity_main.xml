@@ -40,7 +40,7 @@
                         android:scaleType="centerCrop"
                         android:adjustViewBounds="true"
                         android:alpha="0.3"
-                        android:src="@drawable/temp_header"/>
+                        android:src="@drawable/main_events"/>
 
                     <ImageView
                         android:id="@+id/event_image"
@@ -70,7 +70,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
                 card_view:cardCornerRadius="0dp"
-                card_view:cardBackgroundColor="@color/blackPrimary">">
+                card_view:cardBackgroundColor="@color/blackPrimary">
                 <RelativeLayout
                     android:id="@+id/megaevent_layout"
                     android:layout_width="match_parent"
@@ -104,6 +104,48 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/card_view5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                card_view:cardCornerRadius="0dp"
+                card_view:cardBackgroundColor="@color/blackPrimary">
+                <RelativeLayout
+                    android:id="@+id/funevent_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:alpha="0.3"
+                        android:src="@drawable/main_funevents"/>
+
+                    <ImageView
+                        android:id="@+id/funevent_image"
+                        android:src="@drawable/icn_funevents"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:id="@+id/funevent_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fun Events"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="25sp"
+                        android:layout_below="@+id/funevent_image"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/card_view3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -112,7 +154,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
                 card_view:cardCornerRadius="0dp"
-                card_view:cardBackgroundColor="@color/blackPrimary">>
+                card_view:cardBackgroundColor="@color/blackPrimary">
                 <RelativeLayout
                     android:id="@+id/campusambassador_layout"
                     android:layout_width="match_parent"
@@ -123,7 +165,7 @@
                         android:scaleType="centerCrop"
                         android:adjustViewBounds="true"
                         android:alpha="0.3"
-                        android:src="@drawable/temp_header"/>
+                        android:src="@drawable/main_campuspusambassadors"/>
 
                     <ImageView
                         android:id="@+id/campusambassador_image"
@@ -153,7 +195,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="3dp"
                 card_view:cardCornerRadius="0dp"
-                card_view:cardBackgroundColor="@color/blackPrimary">">
+                card_view:cardBackgroundColor="@color/blackPrimary">
                 <RelativeLayout
                     android:id="@+id/team_layout"
                     android:layout_width="match_parent"
@@ -165,7 +207,7 @@
                         android:scaleType="centerCrop"
                         android:adjustViewBounds="true"
                         android:alpha="0.3"
-                        android:src="@drawable/temp_header"/>
+                        android:src="@drawable/main_team"/>
 
                     <ImageView
                         android:id="@+id/team_image"
@@ -182,48 +224,6 @@
                         android:textColor="@color/whitePrimary"
                         android:textSize="25sp"
                         android:layout_below="@+id/team_image"
-                        android:layout_centerHorizontal="true"/>
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/card_view5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="3dp"
-                card_view:cardCornerRadius="0dp"
-                card_view:cardBackgroundColor="@color/blackPrimary">>
-                <RelativeLayout
-                    android:id="@+id/sponsor_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:adjustViewBounds="true"
-                        android:alpha="0.3"
-                        android:src="@drawable/temp_header"/>
-
-                    <ImageView
-                        android:id="@+id/sponsor_image"
-                        android:src="@drawable/icn_team"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_centerVertical="true"
-                        android:layout_centerHorizontal="true"/>
-                    <TextView
-                        android:id="@+id/sponsor_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sponsors"
-                        android:textColor="@color/whitePrimary"
-                        android:textSize="25sp"
-                        android:layout_below="@+id/sponsor_image"
                         android:layout_centerHorizontal="true"/>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>

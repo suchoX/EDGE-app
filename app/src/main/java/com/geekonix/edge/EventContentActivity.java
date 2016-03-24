@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,7 +49,9 @@ import java.util.List;
 public class EventContentActivity extends Activity {
 
     View headerView,contentView;
-    ImageView headerImageView, call1View, call2View;
+    ImageView headerImageView;
+    RelativeLayout call1,call2;
+
     TextView eventInfoView, contactName1View, contactName2View,eventpdfView;
     LinearLayout divider;
     String contactNumber1,contactNumber1Temp="";
@@ -88,9 +91,10 @@ public class EventContentActivity extends Activity {
         contactName1View = (TextView)contentView.findViewById(R.id.contact_name1);
         contactName2View = (TextView)contentView.findViewById(R.id.contact_name2);
         eventpdfView = (TextView)contentView.findViewById(R.id.eventcontent_pdf);
-        call1View = (ImageView)contentView.findViewById(R.id.contact_call1);
-        call2View = (ImageView)contentView.findViewById(R.id.contact_call2);
         divider = (LinearLayout)contentView.findViewById(R.id.divider);
+
+        call1 = (RelativeLayout)contentView.findViewById(R.id.call1_layout);
+        call2 = (RelativeLayout)contentView.findViewById(R.id.call2_layout);
 
         eventData = Arrays.asList(getResources().getStringArray(dataResID));
 
@@ -136,7 +140,7 @@ public class EventContentActivity extends Activity {
             getJSON();
         }
 
-        call1View.setOnClickListener(new View.OnClickListener() {
+        call1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(contactNumber1.equals("NULL"))
@@ -150,7 +154,7 @@ public class EventContentActivity extends Activity {
             }
         });
 
-        call2View.setOnClickListener(new View.OnClickListener() {
+        call2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
@@ -196,7 +200,7 @@ public class EventContentActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.share_menu:
-                String temp_shr="Check Out the Event " + eventName + " at EDGE, Kolkata's Largest Techno-Management Fest. Download our Official App from \n*Link* \nor go to our website\n http://edg.co.in";
+                String temp_shr="Check Out the Event " + eventName + " at EDGE, Kolkata's Largest Techno-Management Fest. Download our Official App from \nhttp://play.google.com/store/apps/details?id=com.geekonix.edge \nor go to our website\n http://edg.co.in";
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, eventName+" at EDGE");
@@ -344,8 +348,7 @@ public class EventContentActivity extends Activity {
         }
         else
         {
-            contactName2View.setVisibility(View.GONE);
-            call2View.setVisibility(View.GONE);
+            call2.setVisibility(View.GONE);
             divider.setVisibility(View.GONE);
         }
     }

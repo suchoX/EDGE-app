@@ -89,7 +89,7 @@ public class EventsActivity extends AppCompatActivity{
 
         AccountHeader header = new AccountHeaderBuilder()
                 .withActivity(this)
-                .withHeaderBackground(R.drawable.logo_edge)
+                .withHeaderBackground(R.drawable.temp_header)
                 .withHeaderBackgroundScaleType(ImageView.ScaleType.CENTER_CROP)
                 .build();
         drawer = new DrawerBuilder()
