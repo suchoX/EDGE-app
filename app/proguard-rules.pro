@@ -15,11 +15,3 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--dontwarn android.support.v7.**
--keep class android.support.v7.** { *; }
--keep interface android.support.v7.** { *; }
--keep class com.urbanairship.** { *; }
--keep class com.github.manuelpeinado.fadingactionbar.** { *; }
--dontwarn com.squareup.okhttp.**
--keep class com.android.volley.** { *; }
--keep class com.mikepenz.** { *; }

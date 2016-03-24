@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity
     SharedPreferences schedulePreference;
     SharedPreferences.Editor editor;
 
+    SharedPreferences infoPreference;
+    SharedPreferences.Editor editor2;
+
     String scheduleLink,URL;
     Long scheduleDate, scheduleDatePresent;
     RequestQueue requestQueue;
@@ -78,6 +81,13 @@ public class MainActivity extends AppCompatActivity
         //URL = "https://api.myjson.com/bins/31mri";
         //URL = "https://api.myjson.com/bins/1ju1a";
 
+        infoPreference = this.getSharedPreferences("Info", 0);
+        editor2 = infoPreference.edit();
+        if(!infoPreference.getBoolean("Info Shown",false)) {
+            Toast.makeText(this, "The Images in the app are downloaded only once. Once downloaded, the images are loaded from memory", Toast.LENGTH_LONG).show();
+            editor2.putBoolean("Info Shown",true);
+            editor2.apply();
+        }
 
         initToolbar();
         initDrawer();

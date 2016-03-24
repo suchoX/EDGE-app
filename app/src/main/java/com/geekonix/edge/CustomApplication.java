@@ -2,7 +2,6 @@ package com.geekonix.edge;
 
 import android.app.Application;
 
-
 import com.urbanairship.UAirship;
 
 /**
