@@ -77,6 +77,7 @@
         <item>B-Plan</item>
         <item>Addomedia</item>
         <item>B-Quiz</item>
+        <item>Stock It</item>
     </string-array>
 
     <string-array name="newron_events">
@@ -525,6 +526,17 @@
         <item>NULL</item>
         <item>NULL</item>
         <item>NULL</item>
+    </string-array>
+    <string-array name="stockit_data">
+        <item>
+        \"Rule No.1: Never lose money. Rule No.2: Never forget rule No.1.\" - Warren Buffet.\r\n\r\nIt is that simple. Or is it? Find out as you take on the stock market in a quest to gather as much wealth as you can. \r\n\r\nLimited participants allowed. Register \"http:stockit.edg.co.in\"</item>
+        <item>25</item>
+        <item>Stock It</item>
+        <item>http://imgur.com/ROhzsCb</item>
+        <item>Ujjwal Prakash</item>
+        <item>+918972406116</item>
+        <item>Vishal Agarwal</item>
+        <item>+919804563465</item>
     </string-array>
 
 

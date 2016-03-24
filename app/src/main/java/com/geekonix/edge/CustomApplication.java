@@ -2,6 +2,7 @@ package com.geekonix.edge;
 
 import android.app.Application;
 
+
 import com.urbanairship.UAirship;
 
 /**
@@ -21,6 +22,5 @@ public class CustomApplication extends Application
                 airship.getPushManager().setUserNotificationsEnabled(true);
             }
         });
-
     }
 }

@@ -18,8 +18,6 @@
 -dontwarn android.support.v7.**
 -keep class android.support.v7.** { *; }
 -keep interface android.support.v7.** { *; }
--keep class com.yalantis.** { *; }
--keep class com.google.android.gms.** { *; }
 -keep class com.urbanairship.** { *; }
 -keep class com.github.manuelpeinado.fadingactionbar.** { *; }
 -dontwarn com.squareup.okhttp.**
