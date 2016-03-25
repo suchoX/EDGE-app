@@ -82,7 +82,7 @@
                         android:scaleType="centerCrop"
                         android:adjustViewBounds="true"
                         android:alpha="0.3"
-                        android:src="@drawable/temp_header"/>
+                        android:src="@drawable/main_megaevents"/>
 
                     <ImageView
                         android:id="@+id/megaevent_image"

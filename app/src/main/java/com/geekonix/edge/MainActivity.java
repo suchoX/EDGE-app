@@ -103,6 +103,14 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        megaeventsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MegaEventsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         funeventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -393,6 +401,14 @@ public class MainActivity extends AppCompatActivity
             case android.R.id.home:
                 onBackPressed();
                 return true;
+
+            case R.id.share_menu:
+                String temp_shr="Check out the official app for EDGE, Kolkata's Largest Techno-Management Fest. Download from \nhttp://play.google.com/store/apps/details?id=com.geekonix.edge";
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Official EDGE App");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, temp_shr);
+                startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
 
             default:
                 return super.onOptionsItemSelected(item);

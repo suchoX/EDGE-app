@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.geekonix.edge.MegaEventsActivity">
+
+    <include layout="@layout/toolbar" />
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_view_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="8dp"
+                android:layout_marginBottom="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/megaevent_photo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="350dp"
+                        android:contentDescription="@string/action_settings"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temp_header"
+                        />
+
+                    <TextView
+                        android:id="@+id/megaevent_name1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="EDG Nights"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/megaevent_photo1"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/megaevent_desc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="--Will be updated--"
+                        android:textColor="#ffffff"
+                        android:paddingBottom="4dp"
+                        android:gravity="center_horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/megaevent_name1"
+                        android:background="@color/colorPrimary"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_view_team2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="8dp"
+                android:layout_marginBottom="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/megaevent_photo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="350dp"
+                        android:contentDescription="@string/action_settings"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temp_header"
+                        />
+
+                    <TextView
+                        android:id="@+id/megaevent_name2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="EDG Talks"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/megaevent_photo2"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/megaevent_desc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="--Will be updated--"
+                        android:textColor="#ffffff"
+                        android:paddingBottom="4dp"
+                        android:gravity="center_horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/megaevent_name2"
+                        android:background="@color/colorPrimary"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
