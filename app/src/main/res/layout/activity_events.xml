@@ -7,13 +7,59 @@
     android:orientation="vertical">
 
     <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:id="@+id/temp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11 Categories"
+            android:textSize="24sp"
+            android:textColor="@color/whitePrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="46+ Events"
+            android:textSize="24sp"
+            android:textColor="@color/whitePrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7Lakh+ Prize Money"
+            android:textSize="24sp"
+            android:textColor="@color/whitePrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Its our 10th Anniversary Afterall!"
+            android:textSize="20sp"
+            android:paddingTop="3dp"
+            android:textColor="@color/whitePrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\nClick on the Menu Button to see all events"
+            android:textSize="15sp"
+            android:textColor="@color/whitePrimary"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/event_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="5dp"/>
+        android:dividerHeight="5dp"
+        android:visibility="gone"/>
 
 
 </LinearLayout>

@@ -52,7 +52,7 @@ public class EventContentActivity extends Activity {
     ImageView headerImageView;
     RelativeLayout call1,call2;
 
-    TextView eventInfoView, contactName1View, contactName2View,eventpdfView;
+    TextView eventInfoView, contactName1View, contactName2View,eventpdfView, stockitText;
     LinearLayout divider;
     String contactNumber1,contactNumber1Temp="";
     String contactNumber2,contactNumber2Temp="";
@@ -91,6 +91,7 @@ public class EventContentActivity extends Activity {
         contactName1View = (TextView)contentView.findViewById(R.id.contact_name1);
         contactName2View = (TextView)contentView.findViewById(R.id.contact_name2);
         eventpdfView = (TextView)contentView.findViewById(R.id.eventcontent_pdf);
+        stockitText = (TextView)contentView.findViewById(R.id.stockit_link);
         divider = (LinearLayout)contentView.findViewById(R.id.divider);
 
         call1 = (RelativeLayout)contentView.findViewById(R.id.call1_layout);
@@ -98,18 +99,21 @@ public class EventContentActivity extends Activity {
 
         eventData = Arrays.asList(getResources().getStringArray(dataResID));
 
-        twoContacts = dataPreference.getBoolean("two contacts",true);
+        twoContacts = dataPreference.getBoolean("two contacts", true);
 
         eventdesc = eventData.get(0);
         ID = eventData.get(1);
         URL = "http://edg.co.in/details.php?event_id=" + ID;
-        first = dataPreference.getBoolean("first_"+ID,true);
+        first = dataPreference.getBoolean("first_" + ID, true);
 
         eventName = eventData.get(2);
         imageLink = eventData.get(3);
         imageLink = imageLink.concat(".png");
         eventname1 = eventData.get(4);
         contactNumber1 = eventData.get(5);
+
+        if(eventName.equals("Stock It"))
+            stockitText.setVisibility(View.VISIBLE);
         if(eventData.size() > 6) {
             twoContacts = true;
             eventname2 = eventData.get(6);
@@ -176,6 +180,13 @@ public class EventContentActivity extends Activity {
                     Toast.makeText(EventContentActivity.this,"The Rules are not available now,\nPlease Try Later",Toast.LENGTH_SHORT).show();
                 else
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://edg.co.in/content/"+eventpdf)));
+            }
+        });
+
+        stockitText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://stockit.edg.co.in")));
             }
         });
 

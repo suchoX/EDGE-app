@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,9 +32,9 @@ import java.util.List;
 
 public class EventsActivity extends AppCompatActivity{
 
-
-
     Toolbar mToolbar;
+
+    LinearLayout tempLayout;
 
     ListView eventsList;
     EventListAdapter eventListAdapter;
@@ -50,6 +51,7 @@ public class EventsActivity extends AppCompatActivity{
         setContentView(R.layout.activity_events);
 
         eventsList = (ListView)findViewById(R.id.event_list);
+        tempLayout = (LinearLayout)findViewById(R.id.temp_layout);
 
         computeaidEvents = Arrays.asList(getResources().getStringArray(R.array.computeaid_events));
         roboticsEvents = Arrays.asList(getResources().getStringArray(R.array.robotics_events));
@@ -102,6 +104,8 @@ public class EventsActivity extends AppCompatActivity{
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         if (drawerItem != null)
                         {
+                            tempLayout.setVisibility(View.GONE);
+                            eventsList.setVisibility(View.VISIBLE);
                             changetoolbartitle((int)drawerItem.getIdentifier());
                             reinitList((int)drawerItem.getIdentifier());
                         }
@@ -222,7 +226,7 @@ public class EventsActivity extends AppCompatActivity{
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Compute Aid");
+        getSupportActionBar().setTitle("Events");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(false);
     }

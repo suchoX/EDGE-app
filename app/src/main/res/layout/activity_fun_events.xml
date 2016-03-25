@@ -44,7 +44,7 @@
                         android:id="@+id/contact_name1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sobit Sahay"
+                        android:text="Shobhit Sahay"
                         android:textAppearance="@android:style/TextAppearance.Small"
                         android:textColor="@color/whitePrimary"/>
 
