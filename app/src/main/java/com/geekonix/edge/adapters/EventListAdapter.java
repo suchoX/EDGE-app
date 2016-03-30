@@ -169,8 +169,10 @@ public class EventListAdapter extends BaseAdapter
 
             case 9:
                 eventImage[0] = R.drawable.icn_khuljasimsim;
+                eventImage[1] = R.drawable.icn_selfie;
 
                 eventBack[0] = "http://imgur.com/th3NY2P";
+                eventBack[1] = "http://imgur.com/Z8mIKEg";
                 break;
 
             case 10:

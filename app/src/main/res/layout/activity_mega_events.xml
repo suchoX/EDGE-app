@@ -16,6 +16,64 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:id="@+id/call_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/colorPrimary">
+                <LinearLayout
+                    android:id="@+id/call1_layout"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/contact_call1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/call_contact"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:id="@+id/contact_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Raj Singh"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/whitePrimary"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/call2_layout"
+                    android:layout_weight="1.3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/contact_call2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/call_contact"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:id="@+id/contact_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shobhit Sahay"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/whitePrimary"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -33,18 +91,19 @@
                     <ImageView
                         android:id="@+id/megaevent_photo1"
                         android:layout_width="wrap_content"
-                        android:layout_height="350dp"
+                        android:layout_height="wrap_content"
                         android:contentDescription="@string/action_settings"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/temp_header"
+                        android:src="@drawable/edgnight"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
                         />
 
                     <TextView
                         android:id="@+id/megaevent_name1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:text="EDG Nights"
+                        android:textSize="18sp"
+                        android:text="EDG Night"
                         android:textStyle="bold"
                         android:textColor="#ffffff"
                         android:paddingBottom="4dp"
@@ -57,8 +116,8 @@
                         android:id="@+id/megaevent_desc1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:text="--Will be updated--"
+                        android:textSize="15sp"
+                        android:text="@string/edgnight"
                         android:textColor="#ffffff"
                         android:paddingBottom="4dp"
                         android:gravity="center_horizontal"
@@ -87,17 +146,18 @@
                     <ImageView
                         android:id="@+id/megaevent_photo2"
                         android:layout_width="wrap_content"
-                        android:layout_height="350dp"
+                        android:layout_height="wrap_content"
                         android:contentDescription="@string/action_settings"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/temp_header"
+                        android:src="@drawable/edgtalk"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
                         />
 
                     <TextView
                         android:id="@+id/megaevent_name2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
+                        android:textSize="18sp"
                         android:text="EDG Talks"
                         android:textStyle="bold"
                         android:textColor="#ffffff"
@@ -111,8 +171,8 @@
                         android:id="@+id/megaevent_desc2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:text="--Will be updated--"
+                        android:textSize="15sp"
+                        android:text="@string/edgtalk"
                         android:textColor="#ffffff"
                         android:paddingBottom="4dp"
                         android:gravity="center_horizontal"
@@ -125,5 +185,4 @@
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>

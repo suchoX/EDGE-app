@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.geekonix.edge.AboutUsActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
     <include layout="@layout/toolbar" />
 
@@ -18,7 +19,8 @@
         android:layout_height="match_parent"
         android:padding="15dp"
         android:text="@string/aboutus_text"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:textColor="@color/whitePrimary"/>
     </ScrollView>
 
 

@@ -7,6 +7,7 @@
     <string name="the_team">The Team</string>
     <string name="event_pdf"><u>Download Rules for this Event</u></string>
     <string name="stockit_link"><u>StockIT Registration</u></string>
+    <string name="kwiznet_link"><u>Play Kwiznet</u></string>
     <string name="updated_soon_desc">--Information Will be Updated Soon--</string>
     <string name="updated_soon_others">--Will be Updated--</string>
     <string name="facebook">Facebook</string>
@@ -15,11 +16,20 @@
     <string name="instagram">Instagram</string>
     <string name="website">Website</string>
     <string name="location">Find Us</string>
+    <string name="registration">Registration Details</string>
+    <string name="feedback">Give us a Feedback</string>
     <string name="accomodation">Accomodation</string>
     <string name="aboutus">About Us</string>
     <string name="schedule">Download Schedule</string>
-    <string name="aboutus_text">EDGE is the annual techno-management fest of Techno India Salt Lake. The first edition of EDGE was conceived in 2007, and it has been a long and pleasant journey so far. This year, we are celebrating our 10th anniversary. And we dedicate this edition to all the effort and imagination that has been put in by all the individuals who have worked towards making EDGE a grand success.\nEDGE provides a much needed platform to the students that lets them explore and develop their talents, and helps them grow and emerge as winners.Join us in celebrating a decade of imagination.\nJoin us and witness the amalgamation of talent, persistence and an urge to succeed. Join us and witness history in making.
+    <string name="aboutus_text">EDGE is the annual techno-management fest of Techno India Salt Lake. The first edition of EDGE was conceived in 2007, and it has been a long and pleasant journey so far. \n\nThis year, we are celebrating our 10th anniversary. And we dedicate this edition to all the effort and imagination that has been put in by all the individuals who have worked towards making EDGE a grand success.\n\nEDGE provides a much needed platform to the students that lets them explore and develop their talents, and helps them grow and emerge as winners.Join us in celebrating a decade of imagination.\nJoin us and witness the amalgamation of talent, persistence and an urge to succeed.\n\nJoin us and witness history in making!!
     </string>
+    <string name="edgnight">The guests for EDG Night, a mega event of EDGE X 2016 to be held on 1st April, 2016 [5 P.M. onwards] are:\n\n
+<b>Mr. Biswa Kalyan Rath</b>, a famous Indian stand-up comedian and YouTuber. He is known for the YouTube series, Pretentious Movie Reviews where he reviews yesteryear Bollywood films.
+\n\n<b>Mr. Kartik Aryan</b>, a famous Indian film actor. His famous movies are Pyar ka Punchnama[2011], Pyar ka Punchnama 2 [2015].</string>
+
+    <string name="edgtalk">The guests for EDG Talks, a mega event of EDGE X 2016  to be held on 2nd April, 2016 [5 P.M. onwards] are:\n\n
+<b>Mr. Arunabh Kumar</b> - Founder and Group CEO, The Viral Fever and TVF Media Labs, is an alumnus of IIT Kharagpur and is the person who conceptualized and launched The Viral Fever, a popular online entertainment network that satirizes Indian politics, movies, lifestyle, social system and concepts etc.
+\n\n<b>Dr. Som Singh Dutta</b>, founder of Unspun Marketing, a leading marketer and vibrant entrepreneur of the modern day generation.</string>
 
     <string name="compute_aid">Compute Aid</string>
     <string name="robotics">Robotics</string>
@@ -101,6 +111,7 @@
 
     <string-array name="justlikethat_events">
         <item>Khulja Sim Sim</item>
+        <item>Get Selfie-ish with X</item>
 
     </string-array>
 
@@ -653,6 +664,19 @@
         <item>http://imgur.com/th3NY2P</item>
         <item>Sneha Ghosh</item>
         <item>+918272971030</item>
+    </string-array>
+
+    Get Selfie-ish with X
+
+    <string-array name="selfie_data">
+        <item>
+        Riches do not consist in the possession of treasures, but in the use made of them. Get ready to indulge your grey cells. When the climax unfolds an actual hidden treasure may not be found, but the victory may be equivalent to one.
+        </item>
+        <item>48</item>
+        <item>Get Selfie-ish with X</item>
+        <item>http://imgur.com/Z8mIKEg</item>
+        <item>Puja Rani</item>
+        <item>+919614592487</item>
     </string-array>
 
     <string-array name="khuljasimsim_data">

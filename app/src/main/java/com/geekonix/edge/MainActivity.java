@@ -46,7 +46,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity
 {
 
-    RelativeLayout eventsLayout,megaeventsLayout,funeventsLayout,campusambassadorLayout,teamLayout;
+    RelativeLayout eventsLayout,megaeventsLayout,funeventsLayout,campusambassadorLayout,teamLayout, sponsorsLayout;
     Toolbar mToolbar;
 
     Drawer drawer;
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity
         campusambassadorLayout = (RelativeLayout)findViewById(R.id.campusambassador_layout);
         teamLayout = (RelativeLayout)findViewById(R.id.team_layout);
         funeventsLayout = (RelativeLayout)findViewById(R.id.funevent_layout);
+        sponsorsLayout = (RelativeLayout)findViewById(R.id.sponsors_layout);
 
         schedulePreference = this.getSharedPreferences("ScheduleData", 0);
         editor = schedulePreference.edit();
@@ -135,16 +136,16 @@ public class MainActivity extends AppCompatActivity
                 AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
                 alert.setTitle("Campus Ambassador");
                 alert.setMessage(" What we expect from our Campus Ambassador?\n" +
-                        "* Should be responsible enough to handle the pressure of this grand endeavor.\n" +
-                        "* Good communication skills.\n" +
-                        "* Must have a good network in college to be able to promote and publicize EDGE X 2016 throughout your college.\n" +
-                        "* Should be an active member of any student committee.\n" +
+                        "- Should be responsible enough to handle the pressure of this grand endeavor.\n" +
+                        "- Good communication skills.\n" +
+                        "- Must have a good network in college to be able to promote and publicize EDGE X 2016 throughout your college.\n" +
+                        "- Should be an active member of any student committee.\n" +
                         "\n" +
                         "Benefits for our Campus Ambassador?\n" +
-                        "* Certificate of appreciation from team Geekonix.\n" +
-                        "* A chance to win exciting goodies.\n" +
-                        "* A chance to gain free entry in our grand festival, EDGE X 2016.\n" +
-                        "* Gather experience on professional level and enhance your skills in leadership, marketing, convincing, communication, social media marketing and team work!" +
+                        "- Certificate of appreciation from team Geekonix.\n" +
+                        "- A chance to win exciting goodies.\n" +
+                        "- A chance to gain free entry in our grand festival, EDGE X 2016.\n" +
+                        "- Gather experience on professional level and enhance your skills in leadership, marketing, convincing, communication, social media marketing and team work!" +
                         "\n\n");
                 alert.setPositiveButton("Register", new DialogInterface.OnClickListener() {
                     @Override
@@ -165,9 +166,14 @@ public class MainActivity extends AppCompatActivity
                     }
                 });
                 alert.show();
+            }
+        });
 
-
-
+        sponsorsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SponsorsActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -239,6 +245,8 @@ public class MainActivity extends AppCompatActivity
         SecondaryDrawerItem accomodation = new SecondaryDrawerItem().withName(R.string.accomodation).withIcon(R.drawable.icn_accomodation).withIdentifier(7);
         SecondaryDrawerItem aboutus = new SecondaryDrawerItem().withName(R.string.aboutus).withIcon(R.drawable.icn_aboutus).withIdentifier(8);
         schedule = new SecondaryDrawerItem().withName(R.string.schedule).withIcon(R.drawable.icn_schedule).withIdentifier(9);
+        SecondaryDrawerItem registration = new SecondaryDrawerItem().withName(R.string.registration).withIcon(R.drawable.icn_registrationdetails).withIdentifier(10);
+        SecondaryDrawerItem feedback = new SecondaryDrawerItem().withName(R.string.feedback).withIcon(R.drawable.icn_feedback).withIdentifier(11);
         AccountHeader header = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.temp_header)
@@ -248,7 +256,7 @@ public class MainActivity extends AppCompatActivity
                 .withActivity(this)
                 .withToolbar(mToolbar)
                 .withAccountHeader(header)
-                .addDrawerItems(faceboook, youtube, twitter, instagram, website, new DividerDrawerItem(),schedule,location,accomodation,aboutus)
+                .addDrawerItems(faceboook, youtube, twitter, instagram, website, new DividerDrawerItem(),schedule,registration,location,accomodation,feedback,aboutus)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem)
@@ -379,6 +387,30 @@ public class MainActivity extends AppCompatActivity
                                     Toast.makeText(MainActivity.this,"Internet Connection is required to download Schedule",Toast.LENGTH_SHORT).show();
 
                             }
+                            else if(drawerItem.getIdentifier() == 10)
+                            {
+                                if(isNetworkAvailable())
+                                {
+                                    Intent intent = new Intent(MainActivity.this, WebviewActivity.class);
+                                    intent.putExtra("Heading", "Registration Details");
+                                    intent.putExtra("URL", "http://edg.co.in/register.php");
+                                    startActivity(intent);
+                                }
+                                else
+                                    Toast.makeText(MainActivity.this,"Internet Connection is required to view Registration Details",Toast.LENGTH_SHORT).show();
+                            }
+                            else if(drawerItem.getIdentifier() == 11)
+                            {
+                                if(isNetworkAvailable())
+                                {
+                                    Intent intent = new Intent(MainActivity.this, WebviewActivity.class);
+                                    intent.putExtra("Heading", "Feedback");
+                                    intent.putExtra("URL", "https://docs.google.com/forms/d/1SZHYXp2uzL1qZmxAWSOfS29BeUaYxBBpvIXKTohQ06E/viewform?c=0&w=1");
+                                    startActivity(intent);
+                                }
+                                else
+                                    Toast.makeText(MainActivity.this,"Internet Connection is required to give Feedback",Toast.LENGTH_SHORT).show();
+                            }
                         }
                         return false;
                     }
@@ -403,7 +435,7 @@ public class MainActivity extends AppCompatActivity
                 return true;
 
             case R.id.share_menu:
-                String temp_shr="Check out the official app for EDGE, Kolkata's Largest Techno-Management Fest. Download from \nhttp://play.google.com/store/apps/details?id=com.geekonix.edge";
+                String temp_shr="Check out the official app for EDGE, Kolkata's Largest Techno-Management Fest. Download the app and get Live Updates and updates from us!\nhttp://play.google.com/store/apps/details?id=com.geekonix.edge";
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Official EDGE App");

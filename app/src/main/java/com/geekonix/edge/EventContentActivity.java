@@ -52,7 +52,7 @@ public class EventContentActivity extends Activity {
     ImageView headerImageView;
     RelativeLayout call1,call2;
 
-    TextView eventInfoView, contactName1View, contactName2View,eventpdfView, stockitText;
+    TextView eventInfoView, contactName1View, contactName2View,eventpdfView, stockitText, kwiznetText;
     LinearLayout divider;
     String contactNumber1,contactNumber1Temp="";
     String contactNumber2,contactNumber2Temp="";
@@ -92,6 +92,7 @@ public class EventContentActivity extends Activity {
         contactName2View = (TextView)contentView.findViewById(R.id.contact_name2);
         eventpdfView = (TextView)contentView.findViewById(R.id.eventcontent_pdf);
         stockitText = (TextView)contentView.findViewById(R.id.stockit_link);
+        kwiznetText = (TextView)contentView.findViewById(R.id.kwiznet_link);
         divider = (LinearLayout)contentView.findViewById(R.id.divider);
 
         call1 = (RelativeLayout)contentView.findViewById(R.id.call1_layout);
@@ -114,6 +115,8 @@ public class EventContentActivity extends Activity {
 
         if(eventName.equals("Stock It"))
             stockitText.setVisibility(View.VISIBLE);
+        if(eventName.equals("Kwiznet"))
+            kwiznetText.setVisibility(View.VISIBLE);
         if(eventData.size() > 6) {
             twoContacts = true;
             eventname2 = eventData.get(6);
@@ -187,6 +190,12 @@ public class EventContentActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://stockit.edg.co.in")));
+            }
+        });
+        kwiznetText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://kwiznet.edg.co.in/")));
             }
         });
 

@@ -113,7 +113,8 @@ public class EventsActivity extends AppCompatActivity{
                     }
                 })
                 .build();
-    }
+        drawer.openDrawer();
+            }
 
     private void reinitList(int position)
     {
@@ -395,6 +396,7 @@ public class EventsActivity extends AppCompatActivity{
                 switch (event)
                 {
                     case 0: return R.array.khuljasimsim_data;
+                    case 1: return R.array.selfie_data;
                 }
                 break;
             case 10:
